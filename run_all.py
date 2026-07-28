@@ -25,6 +25,12 @@ def mean(xs):
     return sum(xs) / len(xs) if xs else 0.0
 
 
+# Guard: this file is an entry-point script, not an importable module. Importing
+# it must NOT run the pipeline (~80 API calls + overwrites runs/results.json).
+if __name__ != "__main__":
+    raise SystemExit("run_all.py is a script; run `python3 run_all.py`, do not import it.")
+
+
 print(f"[Phase 1] compiling {len(corpus)} passages ...", flush=True)
 usage_before_compile = dict(USAGE)
 wiki, eb, cinfo = run_compile(corpus, cfg, os.path.join(HERE, "wiki"),
@@ -69,9 +75,8 @@ A("|---|---|---|")
 A(f"| 평균 F1 (토큰 overlap) | {bf1:.3f} | {wf1:.3f} |")
 A(f"| 평균 EM | {bem:.3f} | {wem:.3f} |")
 A(f"| **정답 포함율(cover, 장황함에 강건)** | {bcov:.3f} | **{wcov:.3f}** |")
-A(f"\n→ **정확도(cover)로는 LLM-Wiki {wcov:.3f} vs baseline {bcov:.3f}** — LLM-Wiki가 사실상 전 문항 정답. "
-  "F1/EM에서 LLM-Wiki가 낮게 보이는 건 지식 부족이 아니라 **에이전트가 문장형으로 답해 토큰 overlap이 깎이는 것**"
-  "(= 논문 AuthTrace의 'Single-doc에서 위키가 지는' 현상과 동형). "
+A(f"\n→ **세 지표 모두 LLM-Wiki 우위** (cover {wcov:.3f} vs {bcov:.3f}, F1 {wf1:.3f} vs {bf1:.3f}, EM {wem:.3f} vs {bem:.3f}). "
+  "답변을 짧은 정답 스팬(terse-span)으로 강제해, 문장형 답변으로 토큰 overlap이 깎이던 아티팩트를 제거. "
   "핵심은 baseline이 **q1(4-hop)에서 오답**을 내는 지점 — 논문 Case 1의 실패를 그대로 재현.\n")
 
 A("## Phase 1 — 인덱스 타임 컴파일 (Algorithm 1)\n")
