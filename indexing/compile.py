@@ -10,6 +10,7 @@ import json
 
 from llm import complete, complete_json
 from wiki import Wiki, slugify
+from indexing.select_pages import select_pages
 from indexing.validators import structural_validate, code_autofix
 from indexing.error_book import ErrorBook
 
@@ -26,21 +27,6 @@ _ANCHOR = """--- EXAMPLE OUTPUT PAGE (schema anchor, do not copy its content) --
  "links": ["Ernest I, Prince of Anhalt-Dessau", "Karl I, Prince of Anhalt-Zerbst"],
  "sources": ["p09"]
 }"""
-
-
-def select_pages(passage, wiki, model, k):
-    if not wiki.pages:
-        return {"update": [], "create": []}
-    idx = "\n".join(wiki.index_lines())
-    sys = "You perform SELECTPAGES for a wiki compiler: pick which EXISTING pages a new passage should update."
-    user = (f"CURRENT WIKI INDEX:\n{idx}\n\nNEW PASSAGE ({passage['pid']}):\n"
-            f"{passage['title']}: {passage['text']}\n\n"
-            f"Return JSON {{\"update\": [<=%d existing page slugs relevant to this passage>]}}." % k)
-    try:
-        r = complete_json(sys, user, model, 500)
-        return {"update": [s for s in r.get("update", []) if s in wiki.pages][:k], "create": []}
-    except Exception:
-        return {"update": [], "create": []}
 
 
 def compile_pages(passage, selected, wiki, constraints, model):

@@ -7,7 +7,6 @@ tags: [German nobility, Duke]
 > Duke of Munsterberg-Oels and father of Margarete of Munsterberg
 
 ## Key Facts
-- Was Duke of Munsterberg-Oels
 - Father of Margarete of Munsterberg
 
 ## Related Pages

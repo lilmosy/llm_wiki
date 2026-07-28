@@ -1,5 +1,6 @@
 # geography
-> 2 pages
+> 3 pages
 
-- [[Anhalt-Zerbst]] (Anhalt-Zerbst) #principality #German-state #House-of-Ascania
+- [[Chicago]] (Chicago) #City #Illinois #United-States
 - [[Melfi]] (Melfi) #Italy #town #birthplace
+- [[Riga]] (Riga) #City #Latvia #Birthplace

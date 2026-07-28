@@ -7,8 +7,8 @@ tags: [German nobility, House of Podiebrad]
 > German noblewoman, daughter of Henry I, Duke of Munsterberg-Oels, and mother of John V, Prince of Anhalt-Zerbst
 
 ## Key Facts
-- Was the daughter of Henry I, Duke of Munsterberg-Oels
-- Was the mother of John V, Prince of Anhalt-Zerbst
+- Daughter of Henry I, Duke of Munsterberg-Oels
+- Mother of John V, Prince of Anhalt-Zerbst
 
 ## Related Pages
 - [[Henry-I-Duke-of-Munsterberg-Oels]] -- Henry I, Duke of Munsterberg-Oels

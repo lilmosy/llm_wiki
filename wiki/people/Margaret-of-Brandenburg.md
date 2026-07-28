@@ -1,10 +1,10 @@
 ---
 type: people
-aliases: [Margaret of Brandenburg]
+aliases: []
 tags: [German nobility]
 ---
 # Margaret of Brandenburg
-> Daughter of Joachim I Nestor who married John V, Prince of Anhalt-Zerbst
+> Daughter of Joachim I Nestor who married into the House of Ascania
 
 ## Key Facts
 - Daughter of Joachim I Nestor, Elector of Brandenburg

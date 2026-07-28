@@ -1,16 +1,16 @@
 ---
 type: media
 aliases: [The Gamecock]
-tags: [film, 1964 film, drama, Italian cinema, 1964]
+tags: [1964 film, Italian cinema, drama film, film, drama]
 ---
 # The Gamecock (film)
-> 1964 drama film directed by Pasquale Festa Campanile
+> A 1964 drama film directed by Pasquale Festa Campanile
 
 ## Key Facts
 - Released in 1964
 - Directed by Pasquale Festa Campanile
 - One of Pasquale Festa Campanile's earlier directorial works
-- The film is a drama
+- A drama film
 - Unrelated to any monster or creature feature
 
 ## Related Pages

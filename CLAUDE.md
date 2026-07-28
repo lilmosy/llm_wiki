@@ -9,7 +9,7 @@
 - API 키: 레포 루트 `../../.env`의 `ANTHROPIC_API_KEY` (llm.py가 로드).
 
 ## 하드 제약 (매번 헷갈리는 것)
-- ⚠️ **`runs/results.json`은 run1(교정 전 verbose 예측). 덮어쓰지 말 것** — 논문 Appendix H 트레이스 재현본이자 REPORT.md의 근거 원본. 재실행은 LLM 비결정성으로 위키·수치가 바뀌니 반드시 백업 후.
+- ⚠️ **`runs/results.json`은 terse 교정 재실행본. 덮어쓰기 전 백업** — 논문 Appendix H 트레이스 재현본이자 REPORT.md의 근거 원본. 재실행은 LLM 비결정성으로 위키·수치가 바뀜.
 - 오프라인 재생성: `make_report.py`는 API 없이 `results.json`에서 `REPORT.md`만 다시 그림.
 - **모델은 전 비교군 `claude-opus-4-8` 동일** (논문 §4.4 통제). 바꾸지 말 것.
 - **임베딩 없음 — BM25** (`rank_bm25`). §3.2 "검색 품질은 병목 아님" 근거. baseline·search-fallback 모두 BM25.
@@ -17,15 +17,15 @@
 - 하이퍼파라미터(`config.yaml`): Tmax=15, patience=3, SELECTPAGES k=5.
 
 ## 구조
-- `llm.py` (opus-4-8 래퍼, .env 로드, USAGE 집계) · `wiki.py` (Wiki 저장/렌더 + `wiki_search`/`wiki_read` 툴)
-- `indexing/` = `compile.py`(Algorithm 1 루프) + `validators.py`(구조검증+코드수정) + `error_book.py`
-- `retrieval/agent.py` (ReAct 루프) · `baseline/bm25_rag.py` · `harness/evaluate.py` (F1/EM/cover)
+- `llm.py` (opus-4-8 래퍼, .env 로드, USAGE 집계) · `wiki.py` (Wiki 저장/렌더 + search/read 구현)
+- `indexing/` = `select_pages.py`(SELECTPAGES) + `compile.py`(COMPILEWIKIPAGES + 루프) + `validators.py`(구조검증+코드수정) + `error_book.py`
+- `retrieval/` = `agent.py`(ReAct 루프) + `tools.py`(wiki_search/wiki_read 툴 래퍼) · `baseline/bm25_rag.py` · `harness/evaluate.py` (F1/EM/cover)
 - `data/` = `corpus.jsonl`(16 passage, 2Wiki 스타일 큐레이션, **Appendix H 정답 케이스 2건 포함**) + `questions.json`(8문항, hop/type 라벨)
 - `wiki/` = 컴파일 산출물(md 트리 + `_manifest.json` 내부 인덱스) · `runs/` 로그 · `REPORT.md`
 - 스케일업(실제 2Wiki dev 앞 50개): `data/` 교체만으로 가능(로더 동일).
 
-## 현재 결과 (run1)
-cover **8/8** vs baseline 7/8 (baseline은 q1 4-hop 오답 = 논문 Case 1 재현). F1 0.554 < 0.750 = 에이전트 verbose 아티팩트(cover로 정확도 판정). 컴파일 구조오류 0건.
+## 현재 결과 (terse 교정 재실행)
+cover **8/8** vs baseline 7/8 (baseline은 q1 4-hop 오답 = 논문 Case 1 재현). terse-span 교정 적용 후 F1·EM도 위키 우위(1.000 vs 0.875). 컴파일 구조오류 0건.
 
 ## 작업 관례
 - 발표 자료: `발표정리.md`(원본) → `발표정리.html`(그 md를 그대로 렌더하는 스크롤 문서). **md만 고치고 html은 재생성**(내용 항상 일치).

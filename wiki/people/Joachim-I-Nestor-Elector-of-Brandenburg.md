@@ -4,7 +4,7 @@ aliases: [Joachim I Nestor, Joachim I of Brandenburg]
 tags: [German nobility, Elector of Brandenburg]
 ---
 # Joachim I Nestor, Elector of Brandenburg
-> Elector of Brandenburg whose daughter married into the House of Anhalt-Zerbst
+> German prince who served as Elector of Brandenburg
 
 ## Key Facts
 - Was Elector of Brandenburg

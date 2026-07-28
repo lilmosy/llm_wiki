@@ -9,7 +9,7 @@ tags: [Italy, town, birthplace, Basilicata, southern Italy]
 ## Key Facts
 - Located in Italy
 - Birthplace of Pasquale Festa Campanile
-- Located in the Basilicata region of southern Italy
+- Is a town in the Basilicata region of southern Italy
 - Birthplace of the film director Pasquale Festa Campanile
 
 ## Related Pages

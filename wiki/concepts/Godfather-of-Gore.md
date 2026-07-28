@@ -1,13 +1,14 @@
 ---
 type: concepts
-aliases: [The Godfather of Gore]
-tags: [nickname, splatter film, horror cinema]
+aliases: []
+tags: [nickname, splatter films, horror]
 ---
 # Godfather of Gore
-> Nickname associated with Herschell Gordon Lewis for his splatter films
+> A nickname associated with Herschell Gordon Lewis for his splatter films
 
 ## Key Facts
 - A nickname associated with Herschell Gordon Lewis for his splatter films
+- Does not itself list birth dates
 
 ## Related Pages
 - [[Herschell-Gordon-Lewis]] -- Herschell Gordon Lewis

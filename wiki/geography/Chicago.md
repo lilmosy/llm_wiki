@@ -4,7 +4,7 @@ aliases: [Chicago, Illinois]
 tags: [City, Illinois, United States]
 ---
 # Chicago
-> City in Illinois, United States, birthplace of Herschell Gordon Lewis
+> City in Illinois, United States; birthplace of Herschell Gordon Lewis
 
 ## Key Facts
 - Located in Illinois, United States

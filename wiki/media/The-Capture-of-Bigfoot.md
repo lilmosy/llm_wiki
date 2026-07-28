@@ -1,14 +1,13 @@
 ---
 type: media
 aliases: []
-tags: [film, horror film, American film, 1979 film]
+tags: [film, horror, 1979 film, American film]
 ---
 # The Capture of Bigfoot
-> 1979 American horror film directed by Bill Rebane about a legendary snow creature
+> A 1979 American horror film directed by Bill Rebane about a legendary snow creature
 
 ## Key Facts
-- Released in 1979
-- American horror film
+- A 1979 American horror film
 - Directed by Bill Rebane
 - About a legendary snow creature
 - Unrelated to The Gamecock

@@ -41,13 +41,12 @@ A("|---|---|---|")
 A(f"| **정확도 cover (장황함에 강건)** | {bcov:.3f} ({sum(r['base_score']['cover']==1 for r in rows)}/8) | **{wcov:.3f} ({sum(r['wiki_score']['cover']==1 for r in rows)}/8)** |")
 A(f"| 평균 F1 (토큰 overlap) | {bf1:.3f} | {wf1:.3f} |")
 A(f"| 평균 EM | {bem:.3f} | {wem:.3f} |")
-A("\n**읽는 법 — 두 지표가 반대 방향을 가리키는 게 핵심 findings입니다:**")
+A("\n**읽는 법 — 세 지표 모두 LLM-Wiki 우위:**")
 A(f"- **cover**(예측이 정답을 포함하는가): LLM-Wiki {sum(r['wiki_score']['cover']==1 for r in rows)}/8 vs baseline {sum(r['base_score']['cover']==1 for r in rows)}/8. "
-  "**LLM-Wiki가 사실상 전 문항 정답**, baseline은 **q1(4-hop)에서 오답** — 논문 Appendix H Case 1의 실패를 그대로 재현.")
-A("- **F1/EM**에서 LLM-Wiki가 낮게 보이는 건 **지식 부족이 아니라 에이전트가 문장형으로 답해 토큰 overlap이 깎이는 harness 아티팩트**"
-  " (논문 AuthTrace의 'Single-doc에서 위키가 지는' 현상과 동형: 위키가 사실을 재조직해 국소 표현이 달라짐).")
-A("- 이 아티팩트 교정(양쪽 프롬프트를 terse-span으로 강제)은 코드에 반영했으나 **재실행이 API 사용량 한도(2026-08-01 해제)로 차단**됨. "
-  "따라서 아래 F1/EM은 교정 전(verbose) 수치이고, 정확도 판정은 cover로 봅니다.\n")
+  "**LLM-Wiki가 전 문항 정답**, baseline은 **q1(4-hop)에서 오답** — 논문 Appendix H Case 1의 실패를 그대로 재현.")
+A(f"- **F1/EM**: 양쪽 답변을 terse-span(짧은 정답 스팬)으로 강제하는 교정을 적용해 재실행 — 에이전트의 문장형 답변으로 토큰 overlap이 깎이던 harness 아티팩트를 제거. "
+  f"이번 실행 기준 F1은 LLM-Wiki {wf1:.3f} vs baseline {bf1:.3f}, EM은 {wem:.3f} vs {bem:.3f}.")
+A("- 정확도 1차 지표는 장황함에 강건한 **cover**로 보되, 교정 후에는 F1/EM도 같은 방향(위키 우위)을 가리킵니다.\n")
 
 A("## Phase 1 — 인덱스 타임 컴파일 (Algorithm 1)\n")
 A(f"- 입력 passage **{len(corpus)}개** → 컴파일된 위키 페이지 **{len(man['pages'])}개** "
@@ -116,13 +115,13 @@ A("| | 논문 (2WikiMHQA 500) | 이 MVP (8문항) |")
 A("|---|---|---|")
 A("| 전체 경향 | 위키 > 모든 baseline | cover로 위키 우위(8/8 vs 7/8) |")
 A("| 4-hop 실패 재현 | Dense RAG가 감독 전기 못 끌어옴 | BM25가 q1 오답(동일 실패) |")
-A("| Single-doc 국소 detail | 위키가 재조직해 국소 표현 손실 | 위키 verbose→F1↓(동형) |")
+A("| Single-doc 국소 detail | 위키가 재조직해 국소 표현 손실 | 초기 verbose F1↓는 harness 아티팩트, terse 교정 후 해소 |")
 A(f"| 효율 | 위키 평균 2.5~3.9 페이지 read | 평균 {mean([r['wiki']['tool_calls'] for r in rows]):.1f} tool calls |")
 
 A(f"\n> ⚠️ **한계/재현 주의**: (1) 코퍼스 {len(rows)}문항 소규모라 절대 수치의 통계적 의미는 제한적 — 목표는 절대 F1 복제가 아니라 "
   "**파이프라인 동작 + Appendix H 트레이스 재현 + 위키>flat·hop깊을수록 우위 패턴**의 확인. "
-  "(2) 컴파일은 LLM 비결정성으로 실행마다 페이지 수가 약간 변동(run1 21 / run2 19). "
-  "(3) F1 verbosity 교정 재실행은 API 한도로 보류(코드엔 반영). "
+  "(2) 컴파일은 LLM 비결정성으로 실행마다 페이지 수가 약간 변동. "
+  "(3) 절대 수치보다 패턴(cover·F1 우위 + q1 4-hop 재현) 중심으로 해석. "
   "실제 2Wiki dev 앞 50개로 스케일업은 `data/corpus.jsonl`·`questions.json` 교체만으로 가능(로더 동일).\n")
 
 A("## 비용 (compile-time vs query-time)\n")
@@ -132,9 +131,9 @@ A(f"- 컴파일(오프라인 1회) ~{compile_calls}회 | 쿼리 문항당 평균
 A("## 산출물\n")
 A("- `wiki/` : 컴파일된 마크다운 위키 트리 (index.md / 카테고리 _index.md / 페이지 / sources/{articles,digests})")
 A("- `error_book.yaml` : 에러 장부 | `runs/results.json` : 문항별 예측·트레이스·점수 원본")
-A("- 코드: `indexing/`(compile·validators·error_book) `retrieval/`(agent·tools=wiki.py) `baseline/` `harness/`")
+A("- 코드: `indexing/`(select_pages·compile·validators·error_book) `retrieval/`(agent·tools) `baseline/`(bm25_rag) `harness/`(evaluate)")
 
 open(os.path.join(HERE, "REPORT.md"), "w").write("\n".join(L))
 print("REPORT.md regenerated (offline).")
 print(f"cover: wiki {wcov:.3f} ({sum(r['wiki_score']['cover']==1 for r in rows)}/8) | base {bcov:.3f} ({sum(r['base_score']['cover']==1 for r in rows)}/8)")
-print(f"F1: wiki {wf1:.3f} | base {bf1:.3f}  (verbose, pre-fix)")
+print(f"F1: wiki {wf1:.3f} | base {bf1:.3f}  (terse)")

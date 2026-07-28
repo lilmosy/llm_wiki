@@ -7,15 +7,7 @@ import re
 
 import anthropic
 from llm import _CLIENT, _acct
-
-_TOOLS = [
-    {"name": "wiki_search",
-     "description": "Search the Wiki index by page names, aliases, tags, and summaries. Returns candidate pages.",
-     "input_schema": {"type": "object", "properties": {"query": {"type": "string"}}, "required": ["query"]}},
-    {"name": "wiki_read",
-     "description": "Batch-read wiki pages (by slug) or indices. Returned page content includes [[links]] to related pages for the next hop.",
-     "input_schema": {"type": "object", "properties": {"paths": {"type": "array", "items": {"type": "string"}}}, "required": ["paths"]}},
-]
+from retrieval.tools import TOOLS, wiki_search, wiki_read
 
 _SYS = ("You answer multi-hop questions by traversing a compiled Wiki.\n"
         "Loop: wiki_search -> wiki_read -> follow [[links]] in the pages you read -> "
@@ -34,7 +26,7 @@ def answer_question(question, wiki, cfg):
     final = ""
     for step in range(tmax):
         resp = _CLIENT.messages.create(model=model, max_tokens=cfg["max_tokens"],
-                                       system=_SYS, tools=_TOOLS, messages=messages)
+                                       system=_SYS, tools=TOOLS, messages=messages)
         _acct(resp)
         if resp.stop_reason != "tool_use":
             final = "".join(b.text for b in resp.content if b.type == "text")
@@ -45,7 +37,7 @@ def answer_question(question, wiki, cfg):
             if b.type != "tool_use":
                 continue
             if b.name == "wiki_search":
-                hits = wiki.search(b.input.get("query", ""), cfg["select_k"])
+                hits = wiki_search(wiki, b.input.get("query", ""), cfg["select_k"])
                 empty_streak = empty_streak + 1 if not hits else 0
                 trace.append({"tool": "wiki_search", "arg": b.input.get("query", ""),
                               "hits": [h["slug"] for h in hits]})
@@ -53,7 +45,7 @@ def answer_question(question, wiki, cfg):
             else:  # wiki_read
                 paths = b.input.get("paths", [])
                 reads += 1
-                out = wiki.read(paths)
+                out = wiki_read(wiki, paths)
                 trace.append({"tool": "wiki_read", "arg": paths})
             results.append({"type": "tool_result", "tool_use_id": b.id, "content": out})
         messages.append({"role": "user", "content": results})

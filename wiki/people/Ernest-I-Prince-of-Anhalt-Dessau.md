@@ -8,7 +8,7 @@ tags: [German nobility, House of Ascania, Prince]
 
 ## Key Facts
 - Father of John V, Prince of Anhalt-Zerbst
-- Was a German prince of the House of Ascania
+- German prince of the House of Ascania
 - Died on 12 June 1516 in Dessau
 
 ## Related Pages
