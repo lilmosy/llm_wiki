@@ -1,0 +1,669 @@
+{
+ "rows": [
+  {
+   "id": "q1",
+   "question": "Which film has the director who is older, The Gamecock or Monster a Go-Go?",
+   "answer": "Monster a Go-Go",
+   "hop": 4,
+   "type": "bridge_comparison",
+   "note": "Appendix H Case 1: film -> director -> birth date -> compare",
+   "wiki": {
+    "pred": "Monster a Go-Go (co-director Herschell Gordon Lewis, born 1926, is the oldest director)",
+    "raw": "I now have all the birth dates:\n\n- **The Gamecock** \u2014 Pasquale Festa Campanile, born 28 July 1927\n- **Monster a Go-Go** \u2014 Bill Rebane (born 1937) and Herschell Gordon Lewis (born 15 June 1926)\n\nThe oldest director among all of them is Herschell Gordon Lewis (born 15 June 1926), a co-director of Monster a Go-Go. Even compared to Campanile (1927), the earliest-born director belongs to Monster a Go-Go.\n\nANSWER: Monster a Go-Go (co-director Herschell Gordon Lewis, born 1926, is the oldest director)",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "The Gamecock film",
+      "hits": [
+       "The-Gamecock-film",
+       "The-Gamecock",
+       "The-Mask-of-the-Gorilla",
+       "The-Capture-of-Bigfoot",
+       "Monster-from-the-Ocean-Floor"
+      ]
+     },
+     {
+      "tool": "wiki_search",
+      "arg": "Monster a Go-Go film",
+      "hits": [
+       "Monster-a-Go-Go",
+       "Herschell-Gordon-Lewis",
+       "Monster-from-the-Ocean-Floor",
+       "The-Mask-of-the-Gorilla",
+       "The-Gamecock-film"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "The-Gamecock-film",
+       "Monster-a-Go-Go"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "Pasquale-Festa-Campanile",
+       "Bill-Rebane",
+       "Herschell-Gordon-Lewis"
+      ]
+     }
+    ],
+    "tool_calls": 4,
+    "reads": 2
+   },
+   "base": {
+    "pred": "The Gamecock",
+    "raw": "ANSWER: The Gamecock",
+    "retrieved": [
+     5,
+     1,
+     0,
+     4,
+     7
+    ]
+   },
+   "wiki_score": {
+    "f1": 0.3076923076923077,
+    "em": 0.0
+   },
+   "base_score": {
+    "f1": 0.0,
+    "em": 0.0
+   }
+  },
+  {
+   "id": "q2",
+   "question": "When did John V, Prince of Anhalt-Zerbst's father die?",
+   "answer": "12 June 1516",
+   "hop": 2,
+   "type": "bridge",
+   "note": "Appendix H Case 2: follow father link to Ernest I",
+   "wiki": {
+    "pred": "John V's father, Ernest I, Prince of Anhalt-Dessau, died on 12 June 1516 (in Dessau).",
+    "raw": "The evidence is clear. Ernest I, Prince of Anhalt-Dessau was the father of John V, Prince of Anhalt-Zerbst, and he died on 12 June 1516 in Dessau.\n\nANSWER: John V's father, Ernest I, Prince of Anhalt-Dessau, died on 12 June 1516 (in Dessau).",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "John V, Prince of Anhalt-Zerbst",
+      "hits": [
+       "Margarete-of-Munsterberg",
+       "Margaret-of-Brandenburg",
+       "John-V-Prince-of-Anhalt-Zerbst",
+       "Ernest-I-Prince-of-Anhalt-Dessau",
+       "Karl-I-Prince-of-Anhalt-Zerbst"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "Ernest-I-Prince-of-Anhalt-Dessau"
+      ]
+     }
+    ],
+    "tool_calls": 2,
+    "reads": 1
+   },
+   "base": {
+    "pred": "12 June 1516",
+    "raw": "ANSWER: 12 June 1516",
+    "retrieved": [
+     11,
+     9,
+     8,
+     10,
+     13
+    ]
+   },
+   "wiki_score": {
+    "f1": 0.33333333333333337,
+    "em": 0.0
+   },
+   "base_score": {
+    "f1": 1.0,
+    "em": 1.0
+   }
+  },
+  {
+   "id": "q3",
+   "question": "Who was born first, Herschell Gordon Lewis or Pasquale Festa Campanile?",
+   "answer": "Herschell Gordon Lewis",
+   "hop": 2,
+   "type": "comparison",
+   "wiki": {
+    "pred": "Herschell Gordon Lewis (born June 15, 1926) was born first, about a year before Pasquale Festa Campanile (born July 28, 1927).",
+    "raw": "Herschell Gordon Lewis was born on 15 June 1926, while Pasquale Festa Campanile was born on 28 July 1927.\n\nANSWER: Herschell Gordon Lewis (born June 15, 1926) was born first, about a year before Pasquale Festa Campanile (born July 28, 1927).",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "Herschell Gordon Lewis",
+      "hits": [
+       "Herschell-Gordon-Lewis",
+       "Godfather-of-Gore",
+       "Chicago"
+      ]
+     },
+     {
+      "tool": "wiki_search",
+      "arg": "Pasquale Festa Campanile",
+      "hits": [
+       "The-Gamecock-film",
+       "Pasquale-Festa-Campanile",
+       "Melfi"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "Herschell-Gordon-Lewis",
+       "Pasquale-Festa-Campanile"
+      ]
+     }
+    ],
+    "tool_calls": 3,
+    "reads": 1
+   },
+   "base": {
+    "pred": "Herschell Gordon Lewis (born 15 June 1926, before Pasquale Festa Campanile on 28 July 1927).",
+    "raw": "ANSWER: Herschell Gordon Lewis (born 15 June 1926, before Pasquale Festa Campanile on 28 July 1927).",
+    "retrieved": [
+     2,
+     3,
+     0,
+     1,
+     15
+    ]
+   },
+   "wiki_score": {
+    "f1": 0.2608695652173913,
+    "em": 0.0
+   },
+   "base_score": {
+    "f1": 0.33333333333333337,
+    "em": 0.0
+   }
+  },
+  {
+   "id": "q4",
+   "question": "In which city did the father of John V, Prince of Anhalt-Zerbst die?",
+   "answer": "Dessau",
+   "hop": 2,
+   "type": "compositional",
+   "wiki": {
+    "pred": "Dessau",
+    "raw": "The evidence is sufficient. Ernest I, Prince of Anhalt-Dessau, the father of John V, died in Dessau.\n\nANSWER: Dessau",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "John V, Prince of Anhalt-Zerbst",
+      "hits": [
+       "Margarete-of-Munsterberg",
+       "Margaret-of-Brandenburg",
+       "John-V-Prince-of-Anhalt-Zerbst",
+       "Ernest-I-Prince-of-Anhalt-Dessau",
+       "Karl-I-Prince-of-Anhalt-Zerbst"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "Ernest-I-Prince-of-Anhalt-Dessau"
+      ]
+     }
+    ],
+    "tool_calls": 2,
+    "reads": 1
+   },
+   "base": {
+    "pred": "Dessau",
+    "raw": "ANSWER: Dessau",
+    "retrieved": [
+     9,
+     11,
+     8,
+     10,
+     13
+    ]
+   },
+   "wiki_score": {
+    "f1": 1.0,
+    "em": 1.0
+   },
+   "base_score": {
+    "f1": 1.0,
+    "em": 1.0
+   }
+  },
+  {
+   "id": "q5",
+   "question": "Who co-directed Monster a Go-Go along with Bill Rebane?",
+   "answer": "Herschell Gordon Lewis",
+   "hop": 2,
+   "type": "bridge",
+   "wiki": {
+    "pred": "Herschell Gordon Lewis (known as the \"Godfather of Gore\") co-directed Monster a Go-Go along with Bill Rebane.",
+    "raw": "The evidence is clear from both pages.\n\nANSWER: Herschell Gordon Lewis (known as the \"Godfather of Gore\") co-directed Monster a Go-Go along with Bill Rebane.",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "Monster a Go-Go film director",
+      "hits": [
+       "Herschell-Gordon-Lewis",
+       "Monster-a-Go-Go",
+       "Monster-from-the-Ocean-Floor",
+       "The-Mask-of-the-Gorilla",
+       "The-Gamecock-film"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "Monster-a-Go-Go",
+       "Herschell-Gordon-Lewis"
+      ]
+     }
+    ],
+    "tool_calls": 2,
+    "reads": 1
+   },
+   "base": {
+    "pred": "Herschell Gordon Lewis",
+    "raw": "ANSWER: Herschell Gordon Lewis",
+    "retrieved": [
+     4,
+     1,
+     3,
+     5,
+     6
+    ]
+   },
+   "wiki_score": {
+    "f1": 0.33333333333333337,
+    "em": 0.0
+   },
+   "base_score": {
+    "f1": 1.0,
+    "em": 1.0
+   }
+  },
+  {
+   "id": "q6",
+   "question": "Who directed the film The Gamecock?",
+   "answer": "Pasquale Festa Campanile",
+   "hop": 1,
+   "type": "direct",
+   "wiki": {
+    "pred": "Pasquale Festa Campanile",
+    "raw": "ANSWER: Pasquale Festa Campanile",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "The Gamecock film",
+      "hits": [
+       "The-Gamecock-film",
+       "The-Gamecock",
+       "The-Mask-of-the-Gorilla",
+       "The-Capture-of-Bigfoot",
+       "Monster-from-the-Ocean-Floor"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "The-Gamecock-film"
+      ]
+     }
+    ],
+    "tool_calls": 2,
+    "reads": 1
+   },
+   "base": {
+    "pred": "Pasquale Festa Campanile",
+    "raw": "ANSWER: Pasquale Festa Campanile",
+    "retrieved": [
+     1,
+     0,
+     6,
+     5,
+     2
+    ]
+   },
+   "wiki_score": {
+    "f1": 1.0,
+    "em": 1.0
+   },
+   "base_score": {
+    "f1": 1.0,
+    "em": 1.0
+   }
+  },
+  {
+   "id": "q7",
+   "question": "Which film was released earlier, The Gamecock or Monster a Go-Go?",
+   "answer": "The Gamecock",
+   "hop": 2,
+   "type": "comparison",
+   "wiki": {
+    "pred": "The Gamecock (1964) was released earlier than Monster a Go-Go (1965).",
+    "raw": "The Gamecock was released in 1964, while Monster a Go-Go was released in 1965.\n\nANSWER: The Gamecock (1964) was released earlier than Monster a Go-Go (1965).",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "The Gamecock film",
+      "hits": [
+       "The-Gamecock-film",
+       "The-Gamecock",
+       "The-Mask-of-the-Gorilla",
+       "The-Capture-of-Bigfoot",
+       "Monster-from-the-Ocean-Floor"
+      ]
+     },
+     {
+      "tool": "wiki_search",
+      "arg": "Monster a Go-Go film",
+      "hits": [
+       "Monster-a-Go-Go",
+       "Herschell-Gordon-Lewis",
+       "Monster-from-the-Ocean-Floor",
+       "The-Mask-of-the-Gorilla",
+       "The-Gamecock-film"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "The-Gamecock-film",
+       "Monster-a-Go-Go"
+      ]
+     }
+    ],
+    "tool_calls": 3,
+    "reads": 1
+   },
+   "base": {
+    "pred": "The Gamecock (1964)",
+    "raw": "ANSWER: The Gamecock (1964)",
+    "retrieved": [
+     0,
+     5,
+     1,
+     3,
+     4
+    ]
+   },
+   "wiki_score": {
+    "f1": 0.19999999999999998,
+    "em": 0.0
+   },
+   "base_score": {
+    "f1": 0.6666666666666666,
+    "em": 0.0
+   }
+  },
+  {
+   "id": "q8",
+   "question": "Who is the eldest son of John V, Prince of Anhalt-Zerbst?",
+   "answer": "Karl I, Prince of Anhalt-Zerbst",
+   "hop": 2,
+   "type": "bridge",
+   "wiki": {
+    "pred": "Karl I, Prince of Anhalt-Zerbst",
+    "raw": "ANSWER: Karl I, Prince of Anhalt-Zerbst",
+    "trace": [
+     {
+      "tool": "wiki_search",
+      "arg": "John V, Prince of Anhalt-Zerbst",
+      "hits": [
+       "Margarete-of-Munsterberg",
+       "Margaret-of-Brandenburg",
+       "John-V-Prince-of-Anhalt-Zerbst",
+       "Ernest-I-Prince-of-Anhalt-Dessau",
+       "Karl-I-Prince-of-Anhalt-Zerbst"
+      ]
+     },
+     {
+      "tool": "wiki_read",
+      "arg": [
+       "John-V-Prince-of-Anhalt-Zerbst"
+      ]
+     }
+    ],
+    "tool_calls": 2,
+    "reads": 1
+   },
+   "base": {
+    "pred": "Karl I, Prince of Anhalt-Zerbst",
+    "raw": "ANSWER: Karl I, Prince of Anhalt-Zerbst",
+    "retrieved": [
+     10,
+     8,
+     11,
+     9,
+     13
+    ]
+   },
+   "wiki_score": {
+    "f1": 1.0,
+    "em": 1.0
+   },
+   "base_score": {
+    "f1": 1.0,
+    "em": 1.0
+   }
+  }
+ ],
+ "compile": {
+  "trace": [
+   {
+    "pid": "p01",
+    "batch": 0,
+    "selected": [],
+    "pages_emitted": [
+     "The Gamecock (film)",
+     "Pasquale Festa Campanile"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p02",
+    "batch": 0,
+    "selected": [],
+    "pages_emitted": [
+     "Monster a Go-Go",
+     "Bill Rebane",
+     "Herschell Gordon Lewis"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p03",
+    "batch": 0,
+    "selected": [
+     "Pasquale-Festa-Campanile",
+     "The-Gamecock-film"
+    ],
+    "pages_emitted": [
+     "Pasquale-Festa-Campanile",
+     "The-Gamecock-film",
+     "Melfi"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p04",
+    "batch": 0,
+    "selected": [
+     "Herschell-Gordon-Lewis",
+     "Monster-a-Go-Go",
+     "Bill-Rebane"
+    ],
+    "pages_emitted": [
+     "Herschell-Gordon-Lewis",
+     "Monster-a-Go-Go",
+     "Chicago"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p05",
+    "batch": 1,
+    "selected": [
+     "Bill-Rebane",
+     "Monster-a-Go-Go",
+     "Herschell-Gordon-Lewis"
+    ],
+    "pages_emitted": [
+     "Bill-Rebane"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p06",
+    "batch": 1,
+    "selected": [
+     "Monster-a-Go-Go",
+     "The-Gamecock-film"
+    ],
+    "pages_emitted": [
+     "The Mask of the Gorilla"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p07",
+    "batch": 1,
+    "selected": [
+     "Bill-Rebane"
+    ],
+    "pages_emitted": [
+     "The Capture of Bigfoot",
+     "Bill Rebane",
+     "The Gamecock"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p08",
+    "batch": 1,
+    "selected": [],
+    "pages_emitted": [
+     "Monster from the Ocean Floor"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p09",
+    "batch": 2,
+    "selected": [],
+    "pages_emitted": [
+     "John V, Prince of Anhalt-Zerbst",
+     "Ernest I, Prince of Anhalt-Dessau",
+     "Karl I, Prince of Anhalt-Zerbst",
+     "House of Ascania"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p10",
+    "batch": 2,
+    "selected": [
+     "Ernest-I-Prince-of-Anhalt-Dessau",
+     "House-of-Ascania",
+     "John-V-Prince-of-Anhalt-Zerbst"
+    ],
+    "pages_emitted": [
+     "Ernest I, Prince of Anhalt-Dessau",
+     "House of Ascania"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p11",
+    "batch": 2,
+    "selected": [
+     "Karl-I-Prince-of-Anhalt-Zerbst",
+     "John-V-Prince-of-Anhalt-Zerbst",
+     "House-of-Ascania"
+    ],
+    "pages_emitted": [
+     "Karl I, Prince of Anhalt-Zerbst",
+     "John V, Prince of Anhalt-Zerbst",
+     "Anhalt-Zerbst"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p12",
+    "batch": 2,
+    "selected": [
+     "John-V-Prince-of-Anhalt-Zerbst"
+    ],
+    "pages_emitted": [
+     "Margarete of Munsterberg",
+     "Henry I, Duke of Munsterberg-Oels",
+     "John V, Prince of Anhalt-Zerbst"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p13",
+    "batch": 3,
+    "selected": [
+     "House-of-Ascania",
+     "Anhalt-Zerbst",
+     "Ernest-I-Prince-of-Anhalt-Dessau",
+     "John-V-Prince-of-Anhalt-Zerbst",
+     "Karl-I-Prince-of-Anhalt-Zerbst"
+    ],
+    "pages_emitted": [
+     "House of Ascania"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p14",
+    "batch": 3,
+    "selected": [
+     "John-V-Prince-of-Anhalt-Zerbst"
+    ],
+    "pages_emitted": [
+     "Joachim I Nestor, Elector of Brandenburg",
+     "Margaret of Brandenburg",
+     "John V, Prince of Anhalt-Zerbst"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p15",
+    "batch": 3,
+    "selected": [
+     "Herschell-Gordon-Lewis"
+    ],
+    "pages_emitted": [
+     "Godfather of Gore"
+    ],
+    "errors": []
+   },
+   {
+    "pid": "p16",
+    "batch": 3,
+    "selected": [
+     "Melfi",
+     "Pasquale-Festa-Campanile"
+    ],
+    "pages_emitted": [
+     "Melfi",
+     "Pasquale-Festa-Campanile"
+    ],
+    "errors": []
+   }
+  ],
+  "final_errors": [],
+  "final_fixed": 0
+ },
+ "usage": {
+  "calls": 80,
+  "input_tokens": 69895,
+  "output_tokens": 12075
+ }
+}

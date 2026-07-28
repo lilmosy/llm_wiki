@@ -1,0 +1,9 @@
+# LLM-Wiki MVP configuration (paper hyperparameters where applicable)
+model: claude-opus-4-8        # unified answer + compile LLM (paper uses one model for all methods)
+max_tokens: 2000
+agent_tmax: 15               # paper: max tool-call budget T_max = 15
+agent_patience: 3            # paper: P = 3 consecutive empty searches
+select_k: 5                  # paper: SELECTPAGES selects at most k = 5 pages
+batch_size: 4               # passages per compile batch (paper leaves exact size unspecified)
+baseline_topk: 5            # Vanilla RAG (BM25): top-5 passages
+error_book_repair: code_only # MVP scope: structural code-autofix only (Layer 1); content Layer 2 = log-only

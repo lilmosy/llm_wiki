@@ -1,0 +1,628 @@
+{
+ "pages": {
+  "The-Gamecock-film": {
+   "slug": "The-Gamecock-film",
+   "title": "The Gamecock (film)",
+   "type": "media",
+   "aliases": [
+    "The Gamecock"
+   ],
+   "tags": [
+    "film",
+    "1964 film",
+    "drama",
+    "Italian cinema",
+    "1964"
+   ],
+   "summary": "1964 drama film directed by Pasquale Festa Campanile",
+   "facts": [
+    "Released in 1964",
+    "Directed by Pasquale Festa Campanile",
+    "One of Pasquale Festa Campanile's earlier directorial works",
+    "The film is a drama",
+    "Unrelated to any monster or creature feature"
+   ],
+   "links": [
+    "Pasquale-Festa-Campanile",
+    "The-Mask-of-the-Gorilla",
+    "The-Capture-of-Bigfoot"
+   ],
+   "sources": [
+    "p01",
+    "p03"
+   ]
+  },
+  "Pasquale-Festa-Campanile": {
+   "slug": "Pasquale-Festa-Campanile",
+   "title": "Pasquale Festa Campanile",
+   "type": "people",
+   "aliases": [
+    "Pasquale Festa Campanile"
+   ],
+   "tags": [
+    "film director",
+    "Italian cinema",
+    "Italian",
+    "screenwriter",
+    "novelist"
+   ],
+   "summary": "Italian film director born in Melfi",
+   "facts": [
+    "Directed The Gamecock (1964)",
+    "The Gamecock was one of his earlier directorial works",
+    "Was an Italian film director, screenwriter and novelist",
+    "Born on 28 July 1927 in Melfi, Italy",
+    "Died on 25 February 1986",
+    "Was a film director",
+    "Born in Melfi, Basilicata, southern Italy"
+   ],
+   "links": [
+    "The-Gamecock-film",
+    "Melfi"
+   ],
+   "sources": [
+    "p01",
+    "p03",
+    "p16"
+   ]
+  },
+  "Monster-a-Go-Go": {
+   "slug": "Monster-a-Go-Go",
+   "title": "Monster a Go-Go",
+   "type": "media",
+   "aliases": [],
+   "tags": [
+    "film",
+    "science fiction",
+    "horror",
+    "1965 film",
+    "American film"
+   ],
+   "summary": "1965 American science fiction horror film about an astronaut transformed into a monster",
+   "facts": [
+    "Released in 1965",
+    "American science fiction horror film",
+    "Directed by Bill Rebane and Herschell Gordon Lewis",
+    "Concerns an astronaut who returns to Earth transformed into a monster"
+   ],
+   "links": [
+    "Bill-Rebane",
+    "Herschell-Gordon-Lewis",
+    "The-Mask-of-the-Gorilla",
+    "Monster-from-the-Ocean-Floor"
+   ],
+   "sources": [
+    "p02"
+   ]
+  },
+  "Bill-Rebane": {
+   "slug": "Bill-Rebane",
+   "title": "Bill Rebane",
+   "type": "people",
+   "aliases": [
+    "Bill Rebane"
+   ],
+   "tags": [
+    "film director",
+    "American film director",
+    "Film director",
+    "Low-budget films"
+   ],
+   "summary": "American film director known for low-budget films who directed The Capture of Bigfoot",
+   "facts": [
+    "Co-directed the 1965 film Monster a Go-Go with Herschell Gordon Lewis",
+    "Born in 1937 in Riga, Latvia",
+    "American film director",
+    "Best known for low-budget films",
+    "Directed the 1979 horror film The Capture of Bigfoot"
+   ],
+   "links": [
+    "Monster-a-Go-Go",
+    "Herschell-Gordon-Lewis",
+    "The-Capture-of-Bigfoot"
+   ],
+   "sources": [
+    "p02",
+    "p05",
+    "p07"
+   ]
+  },
+  "Herschell-Gordon-Lewis": {
+   "slug": "Herschell-Gordon-Lewis",
+   "title": "Herschell Gordon Lewis",
+   "type": "people",
+   "aliases": [
+    "Herschell Gordon Lewis",
+    "Godfather of Gore"
+   ],
+   "tags": [
+    "film director",
+    "American filmmaker"
+   ],
+   "summary": "American filmmaker known as the Godfather of Gore who co-directed Monster a Go-Go",
+   "facts": [
+    "Co-directed the 1965 film Monster a Go-Go with Bill Rebane",
+    "American filmmaker often called the Godfather of Gore",
+    "Born on 15 June 1926 in Chicago, Illinois",
+    "Died on 26 September 2016"
+   ],
+   "links": [
+    "Monster-a-Go-Go",
+    "Bill-Rebane",
+    "Godfather-of-Gore"
+   ],
+   "sources": [
+    "p02",
+    "p04"
+   ]
+  },
+  "Melfi": {
+   "slug": "Melfi",
+   "title": "Melfi",
+   "type": "geography",
+   "aliases": [],
+   "tags": [
+    "Italy",
+    "town",
+    "birthplace",
+    "Basilicata",
+    "southern Italy"
+   ],
+   "summary": "Town in the Basilicata region of southern Italy, birthplace of Pasquale Festa Campanile",
+   "facts": [
+    "Located in Italy",
+    "Birthplace of Pasquale Festa Campanile",
+    "Located in the Basilicata region of southern Italy",
+    "Birthplace of the film director Pasquale Festa Campanile"
+   ],
+   "links": [
+    "Pasquale-Festa-Campanile"
+   ],
+   "sources": [
+    "p03",
+    "p16"
+   ]
+  },
+  "The-Mask-of-the-Gorilla": {
+   "slug": "The-Mask-of-the-Gorilla",
+   "title": "The Mask of the Gorilla",
+   "type": "media",
+   "aliases": [
+    "Le Gorille vous salue bien"
+   ],
+   "tags": [
+    "French film",
+    "crime film",
+    "1958 film"
+   ],
+   "summary": "1958 French crime film",
+   "facts": [
+    "Released in 1958",
+    "French crime film",
+    "Has no connection to Monster a Go-Go or The Gamecock",
+    "Features no astronauts"
+   ],
+   "links": [
+    "Monster-a-Go-Go",
+    "The-Gamecock-film"
+   ],
+   "sources": [
+    "p06"
+   ]
+  },
+  "The-Capture-of-Bigfoot": {
+   "slug": "The-Capture-of-Bigfoot",
+   "title": "The Capture of Bigfoot",
+   "type": "media",
+   "aliases": [],
+   "tags": [
+    "film",
+    "horror film",
+    "American film",
+    "1979 film"
+   ],
+   "summary": "1979 American horror film directed by Bill Rebane about a legendary snow creature",
+   "facts": [
+    "Released in 1979",
+    "American horror film",
+    "Directed by Bill Rebane",
+    "About a legendary snow creature",
+    "Unrelated to The Gamecock"
+   ],
+   "links": [
+    "Bill-Rebane",
+    "The-Gamecock-film"
+   ],
+   "sources": [
+    "p07"
+   ]
+  },
+  "Monster-from-the-Ocean-Floor": {
+   "slug": "Monster-from-the-Ocean-Floor",
+   "title": "Monster from the Ocean Floor",
+   "type": "media",
+   "aliases": [],
+   "tags": [
+    "1954 film",
+    "American film",
+    "science fiction film",
+    "monster film"
+   ],
+   "summary": "1954 American science fiction film with a distinct plot and crew",
+   "facts": [
+    "Released in 1954",
+    "American science fiction film",
+    "Often confused with other monster films of the era",
+    "Has a distinct plot and crew"
+   ],
+   "links": [
+    "Monster-a-Go-Go"
+   ],
+   "sources": [
+    "p08"
+   ]
+  },
+  "John-V-Prince-of-Anhalt-Zerbst": {
+   "slug": "John-V-Prince-of-Anhalt-Zerbst",
+   "title": "John V, Prince of Anhalt-Zerbst",
+   "type": "people",
+   "aliases": [
+    "John V of Anhalt-Zerbst",
+    "Johann V von Anhalt-Zerbst"
+   ],
+   "tags": [
+    "German nobility",
+    "House of Ascania",
+    "Prince"
+   ],
+   "summary": "German prince of the House of Ascania who ruled Anhalt-Zerbst",
+   "facts": [
+    "Was a German prince of the House of Ascania",
+    "Born on 4 September 1504 in Dessau",
+    "Died on 4 February 1551 in Zerbst",
+    "Son of Ernest I, Prince of Anhalt-Dessau",
+    "His eldest son was Karl I, Prince of Anhalt-Zerbst",
+    "Was the son of Margarete of Munsterberg",
+    "Married Margaret of Brandenburg, daughter of Joachim I Nestor, Elector of Brandenburg"
+   ],
+   "links": [
+    "Ernest-I-Prince-of-Anhalt-Dessau",
+    "Karl-I-Prince-of-Anhalt-Zerbst",
+    "House-of-Ascania",
+    "Anhalt-Zerbst",
+    "Margarete-of-Munsterberg",
+    "Margaret-of-Brandenburg",
+    "Joachim-I-Nestor-Elector-of-Brandenburg"
+   ],
+   "sources": [
+    "p09",
+    "p11",
+    "p12",
+    "p14"
+   ]
+  },
+  "Ernest-I-Prince-of-Anhalt-Dessau": {
+   "slug": "Ernest-I-Prince-of-Anhalt-Dessau",
+   "title": "Ernest I, Prince of Anhalt-Dessau",
+   "type": "people",
+   "aliases": [
+    "Ernest I of Anhalt-Dessau",
+    "Ernst I von Anhalt-Dessau"
+   ],
+   "tags": [
+    "German nobility",
+    "House of Ascania",
+    "Prince"
+   ],
+   "summary": "German prince of the House of Ascania and father of John V, Prince of Anhalt-Zerbst",
+   "facts": [
+    "Father of John V, Prince of Anhalt-Zerbst",
+    "Was a German prince of the House of Ascania",
+    "Died on 12 June 1516 in Dessau"
+   ],
+   "links": [
+    "John-V-Prince-of-Anhalt-Zerbst",
+    "House-of-Ascania"
+   ],
+   "sources": [
+    "p09",
+    "p10"
+   ]
+  },
+  "Karl-I-Prince-of-Anhalt-Zerbst": {
+   "slug": "Karl-I-Prince-of-Anhalt-Zerbst",
+   "title": "Karl I, Prince of Anhalt-Zerbst",
+   "type": "people",
+   "aliases": [
+    "Charles I of Anhalt-Zerbst",
+    "Karl I von Anhalt-Zerbst",
+    "Karl I of Anhalt-Zerbst",
+    "Charles I, Prince of Anhalt-Zerbst"
+   ],
+   "tags": [
+    "German nobility",
+    "House of Ascania",
+    "Prince"
+   ],
+   "summary": "German prince who succeeded to the principality of Anhalt-Zerbst as the eldest son of John V",
+   "facts": [
+    "Eldest son of John V, Prince of Anhalt-Zerbst",
+    "Was a German prince",
+    "Succeeded to the principality of Anhalt-Zerbst"
+   ],
+   "links": [
+    "John-V-Prince-of-Anhalt-Zerbst",
+    "House-of-Ascania",
+    "Anhalt-Zerbst"
+   ],
+   "sources": [
+    "p09",
+    "p11"
+   ]
+  },
+  "House-of-Ascania": {
+   "slug": "House-of-Ascania",
+   "title": "House of Ascania",
+   "type": "organizations",
+   "aliases": [
+    "Ascanian dynasty",
+    "Askanier",
+    "Ascanians",
+    "House of Ascanien"
+   ],
+   "tags": [
+    "German nobility",
+    "dynasty",
+    "noble dynasty",
+    "noble house"
+   ],
+   "summary": "A dynasty of German rulers whose members included the princes of Anhalt-Dessau and Anhalt-Zerbst",
+   "facts": [
+    "John V, Prince of Anhalt-Zerbst was a member of this house",
+    "Ernest I, Prince of Anhalt-Dessau was a member of this house",
+    "Karl I, Prince of Anhalt-Zerbst was a member of this house",
+    "Was a dynasty of German rulers",
+    "Its members included princes of Anhalt-Dessau",
+    "Its members included princes of Anhalt-Zerbst",
+    "Is a broad category and does not itself state individual birth or death dates"
+   ],
+   "links": [
+    "John-V-Prince-of-Anhalt-Zerbst",
+    "Ernest-I-Prince-of-Anhalt-Dessau",
+    "Karl-I-Prince-of-Anhalt-Zerbst",
+    "Anhalt-Zerbst"
+   ],
+   "sources": [
+    "p09",
+    "p10",
+    "p13"
+   ]
+  },
+  "Anhalt-Zerbst": {
+   "slug": "Anhalt-Zerbst",
+   "title": "Anhalt-Zerbst",
+   "type": "geography",
+   "aliases": [
+    "Principality of Anhalt-Zerbst"
+   ],
+   "tags": [
+    "principality",
+    "German state",
+    "House of Ascania"
+   ],
+   "summary": "German principality ruled by members of the House of Ascania",
+   "facts": [
+    "Karl I, Prince of Anhalt-Zerbst succeeded to this principality",
+    "Ruled by John V, Prince of Anhalt-Zerbst"
+   ],
+   "links": [
+    "Karl-I-Prince-of-Anhalt-Zerbst",
+    "John-V-Prince-of-Anhalt-Zerbst",
+    "House-of-Ascania"
+   ],
+   "sources": [
+    "p11"
+   ]
+  },
+  "Margarete-of-Munsterberg": {
+   "slug": "Margarete-of-Munsterberg",
+   "title": "Margarete of Munsterberg",
+   "type": "people",
+   "aliases": [
+    "Margarete von Munsterberg"
+   ],
+   "tags": [
+    "German nobility",
+    "House of Podiebrad"
+   ],
+   "summary": "German noblewoman, daughter of Henry I, Duke of Munsterberg-Oels, and mother of John V, Prince of Anhalt-Zerbst",
+   "facts": [
+    "Was the daughter of Henry I, Duke of Munsterberg-Oels",
+    "Was the mother of John V, Prince of Anhalt-Zerbst"
+   ],
+   "links": [
+    "Henry-I-Duke-of-Munsterberg-Oels",
+    "John-V-Prince-of-Anhalt-Zerbst"
+   ],
+   "sources": [
+    "p12"
+   ]
+  },
+  "Henry-I-Duke-of-Munsterberg-Oels": {
+   "slug": "Henry-I-Duke-of-Munsterberg-Oels",
+   "title": "Henry I, Duke of Munsterberg-Oels",
+   "type": "people",
+   "aliases": [
+    "Henry I of Munsterberg-Oels"
+   ],
+   "tags": [
+    "German nobility",
+    "Duke"
+   ],
+   "summary": "Duke of Munsterberg-Oels and father of Margarete of Munsterberg",
+   "facts": [
+    "Was Duke of Munsterberg-Oels",
+    "Father of Margarete of Munsterberg"
+   ],
+   "links": [
+    "Margarete-of-Munsterberg"
+   ],
+   "sources": [
+    "p12"
+   ]
+  },
+  "Joachim-I-Nestor-Elector-of-Brandenburg": {
+   "slug": "Joachim-I-Nestor-Elector-of-Brandenburg",
+   "title": "Joachim I Nestor, Elector of Brandenburg",
+   "type": "people",
+   "aliases": [
+    "Joachim I Nestor",
+    "Joachim I of Brandenburg"
+   ],
+   "tags": [
+    "German nobility",
+    "Elector of Brandenburg"
+   ],
+   "summary": "Elector of Brandenburg whose daughter married into the House of Anhalt-Zerbst",
+   "facts": [
+    "Was Elector of Brandenburg",
+    "His daughter Margaret of Brandenburg married John V, Prince of Anhalt-Zerbst"
+   ],
+   "links": [
+    "Margaret-of-Brandenburg",
+    "John-V-Prince-of-Anhalt-Zerbst"
+   ],
+   "sources": [
+    "p14"
+   ]
+  },
+  "Margaret-of-Brandenburg": {
+   "slug": "Margaret-of-Brandenburg",
+   "title": "Margaret of Brandenburg",
+   "type": "people",
+   "aliases": [
+    "Margaret of Brandenburg"
+   ],
+   "tags": [
+    "German nobility"
+   ],
+   "summary": "Daughter of Joachim I Nestor who married John V, Prince of Anhalt-Zerbst",
+   "facts": [
+    "Daughter of Joachim I Nestor, Elector of Brandenburg",
+    "Married John V, Prince of Anhalt-Zerbst"
+   ],
+   "links": [
+    "Joachim-I-Nestor-Elector-of-Brandenburg",
+    "John-V-Prince-of-Anhalt-Zerbst"
+   ],
+   "sources": [
+    "p14"
+   ]
+  },
+  "Godfather-of-Gore": {
+   "slug": "Godfather-of-Gore",
+   "title": "Godfather of Gore",
+   "type": "concepts",
+   "aliases": [
+    "The Godfather of Gore"
+   ],
+   "tags": [
+    "nickname",
+    "splatter film",
+    "horror cinema"
+   ],
+   "summary": "Nickname associated with Herschell Gordon Lewis for his splatter films",
+   "facts": [
+    "A nickname associated with Herschell Gordon Lewis for his splatter films"
+   ],
+   "links": [
+    "Herschell-Gordon-Lewis"
+   ],
+   "sources": [
+    "p15"
+   ]
+  }
+ },
+ "sources": {
+  "p01": {
+   "title": "The Gamecock (film)",
+   "article": "The Gamecock is a 1964 film directed by Pasquale Festa Campanile. It was one of his earlier directorial works. The film is a drama and is unrelated to any monster or creature feature.",
+   "digest": "The Gamecock is a 1964 drama film directed by Pasquale Festa Campanile, one of his earlier directorial works."
+  },
+  "p02": {
+   "title": "Monster a Go-Go",
+   "article": "Monster a Go-Go is a 1965 American science fiction horror film directed by Bill Rebane and Herschell Gordon Lewis. The film concerns an astronaut who returns to Earth transformed into a monster.",
+   "digest": "Monster a Go-Go is a 1965 American science fiction horror film, directed by Bill Rebane and Herschell Gordon Lewis, about an astronaut who returns to Earth transformed into a monster."
+  },
+  "p03": {
+   "title": "Pasquale Festa Campanile",
+   "article": "Pasquale Festa Campanile was an Italian film director, screenwriter and novelist. He was born on 28 July 1927 in Melfi, Italy, and died on 25 February 1986. He directed The Gamecock in 1964.",
+   "digest": "Pasquale Festa Campanile (1927\u20131986) was an Italian film director, screenwriter, and novelist, born in Melfi, whose directorial works include the 1964 film The Gamecock."
+  },
+  "p04": {
+   "title": "Herschell Gordon Lewis",
+   "article": "Herschell Gordon Lewis was an American filmmaker often called the Godfather of Gore. He was born on 15 June 1926 in Chicago, Illinois, and died on 26 September 2016. He co-directed Monster a Go-Go.",
+   "digest": "Herschell Gordon Lewis (1926\u20132016) was an American filmmaker known as the \"Godfather of Gore\" and co-director of *Monster a Go-Go*."
+  },
+  "p05": {
+   "title": "Bill Rebane",
+   "article": "Bill Rebane is an American film director born in 1937 in Riga, Latvia. He is best known for low-budget films and co-directed Monster a Go-Go with Herschell Gordon Lewis.",
+   "digest": "Bill Rebane is a Latvian-born American film director (born 1937) known for low-budget films, including the co-directed movie Monster a Go-Go."
+  },
+  "p06": {
+   "title": "The Mask of the Gorilla",
+   "article": "The Mask of the Gorilla is a 1958 French crime film. It has no connection to Monster a Go-Go or The Gamecock and features no astronauts.",
+   "digest": "The Mask of the Gorilla is a 1958 French crime film, unrelated to Monster a Go-Go or The Gamecock and containing no astronauts."
+  },
+  "p07": {
+   "title": "The Capture of Bigfoot",
+   "article": "The Capture of Bigfoot is a 1979 American horror film directed by Bill Rebane. It is about a legendary snow creature and is unrelated to The Gamecock.",
+   "digest": "The Capture of Bigfoot is a 1979 American horror film directed by Bill Rebane about a legendary snow creature."
+  },
+  "p08": {
+   "title": "Monster from the Ocean Floor",
+   "article": "Monster from the Ocean Floor is a 1954 American science fiction film. It is often confused with other monster films of the era but has a distinct plot and crew.",
+   "digest": "Monster from the Ocean Floor is a distinct 1954 American science fiction film, often confused with other monster films of that era."
+  },
+  "p09": {
+   "title": "John V, Prince of Anhalt-Zerbst",
+   "article": "John V, Prince of Anhalt-Zerbst was a German prince of the House of Ascania. He was born on 4 September 1504 in Dessau and died on 4 February 1551 in Zerbst. He was the son of Ernest I, Prince of Anhalt-Dessau. His eldest son was Karl I, Prince of Anhalt-Zerbst.",
+   "digest": "John V, Prince of Anhalt-Zerbst (1504\u20131551) was a German prince of the House of Ascania, son of Ernest I of Anhalt-Dessau and father of Karl I of Anhalt-Zerbst."
+  },
+  "p10": {
+   "title": "Ernest I, Prince of Anhalt-Dessau",
+   "article": "Ernest I, Prince of Anhalt-Dessau was a German prince of the House of Ascania. He died on 12 June 1516 in Dessau. He was the father of John V, Prince of Anhalt-Zerbst.",
+   "digest": "Ernest I, Prince of Anhalt-Dessau, was a German prince of the House of Ascania who died on 12 June 1516 in Dessau and was the father of John V, Prince of Anhalt-Zerbst."
+  },
+  "p11": {
+   "title": "Karl I, Prince of Anhalt-Zerbst",
+   "article": "Karl I, Prince of Anhalt-Zerbst was a German prince. He was the eldest son of John V, Prince of Anhalt-Zerbst and succeeded to the principality of Anhalt-Zerbst.",
+   "digest": "Karl I was a German prince and the eldest son of John V, Prince of Anhalt-Zerbst, whom he succeeded as ruler of the principality of Anhalt-Zerbst."
+  },
+  "p12": {
+   "title": "Margarete of Munsterberg",
+   "article": "Margarete of Munsterberg was the daughter of Henry I, Duke of Munsterberg-Oels. She was the mother of John V, Prince of Anhalt-Zerbst. This page is a distractor for questions about John V's father.",
+   "digest": "Margarete of Munsterberg, daughter of Henry I, Duke of Munsterberg-Oels, was the mother of John V, Prince of Anhalt-Zerbst."
+  },
+  "p13": {
+   "title": "House of Ascania",
+   "article": "The House of Ascania was a dynasty of German rulers. Members included princes of Anhalt-Dessau and Anhalt-Zerbst. It is a broad category page and does not by itself state individual birth or death dates.",
+   "digest": "The House of Ascania was a German ruling dynasty whose members included the princes of Anhalt-Dessau and Anhalt-Zerbst."
+  },
+  "p14": {
+   "title": "Joachim I Nestor, Elector of Brandenburg",
+   "article": "Joachim I Nestor was Elector of Brandenburg. His daughter Margaret of Brandenburg married John V, Prince of Anhalt-Zerbst. He is unrelated to the film questions.",
+   "digest": "This passage identifies Joachim I Nestor as Elector of Brandenburg, noting that his daughter Margaret married John V, Prince of Anhalt-Zerbst, and states he is unrelated to the film questions."
+  },
+  "p15": {
+   "title": "Godfather of Gore",
+   "article": "The Godfather of Gore is a nickname associated with Herschell Gordon Lewis for his splatter films. This page is about the nickname and does not itself list birth dates.",
+   "digest": "This passage explains that \"Godfather of Gore\" is a nickname for filmmaker Herschell Gordon Lewis, known for his splatter films, and notes the page does not contain birth date information."
+  },
+  "p16": {
+   "title": "Melfi",
+   "article": "Melfi is a town in the Basilicata region of southern Italy. It is the birthplace of the film director Pasquale Festa Campanile. This page is a geographic distractor.",
+   "digest": "Melfi is a town in the Basilicata region of southern Italy, notable as the birthplace of film director Pasquale Festa Campanile."
+  }
+ }
+}
