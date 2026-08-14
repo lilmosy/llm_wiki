@@ -1,0 +1,286 @@
+[
+ {
+  "id": "m1",
+  "question": "Who founded the company that distributed the film UHF?",
+  "answer": "Mike Medavoy",
+  "answer_aliases": [],
+  "hop": 2,
+  "type": "sequential_chain",
+  "musique_shape": "2hop",
+  "context_pids": [
+   "m001",
+   "m002",
+   "m003",
+   "m004",
+   "m005",
+   "m006",
+   "m007",
+   "m008",
+   "m009",
+   "m010",
+   "m011",
+   "m012",
+   "m013",
+   "m014",
+   "m015",
+   "m016",
+   "m017",
+   "m018",
+   "m019",
+   "m020"
+  ],
+  "gold_pids": [
+   "m007",
+   "m011"
+  ],
+  "distractor_pids": [
+   "m001",
+   "m002",
+   "m003",
+   "m004",
+   "m005",
+   "m006",
+   "m008",
+   "m009",
+   "m010",
+   "m012",
+   "m013",
+   "m014",
+   "m015",
+   "m016",
+   "m017",
+   "m018",
+   "m019",
+   "m020"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "m011",
+    "title": "UHF (film)",
+    "paragraph_idx": 10
+   },
+   {
+    "pid": "m007",
+    "title": "Mike Medavoy",
+    "paragraph_idx": 6
+   }
+  ],
+  "question_decomposition": [
+   {
+    "id": 252311,
+    "question": "UHF >> distributed by",
+    "answer": "Orion Pictures",
+    "paragraph_support_idx": 10
+   },
+   {
+    "id": 366220,
+    "question": "#1 >> founded by",
+    "answer": "Mike Medavoy",
+    "paragraph_support_idx": 6
+   }
+  ],
+  "src_id": "2hop__252311_366220",
+  "note": "Official MuSiQue-Ans dev; 2/3/4-hop sequential-chain teaching slice"
+ },
+ {
+  "id": "m2",
+  "question": "What is the birthplace of the man who does the voice of Stan on the series that includes the episode The Hobbit?",
+  "answer": "Denver",
+  "answer_aliases": [
+   "Denver, Colorado"
+  ],
+  "hop": 3,
+  "type": "sequential_chain",
+  "musique_shape": "3hop1",
+  "context_pids": [
+   "m021",
+   "m022",
+   "m023",
+   "m024",
+   "m025",
+   "m026",
+   "m027",
+   "m028",
+   "m029",
+   "m030",
+   "m031",
+   "m032",
+   "m033",
+   "m034",
+   "m035",
+   "m036",
+   "m037",
+   "m038",
+   "m039",
+   "m040"
+  ],
+  "gold_pids": [
+   "m021",
+   "m028",
+   "m030"
+  ],
+  "distractor_pids": [
+   "m022",
+   "m023",
+   "m024",
+   "m025",
+   "m026",
+   "m027",
+   "m029",
+   "m031",
+   "m032",
+   "m033",
+   "m034",
+   "m035",
+   "m036",
+   "m037",
+   "m038",
+   "m039",
+   "m040"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "m021",
+    "title": "The Hobbit (South Park)",
+    "paragraph_idx": 0
+   },
+   {
+    "pid": "m028",
+    "title": "List of South Park cast members",
+    "paragraph_idx": 7
+   },
+   {
+    "pid": "m030",
+    "title": "Dian Bachar",
+    "paragraph_idx": 9
+   }
+  ],
+  "question_decomposition": [
+   {
+    "id": 454441,
+    "question": "The Hobbit >> part of the series",
+    "answer": "South Park",
+    "paragraph_support_idx": 0
+   },
+   {
+    "id": 55349,
+    "question": "who does the voice of stan on #1",
+    "answer": "Trey Parker",
+    "paragraph_support_idx": 7
+   },
+   {
+    "id": 651302,
+    "question": "#2 >> place of birth",
+    "answer": "Denver",
+    "paragraph_support_idx": 9
+   }
+  ],
+  "src_id": "3hop1__454441_55349_651302",
+  "note": "Official MuSiQue-Ans dev; 2/3/4-hop sequential-chain teaching slice"
+ },
+ {
+  "id": "m3",
+  "question": "What treaty ceded territory to the US extending west to the body of water by the city where the designer of Southeast Library died?",
+  "answer": "Treaty of Paris",
+  "answer_aliases": [],
+  "hop": 4,
+  "type": "sequential_chain",
+  "musique_shape": "4hop1",
+  "context_pids": [
+   "m041",
+   "m042",
+   "m043",
+   "m044",
+   "m045",
+   "m046",
+   "m047",
+   "m048",
+   "m049",
+   "m050",
+   "m051",
+   "m052",
+   "m053",
+   "m054",
+   "m055",
+   "m056",
+   "m057",
+   "m058",
+   "m059",
+   "m060"
+  ],
+  "gold_pids": [
+   "m042",
+   "m045",
+   "m052",
+   "m058"
+  ],
+  "distractor_pids": [
+   "m041",
+   "m043",
+   "m044",
+   "m046",
+   "m047",
+   "m048",
+   "m049",
+   "m050",
+   "m051",
+   "m053",
+   "m054",
+   "m055",
+   "m056",
+   "m057",
+   "m059",
+   "m060"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "m045",
+    "title": "Southeast Library",
+    "paragraph_idx": 4
+   },
+   {
+    "pid": "m042",
+    "title": "Riverside Plaza",
+    "paragraph_idx": 1
+   },
+   {
+    "pid": "m052",
+    "title": "Minneapolis",
+    "paragraph_idx": 11
+   },
+   {
+    "pid": "m058",
+    "title": "Military history of the United States",
+    "paragraph_idx": 17
+   }
+  ],
+  "question_decomposition": [
+   {
+    "id": 94201,
+    "question": "The designer for Southeast Library was?",
+    "answer": "Ralph Rapson",
+    "paragraph_support_idx": 4
+   },
+   {
+    "id": 642284,
+    "question": "#1 >> place of death",
+    "answer": "Minneapolis",
+    "paragraph_support_idx": 1
+   },
+   {
+    "id": 131926,
+    "question": "Which is the body of water by #2 ?",
+    "answer": "Mississippi River",
+    "paragraph_support_idx": 11
+   },
+   {
+    "id": 13165,
+    "question": "What treaty ceded territory to the US extending west to #3 ?",
+    "answer": "Treaty of Paris",
+    "paragraph_support_idx": 17
+   }
+  ],
+  "src_id": "4hop1__94201_642284_131926_13165",
+  "note": "Official MuSiQue-Ans dev; 2/3/4-hop sequential-chain teaching slice"
+ }
+]

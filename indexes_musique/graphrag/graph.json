@@ -1,0 +1,3800 @@
+{
+ "nodes": [
+  {
+   "name": "SICRAL 1B",
+   "type": "other",
+   "descriptions": [
+    "Military communications satellite, dual-use spacecraft, designed to be operable for 13 years"
+   ]
+  },
+  {
+   "name": "Thales Alenia Space",
+   "type": "organization",
+   "descriptions": [
+    "Company that built SICRAL 1B"
+   ]
+  },
+  {
+   "name": "Italian Armed Forces",
+   "type": "organization",
+   "descriptions": [
+    "Military organization for which SICRAL 1B was built"
+   ]
+  },
+  {
+   "name": "Telespazio",
+   "type": "organization",
+   "descriptions": [
+    "Company that will use some of SICRAL 1B's transmission capacity"
+   ]
+  },
+  {
+   "name": "Italian defense ministry",
+   "type": "organization",
+   "descriptions": [
+    "Government ministry that will use some of SICRAL 1B's transmission capacity"
+   ]
+  },
+  {
+   "name": "NATO",
+   "type": "organization",
+   "descriptions": [
+    "Military alliance that will use some of SICRAL 1B's transmission capacity"
+   ]
+  },
+  {
+   "name": "Italsat 3000",
+   "type": "other",
+   "descriptions": [
+    "Satellite bus on which SICRAL 1B is based"
+   ]
+  },
+  {
+   "name": "Salix arbuscula",
+   "type": "other",
+   "descriptions": [
+    "The mountain willow, a low, much branched shrub growing to 0.7 metres"
+   ]
+  },
+  {
+   "name": "Northern Europe",
+   "type": "place",
+   "descriptions": [
+    "Region where Salix arbuscula has a limited distribution"
+   ]
+  },
+  {
+   "name": "Scandinavia",
+   "type": "place",
+   "descriptions": [
+    "Northern region from which the species' range extends eastwards to Siberia"
+   ]
+  },
+  {
+   "name": "Siberia",
+   "type": "place",
+   "descriptions": [
+    "Eastern limit of the species' distribution range"
+   ]
+  },
+  {
+   "name": "Scotland",
+   "type": "place",
+   "descriptions": [
+    "Country where the species can be found on damp rocky mountain slopes and ledges"
+   ]
+  },
+  {
+   "name": "Perthshire",
+   "type": "place",
+   "descriptions": [
+    "Scottish area where the species is rarely found outside of"
+   ]
+  },
+  {
+   "name": "Argyll",
+   "type": "place",
+   "descriptions": [
+    "Scottish area where the species is rarely found outside of"
+   ]
+  },
+  {
+   "name": "GeminiJets",
+   "type": "organization",
+   "descriptions": [
+    "Diecast model airplane manufacturer based in Las Vegas, Nevada, United States, founded in 1998 under the name SkyJets"
+   ]
+  },
+  {
+   "name": "Las Vegas",
+   "type": "place",
+   "descriptions": [
+    "City in Nevada, United States, where GeminiJets is based"
+   ]
+  },
+  {
+   "name": "Nevada",
+   "type": "place",
+   "descriptions": [
+    "U.S. state where Las Vegas is located"
+   ]
+  },
+  {
+   "name": "United States",
+   "type": "place",
+   "descriptions": [
+    "Country where GeminiJets is based",
+    "Country where Minneapolis, Minnesota is located",
+    "Country where the KVLY-TV mast is located",
+    "Country where Minneapolis is located",
+    "Country on whose west coast Stinson Beach is situated",
+    "Nation that received ceded lands and fought wars with American Indian tribes",
+    "Country where West Virginia is located"
+   ]
+  },
+  {
+   "name": "SkyJets",
+   "type": "organization",
+   "descriptions": [
+    "Original name of GeminiJets when founded in 1998"
+   ]
+  },
+  {
+   "name": "ADI (Airliners Distributing Inc.)",
+   "type": "organization",
+   "descriptions": [
+    "Founding company holding production licenses for the GeminiJets product line, from airlines and aircraft manufacturers"
+   ]
+  },
+  {
+   "name": "Boeing",
+   "type": "organization",
+   "descriptions": [
+    "Aircraft manufacturer that licenses production to ADI"
+   ]
+  },
+  {
+   "name": "Airbus",
+   "type": "organization",
+   "descriptions": [
+    "Aircraft manufacturer that licenses production to ADI"
+   ]
+  },
+  {
+   "name": "McDonnell Douglas",
+   "type": "organization",
+   "descriptions": [
+    "Aircraft manufacturer that licenses production to ADI"
+   ]
+  },
+  {
+   "name": "Embraer",
+   "type": "organization",
+   "descriptions": [
+    "Aircraft manufacturer that licenses production to ADI"
+   ]
+  },
+  {
+   "name": "Videodrome",
+   "type": "film",
+   "descriptions": [
+    "1983 Canadian science fiction body horror film"
+   ]
+  },
+  {
+   "name": "David Cronenberg",
+   "type": "person",
+   "descriptions": [
+    "Writer and director of Videodrome"
+   ]
+  },
+  {
+   "name": "James Woods",
+   "type": "person",
+   "descriptions": [
+    "Actor starring in Videodrome"
+   ]
+  },
+  {
+   "name": "Sonja Smits",
+   "type": "person",
+   "descriptions": [
+    "Actress starring in Videodrome"
+   ]
+  },
+  {
+   "name": "Deborah Harry",
+   "type": "person",
+   "descriptions": [
+    "Actress starring in Videodrome"
+   ]
+  },
+  {
+   "name": "Toronto",
+   "type": "place",
+   "descriptions": [
+    "City where Videodrome is set, during the early 1980s",
+    "City in Ontario, Canada, headquarters location of Marketwired"
+   ]
+  },
+  {
+   "name": "Le Mauricien",
+   "type": "other",
+   "descriptions": [
+    "French-language newspaper based and distributed in Mauritius, founded in 1908, released daily, one of the most read in Mauritius, independent newspaper"
+   ]
+  },
+  {
+   "name": "Mauritius",
+   "type": "place",
+   "descriptions": [
+    "Country where Le Mauricien is based and distributed"
+   ]
+  },
+  {
+   "name": "Le Mauricien Ltd.",
+   "type": "organization",
+   "descriptions": [
+    "Publisher of Le Mauricien and other publications"
+   ]
+  },
+  {
+   "name": "Week-End",
+   "type": "other",
+   "descriptions": [
+    "Publication published by Le Mauricien Ltd."
+   ]
+  },
+  {
+   "name": "Week-End Scope",
+   "type": "other",
+   "descriptions": [
+    "Publication published by Le Mauricien Ltd."
+   ]
+  },
+  {
+   "name": "Turf Magazine",
+   "type": "other",
+   "descriptions": [
+    "Publication published by Le Mauricien Ltd."
+   ]
+  },
+  {
+   "name": "Mike Medavoy",
+   "type": "person",
+   "descriptions": [
+    "Morris Mike Medavoy, born January 21, 1941, American film producer and executive"
+   ]
+  },
+  {
+   "name": "Orion Pictures",
+   "type": "organization",
+   "descriptions": [
+    "Film studio co-founded in 1978",
+    "Film production company that financed UHF after cost assurances"
+   ]
+  },
+  {
+   "name": "TriStar Pictures",
+   "type": "organization",
+   "descriptions": [
+    "Film studio where Medavoy was former chairman"
+   ]
+  },
+  {
+   "name": "United Artists",
+   "type": "organization",
+   "descriptions": [
+    "Film studio where Medavoy was head of production from 1974 to 1978"
+   ]
+  },
+  {
+   "name": "Phoenix Pictures",
+   "type": "organization",
+   "descriptions": [
+    "Film company where Medavoy is current chairman and CEO"
+   ]
+  },
+  {
+   "name": "Three Gut Records",
+   "type": "organization",
+   "descriptions": [
+    "Independent record label based in Guelph, Ontario, Canada, founded in 1999"
+   ]
+  },
+  {
+   "name": "Guelph, Ontario",
+   "type": "place",
+   "descriptions": [
+    "City in Canada where Three Gut Records was based"
+   ]
+  },
+  {
+   "name": "Canada",
+   "type": "place",
+   "descriptions": [
+    "Country where Guelph, Ontario is located",
+    "Country where Marketwired is headquartered"
+   ]
+  },
+  {
+   "name": "Lisa Moran",
+   "type": "person",
+   "descriptions": [
+    "Co-founder of Three Gut Records in 1999"
+   ]
+  },
+  {
+   "name": "Tyler Clarke Burke",
+   "type": "person",
+   "descriptions": [
+    "Co-founder of Three Gut Records in 1999"
+   ]
+  },
+  {
+   "name": "Constantines",
+   "type": "organization",
+   "descriptions": [
+    "Canadian band whose self-titled 2001 release on Three Gut Records became a breakout success"
+   ]
+  },
+  {
+   "name": "Outside Music",
+   "type": "organization",
+   "descriptions": [
+    "Distributor of Three Gut Records releases"
+   ]
+  },
+  {
+   "name": "SModcast Pictures",
+   "type": "organization",
+   "descriptions": [
+    "American film distribution company and film/television production company founded by Kevin Smith in 2011"
+   ]
+  },
+  {
+   "name": "Kevin Smith",
+   "type": "person",
+   "descriptions": [
+    "Founder of SModcast Pictures who announced release plans at the 2011 Sundance Film Festival"
+   ]
+  },
+  {
+   "name": "2011 Sundance Film Festival",
+   "type": "other",
+   "descriptions": [
+    "Film festival event in 2011 where Kevin Smith made his announcement"
+   ]
+  },
+  {
+   "name": "Red State",
+   "type": "film",
+   "descriptions": [
+    "Kevin Smith's movie released via touring instead of traditional distribution"
+   ]
+  },
+  {
+   "name": "UHF (film)",
+   "type": "film",
+   "descriptions": [
+    "Film written by Yankovic and Levey, filmed around Tulsa, Oklahoma"
+   ]
+  },
+  {
+   "name": "Yankovic",
+   "type": "person",
+   "descriptions": [
+    "Musician and co-writer of UHF who applied parody and comedy to film"
+   ]
+  },
+  {
+   "name": "Levey",
+   "type": "person",
+   "descriptions": [
+    "Co-writer of UHF with Yankovic"
+   ]
+  },
+  {
+   "name": "George",
+   "type": "person",
+   "descriptions": [
+    "Character in UHF portrayed as a straight man with a vivid imagination"
+   ]
+  },
+  {
+   "name": "Tulsa, Oklahoma",
+   "type": "place",
+   "descriptions": [
+    "Location where principal filming of UHF took place"
+   ]
+  },
+  {
+   "name": "Dallas, Texas",
+   "type": "place",
+   "descriptions": [
+    "Area from which many extras for UHF were drawn"
+   ]
+  },
+  {
+   "name": "Sleaszy Rider Records",
+   "type": "organization",
+   "descriptions": [
+    "Independent record label founded in 1999, headquartered in Greece"
+   ]
+  },
+  {
+   "name": "Tolis G. Palantzas",
+   "type": "person",
+   "descriptions": [
+    "Founder of Sleaszy Rider Records in 1999"
+   ]
+  },
+  {
+   "name": "Greece",
+   "type": "place",
+   "descriptions": [
+    "Location of Sleaszy Rider Records' head office"
+   ]
+  },
+  {
+   "name": "Sony Music/EMI",
+   "type": "organization",
+   "descriptions": [
+    "Distributor of Sleaszy Rider Records mainly in Europe"
+   ]
+  },
+  {
+   "name": "Roadrunner Records",
+   "type": "organization",
+   "descriptions": [
+    "Label whose releases are distributed in Greece by Sleaszy Rider Records"
+   ]
+  },
+  {
+   "name": "SPV",
+   "type": "organization",
+   "descriptions": [
+    "Label whose releases are distributed in Greece by Sleaszy Rider Records"
+   ]
+  },
+  {
+   "name": "Pagan Records",
+   "type": "organization",
+   "descriptions": [
+    "Label whose releases are distributed in Greece by Sleaszy Rider Records"
+   ]
+  },
+  {
+   "name": "Common nightingale",
+   "type": "other",
+   "descriptions": [
+    "Migratory insectivorous bird species that breeds in Europe and south-west Asia and winters in sub-Saharan Africa"
+   ]
+  },
+  {
+   "name": "Europe",
+   "type": "place",
+   "descriptions": [
+    "Continent where the common nightingale breeds in forest and scrub habitats"
+   ]
+  },
+  {
+   "name": "south-west Asia",
+   "type": "place",
+   "descriptions": [
+    "Region where the common nightingale breeds in forest and scrub habitats"
+   ]
+  },
+  {
+   "name": "sub-Saharan Africa",
+   "type": "place",
+   "descriptions": [
+    "Region where the common nightingale winters"
+   ]
+  },
+  {
+   "name": "Americas",
+   "type": "place",
+   "descriptions": [
+    "Continents where the common nightingale is not naturally found"
+   ]
+  },
+  {
+   "name": "thrush nightingale",
+   "type": "other",
+   "descriptions": [
+    "Closely related bird species, Luscinia luscinia, with a more northerly distribution than the common nightingale"
+   ]
+  },
+  {
+   "name": "Germany",
+   "type": "place",
+   "descriptions": [
+    "Country where research on nightingale breeding habitat was conducted"
+   ]
+  },
+  {
+   "name": "John Kirtland",
+   "type": "person",
+   "descriptions": [
+    "Co-founded Kirtland Records in 2003"
+   ]
+  },
+  {
+   "name": "Jenny Kirtland",
+   "type": "person",
+   "descriptions": [
+    "The Polyphonic Spree choir member, co-founded Kirtland Records with her husband"
+   ]
+  },
+  {
+   "name": "Kirtland Records",
+   "type": "organization",
+   "descriptions": [
+    "Record label founded in 2003, distributed by RED Distribution, home to several Texas-based indie bands"
+   ]
+  },
+  {
+   "name": "RED Distribution",
+   "type": "organization",
+   "descriptions": [
+    "National distributor secured by Kirtland Records via Bush back catalog rights"
+   ]
+  },
+  {
+   "name": "Bush",
+   "type": "organization",
+   "descriptions": [
+    "Band whose back catalog rights were leveraged to secure distribution deal"
+   ]
+  },
+  {
+   "name": "Burden Brothers",
+   "type": "organization",
+   "descriptions": [
+    "Texas-based indie band signed to Kirtland Records"
+   ]
+  },
+  {
+   "name": "The Polyphonic Spree",
+   "type": "organization",
+   "descriptions": [
+    "Texas-based indie band signed to Kirtland Records"
+   ]
+  },
+  {
+   "name": "Toadies",
+   "type": "organization",
+   "descriptions": [
+    "Texas-based indie band signed to Kirtland Records"
+   ]
+  },
+  {
+   "name": "The Vanished",
+   "type": "organization",
+   "descriptions": [
+    "Texas-based indie band signed to Kirtland Records"
+   ]
+  },
+  {
+   "name": "Sarah Jaffe",
+   "type": "person",
+   "descriptions": [
+    "Texas-based indie artist signed to Kirtland Records"
+   ]
+  },
+  {
+   "name": "WCCO-TV",
+   "type": "organization",
+   "descriptions": [
+    "CBS owned-and-operated television station, virtual channel 4 (UHF digital channel 32), licensed to Minneapolis, Minnesota"
+   ]
+  },
+  {
+   "name": "CBS Television Stations",
+   "type": "organization",
+   "descriptions": [
+    "Subsidiary of CBS Corporation that owns WCCO-TV"
+   ]
+  },
+  {
+   "name": "CBS Corporation",
+   "type": "organization",
+   "descriptions": [
+    "Parent company owning CBS Television Stations"
+   ]
+  },
+  {
+   "name": "Minneapolis, Minnesota",
+   "type": "place",
+   "descriptions": [
+    "City in the United States where WCCO-TV is licensed"
+   ]
+  },
+  {
+   "name": "Twin Cities television market",
+   "type": "place",
+   "descriptions": [
+    "Television market served by WCCO-TV"
+   ]
+  },
+  {
+   "name": "South 11th Street",
+   "type": "place",
+   "descriptions": [
+    "Street in downtown Minneapolis where WCCO-TV's studios are located"
+   ]
+  },
+  {
+   "name": "Nicollet Mall",
+   "type": "place",
+   "descriptions": [
+    "Street in downtown Minneapolis along which WCCO-TV's studios are located"
+   ]
+  },
+  {
+   "name": "downtown Minneapolis",
+   "type": "place",
+   "descriptions": [
+    "Area of Minneapolis where WCCO-TV's studios are located"
+   ]
+  },
+  {
+   "name": "Telefarm complex",
+   "type": "place",
+   "descriptions": [
+    "Location of WCCO-TV's transmitter"
+   ]
+  },
+  {
+   "name": "Shoreview, Minnesota",
+   "type": "place",
+   "descriptions": [
+    "City where the Telefarm complex and WCCO-TV's transmitter are located"
+   ]
+  },
+  {
+   "name": "Marketwired",
+   "type": "organization",
+   "descriptions": [
+    "Press release distribution service founded in 1993, incorporated in the U.S. in 1999"
+   ]
+  },
+  {
+   "name": "Ontario",
+   "type": "place",
+   "descriptions": [
+    "Province in Canada where Toronto is located"
+   ]
+  },
+  {
+   "name": "Associated Press",
+   "type": "organization",
+   "descriptions": [
+    "Traditional method/service used by Marketwired to distribute press releases"
+   ]
+  },
+  {
+   "name": "Bloomberg",
+   "type": "organization",
+   "descriptions": [
+    "Traditional method/service used by Marketwired to distribute press releases"
+   ]
+  },
+  {
+   "name": "Equity Music Group",
+   "type": "organization",
+   "descriptions": [
+    "American country music record label founded in 2003"
+   ]
+  },
+  {
+   "name": "Clint Black",
+   "type": "person",
+   "descriptions": [
+    "Singer who founded Equity Music Group in 2003"
+   ]
+  },
+  {
+   "name": "Koch Entertainment",
+   "type": "organization",
+   "descriptions": [
+    "Company that distributed Equity Music Group, now known as E1 Entertainment"
+   ]
+  },
+  {
+   "name": "E1 Entertainment",
+   "type": "organization",
+   "descriptions": [
+    "Current name of Koch Entertainment"
+   ]
+  },
+  {
+   "name": "KVLY-TV mast",
+   "type": "other",
+   "descriptions": [
+    "Guyed mast built in 1963, 628.8 m (2,063 ft) tall, used for VHF-UHF transmission; tallest mast in the world"
+   ]
+  },
+  {
+   "name": "Blanchard, North Dakota",
+   "type": "place",
+   "descriptions": [
+    "Location where the KVLY-TV mast is situated"
+   ]
+  },
+  {
+   "name": "Amblin Entertainment",
+   "type": "organization",
+   "descriptions": [
+    "American film production company founded in 1981"
+   ]
+  },
+  {
+   "name": "Steven Spielberg",
+   "type": "person",
+   "descriptions": [
+    "Director and producer, co-founder of Amblin Entertainment"
+   ]
+  },
+  {
+   "name": "Kathleen Kennedy",
+   "type": "person",
+   "descriptions": [
+    "Film producer, co-founder of Amblin Entertainment"
+   ]
+  },
+  {
+   "name": "Frank Marshall",
+   "type": "person",
+   "descriptions": [
+    "Film producer, co-founder of Amblin Entertainment"
+   ]
+  },
+  {
+   "name": "Universal Studios",
+   "type": "place",
+   "descriptions": [
+    "Studio lot where Amblin Entertainment's headquarters are located"
+   ]
+  },
+  {
+   "name": "Universal City, California",
+   "type": "place",
+   "descriptions": [
+    "Location of Universal Studios backlot"
+   ]
+  },
+  {
+   "name": "Amblin Partners",
+   "type": "organization",
+   "descriptions": [
+    "Company whose films are distributed under the Amblin Entertainment name"
+   ]
+  },
+  {
+   "name": "The Hobbit (South Park)",
+   "type": "other",
+   "descriptions": [
+    "Tenth and final episode of the seventeenth season of South Park, the 247th episode overall, premiered December 11, 2013"
+   ]
+  },
+  {
+   "name": "South Park",
+   "type": "other",
+   "descriptions": [
+    "American animated television series"
+   ]
+  },
+  {
+   "name": "Comedy Central",
+   "type": "organization",
+   "descriptions": [
+    "American television network that aired the episode"
+   ]
+  },
+  {
+   "name": "Wendy Testaburger",
+   "type": "person",
+   "descriptions": [
+    "Character who attempts to raise awareness of media's impact on body image"
+   ]
+  },
+  {
+   "name": "Kanye West",
+   "type": "person",
+   "descriptions": [
+    "Rapper who crusades to convince the world Kim Kardashian is not a hobbit"
+   ]
+  },
+  {
+   "name": "Kim Kardashian",
+   "type": "person",
+   "descriptions": [
+    "Kanye West's fianc\u00e9e, accused of being a hobbit in the episode's plot"
+   ]
+  },
+  {
+   "name": "Gamla stan metro station",
+   "type": "place",
+   "descriptions": [
+    "A station of the Stockholm metro located in Gamla stan, opened on 24 November 1957"
+   ]
+  },
+  {
+   "name": "Stockholm metro",
+   "type": "organization",
+   "descriptions": [
+    "The metro system serving Stockholm, which includes the Gamla stan station"
+   ]
+  },
+  {
+   "name": "Gamla stan",
+   "type": "place",
+   "descriptions": [
+    "District of Stockholm where the metro station is located"
+   ]
+  },
+  {
+   "name": "Red line",
+   "type": "other",
+   "descriptions": [
+    "One of the Stockholm metro lines serving Gamla stan metro station; first stretch opened 5 April 1964 between T-Centralen and Fru\u00e4ngen"
+   ]
+  },
+  {
+   "name": "Green line",
+   "type": "other",
+   "descriptions": [
+    "One of the Stockholm metro lines serving Gamla stan metro station; connected east and west parts via Slussen and H\u00f6torget"
+   ]
+  },
+  {
+   "name": "Slussen",
+   "type": "place",
+   "descriptions": [
+    "Location that was part of the 1957 connection forming the green line"
+   ]
+  },
+  {
+   "name": "H\u00f6torget",
+   "type": "place",
+   "descriptions": [
+    "Location that was part of the 1957 connection forming the green line"
+   ]
+  },
+  {
+   "name": "T-Centralen",
+   "type": "place",
+   "descriptions": [
+    "Starting point of the first stretch of the Red line opened on 5 April 1964"
+   ]
+  },
+  {
+   "name": "Fru\u00e4ngen",
+   "type": "place",
+   "descriptions": [
+    "Endpoint of the first stretch of the Red line opened on 5 April 1964"
+   ]
+  },
+  {
+   "name": "John Bell",
+   "type": "person",
+   "descriptions": [
+    "Scottish actor, born October 20, 1997"
+   ]
+  },
+  {
+   "name": "Hobbit film series",
+   "type": "film",
+   "descriptions": [
+    "Film series in which John Bell played Bain in two installments"
+   ]
+  },
+  {
+   "name": "Bain",
+   "type": "other",
+   "descriptions": [
+    "Character played by John Bell in the Hobbit film series"
+   ]
+  },
+  {
+   "name": "Battleship",
+   "type": "film",
+   "descriptions": [
+    "Film in which John Bell played Angus"
+   ]
+  },
+  {
+   "name": "Angus",
+   "type": "other",
+   "descriptions": [
+    "Character played by John Bell in Battleship"
+   ]
+  },
+  {
+   "name": "Wrath of the Titans",
+   "type": "film",
+   "descriptions": [
+    "Film in which John Bell played Helius"
+   ]
+  },
+  {
+   "name": "Helius",
+   "type": "other",
+   "descriptions": [
+    "Character played by John Bell in Wrath of the Titans"
+   ]
+  },
+  {
+   "name": "Tracy Beaker Returns",
+   "type": "film",
+   "descriptions": [
+    "Television series in which John Bell played Toby Coleman"
+   ]
+  },
+  {
+   "name": "Toby Coleman",
+   "type": "other",
+   "descriptions": [
+    "Character played by John Bell in Tracy Beaker Returns"
+   ]
+  },
+  {
+   "name": "Arnaud Joyet",
+   "type": "person",
+   "descriptions": [
+    "French singer, musician, comedian and theatre director, born 3 April 1974"
+   ]
+  },
+  {
+   "name": "Stan",
+   "type": "other",
+   "descriptions": [
+    "Character played by Arnaud Joyet",
+    "Main character whose relationship with Francine ends in this episode"
+   ]
+  },
+  {
+   "name": "Hero Corp",
+   "type": "other",
+   "descriptions": [
+    "Series in which Arnaud Joyet plays Stan"
+   ]
+  },
+  {
+   "name": "Manu Bennett",
+   "type": "person",
+   "descriptions": [
+    "Jonathan Manu Bennett, born 10 October 1969, New Zealand-Australian actor"
+   ]
+  },
+  {
+   "name": "Spartacus",
+   "type": "other",
+   "descriptions": [
+    "TV series in which Manu Bennett portrayed Crixus"
+   ]
+  },
+  {
+   "name": "Crixus",
+   "type": "other",
+   "descriptions": [
+    "Character portrayed by Manu Bennett in Spartacus"
+   ]
+  },
+  {
+   "name": "The Shannara Chronicles",
+   "type": "other",
+   "descriptions": [
+    "TV series in which Manu Bennett portrayed Allanon"
+   ]
+  },
+  {
+   "name": "Allanon",
+   "type": "other",
+   "descriptions": [
+    "Character portrayed by Manu Bennett in The Shannara Chronicles"
+   ]
+  },
+  {
+   "name": "Arrow",
+   "type": "other",
+   "descriptions": [
+    "TV series in which Manu Bennett portrayed Slade Wilson / Deathstroke"
+   ]
+  },
+  {
+   "name": "Slade Wilson / Deathstroke",
+   "type": "other",
+   "descriptions": [
+    "Character portrayed by Manu Bennett in Arrow"
+   ]
+  },
+  {
+   "name": "the Hobbit film trilogy",
+   "type": "film",
+   "descriptions": [
+    "Film trilogy in which Manu Bennett portrayed Azog the Defiler"
+   ]
+  },
+  {
+   "name": "Azog the Defiler",
+   "type": "other",
+   "descriptions": [
+    "Character portrayed by Manu Bennett in the Hobbit film trilogy"
+   ]
+  },
+  {
+   "name": "Buzz Lightyear",
+   "type": "other",
+   "descriptions": [
+    "Fictional character featured in the Toy Story film series, a spin-off movie, TV series, video games, and Disney Parks attractions."
+   ]
+  },
+  {
+   "name": "Tim Allen",
+   "type": "person",
+   "descriptions": [
+    "Voice actor who voiced Buzz Lightyear in the Toy Story film series and the Buzz Lightyear movie."
+   ]
+  },
+  {
+   "name": "Toy Story",
+   "type": "film",
+   "descriptions": [
+    "Film series in which Buzz Lightyear is a main character."
+   ]
+  },
+  {
+   "name": "Buzz Lightyear movie",
+   "type": "film",
+   "descriptions": [
+    "A standalone movie featuring the character Buzz Lightyear."
+   ]
+  },
+  {
+   "name": "Patrick Warburton",
+   "type": "person",
+   "descriptions": [
+    "Voice actor who provided Buzz Lightyear's voice for the TV series."
+   ]
+  },
+  {
+   "name": "TV series",
+   "type": "other",
+   "descriptions": [
+    "Television series featuring Buzz Lightyear, voiced by Patrick Warburton."
+   ]
+  },
+  {
+   "name": "Pat Fraley",
+   "type": "person",
+   "descriptions": [
+    "Voice actor who voiced Buzz Lightyear for video games and Disney Parks attractions."
+   ]
+  },
+  {
+   "name": "video games",
+   "type": "other",
+   "descriptions": [
+    "Video games featuring Buzz Lightyear, voiced by Pat Fraley."
+   ]
+  },
+  {
+   "name": "Disney Parks",
+   "type": "organization",
+   "descriptions": [
+    "Theme park attractions featuring Buzz Lightyear, voiced by Pat Fraley."
+   ]
+  },
+  {
+   "name": "Trey Parker",
+   "type": "person",
+   "descriptions": [
+    "Voice actor for South Park who voices multiple main and recurring characters"
+   ]
+  },
+  {
+   "name": "Stan Marsh",
+   "type": "person",
+   "descriptions": [
+    "Main character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Eric Cartman",
+   "type": "person",
+   "descriptions": [
+    "Main character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Randy Marsh",
+   "type": "person",
+   "descriptions": [
+    "Main character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Mr. Garrison",
+   "type": "person",
+   "descriptions": [
+    "Main character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Clyde Donovan",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Mr. Hankey",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Mr. Mackey",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Stephen Stotch",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Jimmy Valmer",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Timmy Burch",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Tuong Lu Kim",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Phillip",
+   "type": "person",
+   "descriptions": [
+    "Recurring character in South Park voiced by Trey Parker"
+   ]
+  },
+  {
+   "name": "Dog Star Man",
+   "type": "film",
+   "descriptions": [
+    "A series of short experimental films released from 1961 to 1964, comprising a prelude and four parts."
+   ]
+  },
+  {
+   "name": "Stan Brakhage",
+   "type": "person",
+   "descriptions": [
+    "Director of the Dog Star Man film series."
+   ]
+  },
+  {
+   "name": "Jane Wodening",
+   "type": "person",
+   "descriptions": [
+    "Featured performer in the Dog Star Man film series."
+   ]
+  },
+  {
+   "name": "Steve Smith (American Dad!)",
+   "type": "other",
+   "descriptions": [
+    "Steven Anita 'Steve' Smith, a fictional character in the animated television series American Dad!"
+   ]
+  },
+  {
+   "name": "American Dad!",
+   "type": "other",
+   "descriptions": [
+    "Animated television series featuring Steve Smith as one of six main characters",
+    "American animated television series"
+   ]
+  },
+  {
+   "name": "Scott Grimes",
+   "type": "person",
+   "descriptions": [
+    "Voice actor who voices Steve Smith"
+   ]
+  },
+  {
+   "name": "Stan Smith",
+   "type": "person",
+   "descriptions": [
+    "Steve Smith's father"
+   ]
+  },
+  {
+   "name": "Francine Smith",
+   "type": "person",
+   "descriptions": [
+    "Steve Smith's mother"
+   ]
+  },
+  {
+   "name": "Hayley",
+   "type": "person",
+   "descriptions": [
+    "Steve Smith's older sister",
+    "Character raptured along with Steve in this episode"
+   ]
+  },
+  {
+   "name": "Rapture's Delight",
+   "type": "other",
+   "descriptions": [
+    "Ninth episode of the sixth season of American Dad!, aired December 13, 2009"
+   ]
+  },
+  {
+   "name": "Fox",
+   "type": "organization",
+   "descriptions": [
+    "American television network that aired the episode"
+   ]
+  },
+  {
+   "name": "Francine",
+   "type": "person",
+   "descriptions": [
+    "Stan's wife who befriends Jesus and becomes his bride"
+   ]
+  },
+  {
+   "name": "Steve",
+   "type": "person",
+   "descriptions": [
+    "Character raptured along with Hayley in this episode"
+   ]
+  },
+  {
+   "name": "Jesus",
+   "type": "person",
+   "descriptions": [
+    "Man Francine befriends and later marries, revealed to be Jesus"
+   ]
+  },
+  {
+   "name": "Aidan Turner",
+   "type": "person",
+   "descriptions": [
+    "Irish actor born 19 June 1983"
+   ]
+  },
+  {
+   "name": "The Hobbit",
+   "type": "film",
+   "descriptions": [
+    "Three-part fantasy film"
+   ]
+  },
+  {
+   "name": "K\u00edli",
+   "type": "other",
+   "descriptions": [
+    "Character played by Aidan Turner in The Hobbit"
+   ]
+  },
+  {
+   "name": "Ross Poldark",
+   "type": "other",
+   "descriptions": [
+    "Character played by Aidan Turner in the 2015 BBC adaptation of The Poldark Novels"
+   ]
+  },
+  {
+   "name": "The Poldark Novels",
+   "type": "other",
+   "descriptions": [
+    "Novel series by Winston Graham adapted into a 2015 BBC series"
+   ]
+  },
+  {
+   "name": "Winston Graham",
+   "type": "person",
+   "descriptions": [
+    "Author of The Poldark Novels"
+   ]
+  },
+  {
+   "name": "BBC",
+   "type": "organization",
+   "descriptions": [
+    "British broadcasting organization that produced the 2015 Poldark adaptation"
+   ]
+  },
+  {
+   "name": "Dante Gabriel Rossetti",
+   "type": "other",
+   "descriptions": [
+    "Character played by Aidan Turner in Desperate Romantics"
+   ]
+  },
+  {
+   "name": "Desperate Romantics",
+   "type": "other",
+   "descriptions": [
+    "Television series featuring Dante Gabriel Rossetti"
+   ]
+  },
+  {
+   "name": "Ruair\u00ed McGowan",
+   "type": "other",
+   "descriptions": [
+    "Character played by Aidan Turner in The Clinic"
+   ]
+  },
+  {
+   "name": "The Clinic",
+   "type": "other",
+   "descriptions": [
+    "Television series featuring Ruair\u00ed McGowan"
+   ]
+  },
+  {
+   "name": "John Mitchell",
+   "type": "other",
+   "descriptions": [
+    "Character played by Aidan Turner in Being Human"
+   ]
+  },
+  {
+   "name": "Being Human",
+   "type": "other",
+   "descriptions": [
+    "Supernatural drama television series featuring John Mitchell"
+   ]
+  },
+  {
+   "name": "Dwight D. Eisenhower",
+   "type": "person",
+   "descriptions": [
+    "American president, buried as a General of the Army after his death"
+   ]
+  },
+  {
+   "name": "Abilene, Kansas",
+   "type": "place",
+   "descriptions": [
+    "Town where Eisenhower's funeral train traveled and where he was interred"
+   ]
+  },
+  {
+   "name": "Eisenhower Presidential Library",
+   "type": "place",
+   "descriptions": [
+    "Location containing the chapel where Eisenhower was buried"
+   ]
+  },
+  {
+   "name": "Doud",
+   "type": "person",
+   "descriptions": [
+    "Eisenhower's son, who died at age 3 in 1921"
+   ]
+  },
+  {
+   "name": "Mamie",
+   "type": "person",
+   "descriptions": [
+    "Eisenhower's wife, buried next to him after her death in 1979"
+   ]
+  },
+  {
+   "name": "Army Distinguished Service Medal",
+   "type": "other",
+   "descriptions": [
+    "Military medal worn by Eisenhower's body, with three oak leaf clusters"
+   ]
+  },
+  {
+   "name": "Navy Distinguished Service Medal",
+   "type": "other",
+   "descriptions": [
+    "Military medal worn by Eisenhower's body"
+   ]
+  },
+  {
+   "name": "Legion of Merit",
+   "type": "other",
+   "descriptions": [
+    "Military medal worn by Eisenhower's body"
+   ]
+  },
+  {
+   "name": "Territorial waters",
+   "type": "other",
+   "descriptions": [
+    "Also called territorial sea; belt of coastal waters extending at most 12 nautical miles from the baseline of a coastal state"
+   ]
+  },
+  {
+   "name": "1982 United Nations Convention on the Law of the Sea",
+   "type": "other",
+   "descriptions": [
+    "International treaty from 1982 that defines territorial waters"
+   ]
+  },
+  {
+   "name": "12 nautical miles",
+   "type": "other",
+   "descriptions": [
+    "Maximum extent of territorial waters, equivalent to 22.2 km or 13.8 mi"
+   ]
+  },
+  {
+   "name": "baseline",
+   "type": "other",
+   "descriptions": [
+    "Usually the mean low-water mark of a coastal state, used to measure territorial waters"
+   ]
+  },
+  {
+   "name": "coastal state",
+   "type": "other",
+   "descriptions": [
+    "A state with a coastline from which territorial waters are measured"
+   ]
+  },
+  {
+   "name": "innocent passage",
+   "type": "other",
+   "descriptions": [
+    "Right allowing foreign civilian ships to pass through territorial waters"
+   ]
+  },
+  {
+   "name": "transit passage",
+   "type": "other",
+   "descriptions": [
+    "Right allowing passage for straits within territorial waters"
+   ]
+  },
+  {
+   "name": "airspace",
+   "type": "other",
+   "descriptions": [
+    "Space over the territorial sea that falls under the coastal state's sovereignty"
+   ]
+  },
+  {
+   "name": "seabed",
+   "type": "other",
+   "descriptions": [
+    "Area below the territorial sea that falls under the coastal state's sovereignty"
+   ]
+  },
+  {
+   "name": "maritime delimitation",
+   "type": "other",
+   "descriptions": [
+    "Term in international law for adjustment of territorial sea boundaries"
+   ]
+  },
+  {
+   "name": "Southeast Library",
+   "type": "organization",
+   "descriptions": [
+    "Library that opened in 1967, originally a credit union building"
+   ]
+  },
+  {
+   "name": "Ralph Rapson",
+   "type": "person",
+   "descriptions": [
+    "Master architect who designed the building"
+   ]
+  },
+  {
+   "name": "State Capitol Credit Union building",
+   "type": "place",
+   "descriptions": [
+    "Building at 1222 Fourth Street Southeast, purchased on December 29, 1966 to be converted into a library"
+   ]
+  },
+  {
+   "name": "1222 Fourth Street Southeast",
+   "type": "place",
+   "descriptions": [
+    "Address of the State Capitol Credit Union building"
+   ]
+  },
+  {
+   "name": "Falling Waters, West Virginia",
+   "type": "place",
+   "descriptions": [
+    "A census-designated place (CDP) on the Potomac River in Berkeley County, West Virginia; population 876 per 2010 census."
+   ]
+  },
+  {
+   "name": "Potomac River",
+   "type": "place",
+   "descriptions": [
+    "River along which Falling Waters is located."
+   ]
+  },
+  {
+   "name": "Berkeley County, West Virginia",
+   "type": "place",
+   "descriptions": [
+    "County in which Falling Waters is located."
+   ]
+  },
+  {
+   "name": "Williamsport Pike (US 11)",
+   "type": "place",
+   "descriptions": [
+    "Road/highway along which Falling Waters is located, north of Martinsburg."
+   ]
+  },
+  {
+   "name": "Martinsburg",
+   "type": "place",
+   "descriptions": [
+    "Nearby town located south of Falling Waters."
+   ]
+  },
+  {
+   "name": "2010 census",
+   "type": "other",
+   "descriptions": [
+    "U.S. census reporting Falling Waters' population as 876.",
+    "Census that recorded a population of 632 for Stinson Beach CDP",
+    "Census that recorded Justice's population as 412"
+   ]
+  },
+  {
+   "name": "Scientific American",
+   "type": "organization",
+   "descriptions": [
+    "Publication that in 1887 claimed the first U.S. railroad was built in Falling Waters in 1814."
+   ]
+  },
+  {
+   "name": "first U.S. railroad",
+   "type": "other",
+   "descriptions": [
+    "Railroad claimed by an 1887 Scientific American article to have been built in Falling Waters in 1814."
+   ]
+  },
+  {
+   "name": "Linden Hills Library",
+   "type": "organization",
+   "descriptions": [
+    "Public library in the Linden Hills neighborhood of southwest Minneapolis, Minnesota; opened 1911, listed on the National Register of Historic Places in 2000, renovated in 2002"
+   ]
+  },
+  {
+   "name": "Linden Hills",
+   "type": "place",
+   "descriptions": [
+    "Neighborhood in southwest Minneapolis, Minnesota, United States"
+   ]
+  },
+  {
+   "name": "Minneapolis",
+   "type": "place",
+   "descriptions": [
+    "City in Minnesota, United States"
+   ]
+  },
+  {
+   "name": "Minnesota",
+   "type": "place",
+   "descriptions": [
+    "State in the United States"
+   ]
+  },
+  {
+   "name": "Lake Harriet Commercial Club building",
+   "type": "place",
+   "descriptions": [
+    "Building whose first floor housed the library when it opened in 1911"
+   ]
+  },
+  {
+   "name": "Minneapolis Public Library",
+   "type": "organization",
+   "descriptions": [
+    "Public library system that oversaw the branch's move in 1931"
+   ]
+  },
+  {
+   "name": "Gratia Countryman",
+   "type": "person",
+   "descriptions": [
+    "Chief librarian of Minneapolis Public Library who led the 1931 move to a new building"
+   ]
+  },
+  {
+   "name": "2900 West 43rd Street",
+   "type": "place",
+   "descriptions": [
+    "Address of the library's own building, opened in 1931"
+   ]
+  },
+  {
+   "name": "Joseph Victor Vanderbilt",
+   "type": "person",
+   "descriptions": [
+    "Area resident who designed the library in the Tudor Revival style"
+   ]
+  },
+  {
+   "name": "Edith Frost",
+   "type": "person",
+   "descriptions": [
+    "Head librarian who served for over thirty years"
+   ]
+  },
+  {
+   "name": "National Register of Historic Places",
+   "type": "organization",
+   "descriptions": [
+    "Register that listed the library in 2000"
+   ]
+  },
+  {
+   "name": "Secchi disk",
+   "type": "other",
+   "descriptions": [
+    "A plain white circular disk created in 1865 used to measure water transparency or turbidity"
+   ]
+  },
+  {
+   "name": "Angelo Secchi",
+   "type": "person",
+   "descriptions": [
+    "Creator of the Secchi disk in 1865"
+   ]
+  },
+  {
+   "name": "Secchi depth",
+   "type": "other",
+   "descriptions": [
+    "The measure of depth at which the Secchi disk is no longer visible, related to water turbidity"
+   ]
+  },
+  {
+   "name": "Stinson Beach, California",
+   "type": "place",
+   "descriptions": [
+    "Census-designated place in Marin County, California, with a population of 632 at the 2010 census"
+   ]
+  },
+  {
+   "name": "Marin County, California",
+   "type": "place",
+   "descriptions": [
+    "County in California where Stinson Beach is located"
+   ]
+  },
+  {
+   "name": "Bolinas",
+   "type": "place",
+   "descriptions": [
+    "Location near Stinson Beach, which lies east-southeast of it"
+   ]
+  },
+  {
+   "name": "Clerke Rocks",
+   "type": "place",
+   "descriptions": [
+    "A group of small rocky islands southeast of South Georgia, extending from east to west"
+   ]
+  },
+  {
+   "name": "South Georgia",
+   "type": "place",
+   "descriptions": [
+    "Island near which the Clerke Rocks are located"
+   ]
+  },
+  {
+   "name": "The Office Boys",
+   "type": "place",
+   "descriptions": [
+    "Rocks at the northeastern end of the Clerke Rocks group"
+   ]
+  },
+  {
+   "name": "Nobby",
+   "type": "place",
+   "descriptions": [
+    "Rock at the southeastern end of the Clerke Rocks group, also called Islote Llamativo or Roca Notable in Spanish"
+   ]
+  },
+  {
+   "name": "South Georgia and the South Sandwich Islands",
+   "type": "place",
+   "descriptions": [
+    "British Overseas Territory that includes the Clerke Rocks"
+   ]
+  },
+  {
+   "name": "Argentina",
+   "type": "place",
+   "descriptions": [
+    "Country that claims the Clerke Rocks as part of Tierra del Fuego Province"
+   ]
+  },
+  {
+   "name": "Tierra del Fuego Province",
+   "type": "place",
+   "descriptions": [
+    "Argentine province under which Argentina claims the Clerke Rocks"
+   ]
+  },
+  {
+   "name": "Treaty of Paris",
+   "type": "other",
+   "descriptions": [
+    "Treaty ending the Revolution, in which Britain ceded lands to the United States"
+   ]
+  },
+  {
+   "name": "British",
+   "type": "organization",
+   "descriptions": [
+    "Colonial power that ceded lands between the Appalachians and Mississippi to the U.S."
+   ]
+  },
+  {
+   "name": "Appalachian Mountains",
+   "type": "place",
+   "descriptions": [
+    "Mountain range marking the eastern boundary of ceded lands"
+   ]
+  },
+  {
+   "name": "Mississippi River",
+   "type": "place",
+   "descriptions": [
+    "River marking the western boundary of ceded lands"
+   ]
+  },
+  {
+   "name": "Shawnee",
+   "type": "organization",
+   "descriptions": [
+    "Native American tribe living in the ceded lands"
+   ]
+  },
+  {
+   "name": "Cherokee",
+   "type": "organization",
+   "descriptions": [
+    "Native American tribe living in the ceded lands"
+   ]
+  },
+  {
+   "name": "Choctaw",
+   "type": "organization",
+   "descriptions": [
+    "Native American tribe living in the ceded lands"
+   ]
+  },
+  {
+   "name": "Northwest Territory",
+   "type": "place",
+   "descriptions": [
+    "Region where war broke out over land disputes"
+   ]
+  },
+  {
+   "name": "Battle of the Wabash",
+   "type": "other",
+   "descriptions": [
+    "1791 battle, the most severe defeat suffered by the U.S. at the hands of American Indians"
+   ]
+  },
+  {
+   "name": "President Washington",
+   "type": "person",
+   "descriptions": [
+    "U.S. President who dispatched a newly trained army to the Northwest Territory"
+   ]
+  },
+  {
+   "name": "Battle of Fallen Timbers",
+   "type": "other",
+   "descriptions": [
+    "1794 battle where U.S. forces decisively defeated the Indian confederacy"
+   ]
+  },
+  {
+   "name": "Indian confederacy",
+   "type": "organization",
+   "descriptions": [
+    "Coalition of American Indian tribes defeated at the Battle of Fallen Timbers"
+   ]
+  },
+  {
+   "name": "Justice, West Virginia",
+   "type": "place",
+   "descriptions": [
+    "Census-designated place in Mingo County, West Virginia, United States; population 412 as of 2010 census"
+   ]
+  },
+  {
+   "name": "Mingo County",
+   "type": "place",
+   "descriptions": [
+    "County in West Virginia where Justice is located"
+   ]
+  },
+  {
+   "name": "West Virginia",
+   "type": "place",
+   "descriptions": [
+    "U.S. state where Mingo County and Justice are located"
+   ]
+  },
+  {
+   "name": "U.S. Route 52",
+   "type": "other",
+   "descriptions": [
+    "Highway on which Justice is located"
+   ]
+  },
+  {
+   "name": "Gilbert",
+   "type": "place",
+   "descriptions": [
+    "Town near which Justice is located, to the northwest along U.S. Route 52"
+   ]
+  },
+  {
+   "name": "24851",
+   "type": "other",
+   "descriptions": [
+    "ZIP code of the post office in Justice"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "source": "SICRAL 1B",
+   "target": "Thales Alenia Space",
+   "description": "built by"
+  },
+  {
+   "source": "SICRAL 1B",
+   "target": "Italian Armed Forces",
+   "description": "built for"
+  },
+  {
+   "source": "SICRAL 1B",
+   "target": "Telespazio",
+   "description": "transmission capacity used by"
+  },
+  {
+   "source": "SICRAL 1B",
+   "target": "Italian defense ministry",
+   "description": "transmission capacity used by"
+  },
+  {
+   "source": "SICRAL 1B",
+   "target": "NATO",
+   "description": "transmission capacity used by"
+  },
+  {
+   "source": "SICRAL 1B",
+   "target": "Italsat 3000",
+   "description": "based on"
+  },
+  {
+   "source": "Salix arbuscula",
+   "target": "Northern Europe",
+   "description": "has a limited distribution in"
+  },
+  {
+   "source": "Salix arbuscula",
+   "target": "Scandinavia",
+   "description": "occurs from north Scandinavia eastwards"
+  },
+  {
+   "source": "Salix arbuscula",
+   "target": "Siberia",
+   "description": "range extends eastwards to Siberia"
+  },
+  {
+   "source": "Salix arbuscula",
+   "target": "Scotland",
+   "description": "can be found on damp rocky mountain slopes and ledges in"
+  },
+  {
+   "source": "Salix arbuscula",
+   "target": "Perthshire",
+   "description": "rarely found outside this area"
+  },
+  {
+   "source": "Salix arbuscula",
+   "target": "Argyll",
+   "description": "rarely found outside this area"
+  },
+  {
+   "source": "GeminiJets",
+   "target": "Las Vegas",
+   "description": "GeminiJets is based in Las Vegas"
+  },
+  {
+   "source": "GeminiJets",
+   "target": "SkyJets",
+   "description": "GeminiJets was founded in 1998 under the name SkyJets"
+  },
+  {
+   "source": "GeminiJets",
+   "target": "ADI (Airliners Distributing Inc.)",
+   "description": "ADI is the founding company behind the GeminiJets product line"
+  },
+  {
+   "source": "Las Vegas",
+   "target": "Nevada",
+   "description": "Las Vegas is located in Nevada"
+  },
+  {
+   "source": "Nevada",
+   "target": "United States",
+   "description": "Nevada is a state in the United States"
+  },
+  {
+   "source": "United States",
+   "target": "Minneapolis, Minnesota",
+   "description": "Minneapolis, Minnesota is located in the United States"
+  },
+  {
+   "source": "United States",
+   "target": "Blanchard, North Dakota",
+   "description": "Blanchard is a location within the United States"
+  },
+  {
+   "source": "United States",
+   "target": "Minnesota",
+   "description": "State located in this country"
+  },
+  {
+   "source": "United States",
+   "target": "Stinson Beach, California",
+   "description": "on the west coast of"
+  },
+  {
+   "source": "United States",
+   "target": "British",
+   "description": "Ceded lands between the Appalachian Mountains and Mississippi River via the Treaty of Paris"
+  },
+  {
+   "source": "United States",
+   "target": "Treaty of Paris",
+   "description": "Formalized the cession of lands to the United States"
+  },
+  {
+   "source": "United States",
+   "target": "Shawnee",
+   "description": "Compelled tribal leaders to sign away lands in postwar treaties"
+  },
+  {
+   "source": "United States",
+   "target": "Cherokee",
+   "description": "Compelled tribal leaders to sign away lands in postwar treaties"
+  },
+  {
+   "source": "United States",
+   "target": "Choctaw",
+   "description": "Compelled tribal leaders to sign away lands in postwar treaties"
+  },
+  {
+   "source": "United States",
+   "target": "Northwest Territory",
+   "description": "Fought a war provoked by land settlement in this region"
+  },
+  {
+   "source": "United States",
+   "target": "Battle of the Wabash",
+   "description": "Was the most severe defeat suffered by the United States at the hands of American Indians"
+  },
+  {
+   "source": "United States",
+   "target": "West Virginia",
+   "description": "is a state in"
+  },
+  {
+   "source": "ADI (Airliners Distributing Inc.)",
+   "target": "Boeing",
+   "description": "ADI holds production licenses from Boeing"
+  },
+  {
+   "source": "ADI (Airliners Distributing Inc.)",
+   "target": "Airbus",
+   "description": "ADI holds production licenses from Airbus"
+  },
+  {
+   "source": "ADI (Airliners Distributing Inc.)",
+   "target": "McDonnell Douglas",
+   "description": "ADI holds production licenses from McDonnell Douglas"
+  },
+  {
+   "source": "ADI (Airliners Distributing Inc.)",
+   "target": "Embraer",
+   "description": "ADI holds production licenses from Embraer"
+  },
+  {
+   "source": "Videodrome",
+   "target": "David Cronenberg",
+   "description": "Wrote and directed the film"
+  },
+  {
+   "source": "Videodrome",
+   "target": "James Woods",
+   "description": "Starred in the film"
+  },
+  {
+   "source": "Videodrome",
+   "target": "Sonja Smits",
+   "description": "Starred in the film"
+  },
+  {
+   "source": "Videodrome",
+   "target": "Deborah Harry",
+   "description": "Starred in the film"
+  },
+  {
+   "source": "Videodrome",
+   "target": "Toronto",
+   "description": "Set in Toronto during the early 1980s"
+  },
+  {
+   "source": "Toronto",
+   "target": "Marketwired",
+   "description": "Marketwired is headquartered in Toronto"
+  },
+  {
+   "source": "Toronto",
+   "target": "Ontario",
+   "description": "Toronto is located in Ontario"
+  },
+  {
+   "source": "Le Mauricien",
+   "target": "Mauritius",
+   "description": "Le Mauricien is based and distributed in Mauritius"
+  },
+  {
+   "source": "Le Mauricien",
+   "target": "Le Mauricien Ltd.",
+   "description": "Le Mauricien Ltd. publishes Le Mauricien"
+  },
+  {
+   "source": "Le Mauricien Ltd.",
+   "target": "Week-End",
+   "description": "Le Mauricien Ltd. publishes Week-End"
+  },
+  {
+   "source": "Le Mauricien Ltd.",
+   "target": "Week-End Scope",
+   "description": "Le Mauricien Ltd. publishes Week-End Scope"
+  },
+  {
+   "source": "Le Mauricien Ltd.",
+   "target": "Turf Magazine",
+   "description": "Le Mauricien Ltd. publishes Turf Magazine"
+  },
+  {
+   "source": "Mike Medavoy",
+   "target": "Orion Pictures",
+   "description": "co-founded in 1978"
+  },
+  {
+   "source": "Mike Medavoy",
+   "target": "TriStar Pictures",
+   "description": "former chairman"
+  },
+  {
+   "source": "Mike Medavoy",
+   "target": "United Artists",
+   "description": "former head of production from 1974 to 1978"
+  },
+  {
+   "source": "Mike Medavoy",
+   "target": "Phoenix Pictures",
+   "description": "current chairman and CEO"
+  },
+  {
+   "source": "Orion Pictures",
+   "target": "UHF (film)",
+   "description": "Received financing support from Orion Pictures"
+  },
+  {
+   "source": "Three Gut Records",
+   "target": "Guelph, Ontario",
+   "description": "Three Gut Records was based in Guelph, Ontario"
+  },
+  {
+   "source": "Three Gut Records",
+   "target": "Lisa Moran",
+   "description": "Co-founded Three Gut Records in 1999"
+  },
+  {
+   "source": "Three Gut Records",
+   "target": "Tyler Clarke Burke",
+   "description": "Co-founded Three Gut Records in 1999"
+  },
+  {
+   "source": "Three Gut Records",
+   "target": "Constantines",
+   "description": "Released self-titled 2001 album on Three Gut Records, a breakout success"
+  },
+  {
+   "source": "Three Gut Records",
+   "target": "Outside Music",
+   "description": "Three Gut Records releases were distributed by Outside Music"
+  },
+  {
+   "source": "Guelph, Ontario",
+   "target": "Canada",
+   "description": "Guelph, Ontario is located in Canada"
+  },
+  {
+   "source": "Canada",
+   "target": "Ontario",
+   "description": "Ontario is a province in Canada"
+  },
+  {
+   "source": "SModcast Pictures",
+   "target": "Kevin Smith",
+   "description": "Founded the company in 2011"
+  },
+  {
+   "source": "SModcast Pictures",
+   "target": "Red State",
+   "description": "Distribution company used to release the film"
+  },
+  {
+   "source": "Kevin Smith",
+   "target": "2011 Sundance Film Festival",
+   "description": "Made announcement about Red State at this festival"
+  },
+  {
+   "source": "Kevin Smith",
+   "target": "Red State",
+   "description": "Directed/created the movie and released it himself"
+  },
+  {
+   "source": "UHF (film)",
+   "target": "Yankovic",
+   "description": "Co-wrote the film"
+  },
+  {
+   "source": "UHF (film)",
+   "target": "Levey",
+   "description": "Co-wrote the film"
+  },
+  {
+   "source": "UHF (film)",
+   "target": "George",
+   "description": "Features George as a straight man with a vivid imagination"
+  },
+  {
+   "source": "UHF (film)",
+   "target": "Tulsa, Oklahoma",
+   "description": "Principal filming took place here"
+  },
+  {
+   "source": "UHF (film)",
+   "target": "Dallas, Texas",
+   "description": "Many extras for the film came from this area"
+  },
+  {
+   "source": "Yankovic",
+   "target": "Levey",
+   "description": "Collaborated as co-writers of UHF"
+  },
+  {
+   "source": "Tulsa, Oklahoma",
+   "target": "Dallas, Texas",
+   "description": "Both areas provided extras for the film"
+  },
+  {
+   "source": "Sleaszy Rider Records",
+   "target": "Tolis G. Palantzas",
+   "description": "Founded the label in 1999"
+  },
+  {
+   "source": "Sleaszy Rider Records",
+   "target": "Greece",
+   "description": "Head office located in Greece"
+  },
+  {
+   "source": "Sleaszy Rider Records",
+   "target": "Sony Music/EMI",
+   "description": "Mainly distributed in Europe by Sony Music/EMI"
+  },
+  {
+   "source": "Sleaszy Rider Records",
+   "target": "Roadrunner Records",
+   "description": "Distributes releases in Greece from Roadrunner Records"
+  },
+  {
+   "source": "Sleaszy Rider Records",
+   "target": "SPV",
+   "description": "Distributes releases in Greece from SPV"
+  },
+  {
+   "source": "Sleaszy Rider Records",
+   "target": "Pagan Records",
+   "description": "Distributes releases in Greece from Pagan Records"
+  },
+  {
+   "source": "Common nightingale",
+   "target": "Europe",
+   "description": "Breeds in forest and scrub habitats in Europe"
+  },
+  {
+   "source": "Common nightingale",
+   "target": "south-west Asia",
+   "description": "Breeds in forest and scrub habitats in south-west Asia"
+  },
+  {
+   "source": "Common nightingale",
+   "target": "sub-Saharan Africa",
+   "description": "Winters in sub-Saharan Africa"
+  },
+  {
+   "source": "Common nightingale",
+   "target": "Americas",
+   "description": "Not found naturally in the Americas"
+  },
+  {
+   "source": "Common nightingale",
+   "target": "thrush nightingale",
+   "description": "Closely related species with a more southerly distribution"
+  },
+  {
+   "source": "Common nightingale",
+   "target": "Germany",
+   "description": "Site of research studying the nightingale's favoured breeding habitat"
+  },
+  {
+   "source": "John Kirtland",
+   "target": "Kirtland Records",
+   "description": "co-founded"
+  },
+  {
+   "source": "John Kirtland",
+   "target": "Jenny Kirtland",
+   "description": "married to"
+  },
+  {
+   "source": "Jenny Kirtland",
+   "target": "Kirtland Records",
+   "description": "co-founded"
+  },
+  {
+   "source": "Jenny Kirtland",
+   "target": "The Polyphonic Spree",
+   "description": "choir member of"
+  },
+  {
+   "source": "Kirtland Records",
+   "target": "RED Distribution",
+   "description": "secured national distribution deal with"
+  },
+  {
+   "source": "Kirtland Records",
+   "target": "Bush",
+   "description": "leveraged back catalog rights of"
+  },
+  {
+   "source": "Kirtland Records",
+   "target": "Burden Brothers",
+   "description": "record label for"
+  },
+  {
+   "source": "Kirtland Records",
+   "target": "The Polyphonic Spree",
+   "description": "record label for"
+  },
+  {
+   "source": "Kirtland Records",
+   "target": "Toadies",
+   "description": "record label for"
+  },
+  {
+   "source": "Kirtland Records",
+   "target": "The Vanished",
+   "description": "record label for"
+  },
+  {
+   "source": "Kirtland Records",
+   "target": "Sarah Jaffe",
+   "description": "record label for"
+  },
+  {
+   "source": "WCCO-TV",
+   "target": "CBS Television Stations",
+   "description": "WCCO-TV is owned by CBS Television Stations"
+  },
+  {
+   "source": "WCCO-TV",
+   "target": "Minneapolis, Minnesota",
+   "description": "WCCO-TV is licensed to Minneapolis, Minnesota"
+  },
+  {
+   "source": "WCCO-TV",
+   "target": "Twin Cities television market",
+   "description": "WCCO-TV serves the Twin Cities television market"
+  },
+  {
+   "source": "WCCO-TV",
+   "target": "South 11th Street",
+   "description": "WCCO-TV's studios are located on South 11th Street"
+  },
+  {
+   "source": "WCCO-TV",
+   "target": "Telefarm complex",
+   "description": "WCCO-TV's transmitter is located at the Telefarm complex"
+  },
+  {
+   "source": "CBS Television Stations",
+   "target": "CBS Corporation",
+   "description": "CBS Television Stations is a subsidiary of CBS Corporation"
+  },
+  {
+   "source": "South 11th Street",
+   "target": "Nicollet Mall",
+   "description": "South 11th Street runs along Nicollet Mall"
+  },
+  {
+   "source": "South 11th Street",
+   "target": "downtown Minneapolis",
+   "description": "South 11th Street is located in downtown Minneapolis"
+  },
+  {
+   "source": "Telefarm complex",
+   "target": "Shoreview, Minnesota",
+   "description": "The Telefarm complex is located in Shoreview, Minnesota"
+  },
+  {
+   "source": "Marketwired",
+   "target": "Associated Press",
+   "description": "Marketwired distributes press releases via Associated Press"
+  },
+  {
+   "source": "Marketwired",
+   "target": "Bloomberg",
+   "description": "Marketwired distributes press releases via Bloomberg"
+  },
+  {
+   "source": "Equity Music Group",
+   "target": "Clint Black",
+   "description": "Founded the label in 2003"
+  },
+  {
+   "source": "Equity Music Group",
+   "target": "Koch Entertainment",
+   "description": "Was distributed by Koch Entertainment"
+  },
+  {
+   "source": "Koch Entertainment",
+   "target": "E1 Entertainment",
+   "description": "Now known as E1 Entertainment"
+  },
+  {
+   "source": "KVLY-TV mast",
+   "target": "Blanchard, North Dakota",
+   "description": "The mast is located in Blanchard, North Dakota"
+  },
+  {
+   "source": "Amblin Entertainment",
+   "target": "Steven Spielberg",
+   "description": "Founded the company in 1981"
+  },
+  {
+   "source": "Amblin Entertainment",
+   "target": "Kathleen Kennedy",
+   "description": "Co-founded the company in 1981"
+  },
+  {
+   "source": "Amblin Entertainment",
+   "target": "Frank Marshall",
+   "description": "Co-founded the company in 1981"
+  },
+  {
+   "source": "Amblin Entertainment",
+   "target": "Universal Studios",
+   "description": "Headquarters located on the backlot of Universal Studios"
+  },
+  {
+   "source": "Amblin Entertainment",
+   "target": "Amblin Partners",
+   "description": "Distributes all films from Amblin Partners under its name"
+  },
+  {
+   "source": "Universal Studios",
+   "target": "Universal City, California",
+   "description": "Located in Universal City, California"
+  },
+  {
+   "source": "The Hobbit (South Park)",
+   "target": "South Park",
+   "description": "is an episode of the series"
+  },
+  {
+   "source": "The Hobbit (South Park)",
+   "target": "Comedy Central",
+   "description": "premiered on this network on December 11, 2013"
+  },
+  {
+   "source": "The Hobbit (South Park)",
+   "target": "Wendy Testaburger",
+   "description": "centers on her attempts to raise awareness of media impact on body image"
+  },
+  {
+   "source": "The Hobbit (South Park)",
+   "target": "Kanye West",
+   "description": "features his crusade to defend Kim Kardashian"
+  },
+  {
+   "source": "Kanye West",
+   "target": "Kim Kardashian",
+   "description": "fianc\u00e9 of Kim Kardashian"
+  },
+  {
+   "source": "Gamla stan metro station",
+   "target": "Stockholm metro",
+   "description": "is a station of"
+  },
+  {
+   "source": "Gamla stan metro station",
+   "target": "Gamla stan",
+   "description": "is located in"
+  },
+  {
+   "source": "Gamla stan metro station",
+   "target": "Red line",
+   "description": "is served by"
+  },
+  {
+   "source": "Gamla stan metro station",
+   "target": "Green line",
+   "description": "is served by"
+  },
+  {
+   "source": "Red line",
+   "target": "T-Centralen",
+   "description": "first stretch started at"
+  },
+  {
+   "source": "Red line",
+   "target": "Fru\u00e4ngen",
+   "description": "first stretch ended at"
+  },
+  {
+   "source": "Green line",
+   "target": "Slussen",
+   "description": "connects to"
+  },
+  {
+   "source": "Green line",
+   "target": "H\u00f6torget",
+   "description": "connects to"
+  },
+  {
+   "source": "John Bell",
+   "target": "Hobbit film series",
+   "description": "Played Bain in two installments"
+  },
+  {
+   "source": "John Bell",
+   "target": "Bain",
+   "description": "Portrayed this character"
+  },
+  {
+   "source": "John Bell",
+   "target": "Battleship",
+   "description": "Played Angus in this film"
+  },
+  {
+   "source": "John Bell",
+   "target": "Angus",
+   "description": "Portrayed this character"
+  },
+  {
+   "source": "John Bell",
+   "target": "Wrath of the Titans",
+   "description": "Played Helius in this film"
+  },
+  {
+   "source": "John Bell",
+   "target": "Helius",
+   "description": "Portrayed this character"
+  },
+  {
+   "source": "John Bell",
+   "target": "Tracy Beaker Returns",
+   "description": "Played Toby Coleman in this series"
+  },
+  {
+   "source": "John Bell",
+   "target": "Toby Coleman",
+   "description": "Portrayed this character"
+  },
+  {
+   "source": "Arnaud Joyet",
+   "target": "Stan",
+   "description": "plays the character"
+  },
+  {
+   "source": "Stan",
+   "target": "Hero Corp",
+   "description": "is a character in the series"
+  },
+  {
+   "source": "Stan",
+   "target": "Francine",
+   "description": "husband and wife whose relationship ends after blame over the rapture"
+  },
+  {
+   "source": "Stan",
+   "target": "Rapture's Delight",
+   "description": "main character in this episode"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "Crixus",
+   "description": "portrayed"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "Spartacus",
+   "description": "acted in"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "Allanon",
+   "description": "portrayed"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "The Shannara Chronicles",
+   "description": "acted in"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "Slade Wilson / Deathstroke",
+   "description": "portrayed"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "Arrow",
+   "description": "acted in"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "Azog the Defiler",
+   "description": "portrayed"
+  },
+  {
+   "source": "Manu Bennett",
+   "target": "the Hobbit film trilogy",
+   "description": "acted in"
+  },
+  {
+   "source": "Spartacus",
+   "target": "Crixus",
+   "description": "character in"
+  },
+  {
+   "source": "The Shannara Chronicles",
+   "target": "Allanon",
+   "description": "character in"
+  },
+  {
+   "source": "Arrow",
+   "target": "Slade Wilson / Deathstroke",
+   "description": "character in"
+  },
+  {
+   "source": "the Hobbit film trilogy",
+   "target": "Azog the Defiler",
+   "description": "character in"
+  },
+  {
+   "source": "Buzz Lightyear",
+   "target": "Tim Allen",
+   "description": "Voiced the character in the Toy Story film series and the Buzz Lightyear movie."
+  },
+  {
+   "source": "Buzz Lightyear",
+   "target": "Patrick Warburton",
+   "description": "Provided the character's voice for the TV series."
+  },
+  {
+   "source": "Buzz Lightyear",
+   "target": "Pat Fraley",
+   "description": "Voiced the character for video games and Disney Parks attractions."
+  },
+  {
+   "source": "Tim Allen",
+   "target": "Toy Story",
+   "description": "Voiced Buzz Lightyear in this film series."
+  },
+  {
+   "source": "Tim Allen",
+   "target": "Buzz Lightyear movie",
+   "description": "Voiced Buzz Lightyear in this movie."
+  },
+  {
+   "source": "Patrick Warburton",
+   "target": "TV series",
+   "description": "Voiced Buzz Lightyear in this series."
+  },
+  {
+   "source": "Pat Fraley",
+   "target": "video games",
+   "description": "Voiced Buzz Lightyear in these games."
+  },
+  {
+   "source": "Pat Fraley",
+   "target": "Disney Parks",
+   "description": "Voiced Buzz Lightyear for attractions in these parks."
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Stan Marsh",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Eric Cartman",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Randy Marsh",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Mr. Garrison",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Clyde Donovan",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Mr. Hankey",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Mr. Mackey",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Stephen Stotch",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Jimmy Valmer",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Timmy Burch",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Tuong Lu Kim",
+   "description": "voices"
+  },
+  {
+   "source": "Trey Parker",
+   "target": "Phillip",
+   "description": "voices"
+  },
+  {
+   "source": "Dog Star Man",
+   "target": "Stan Brakhage",
+   "description": "Directed all films in the series."
+  },
+  {
+   "source": "Dog Star Man",
+   "target": "Jane Wodening",
+   "description": "Series features Jane Wodening."
+  },
+  {
+   "source": "Steve Smith (American Dad!)",
+   "target": "American Dad!",
+   "description": "Is a fictional character in this animated television series"
+  },
+  {
+   "source": "Steve Smith (American Dad!)",
+   "target": "Scott Grimes",
+   "description": "Voices this character"
+  },
+  {
+   "source": "Steve Smith (American Dad!)",
+   "target": "Stan Smith",
+   "description": "Is Stan Smith's only son"
+  },
+  {
+   "source": "Steve Smith (American Dad!)",
+   "target": "Francine Smith",
+   "description": "Is Francine Smith's only son"
+  },
+  {
+   "source": "Steve Smith (American Dad!)",
+   "target": "Hayley",
+   "description": "Is Hayley's younger brother"
+  },
+  {
+   "source": "American Dad!",
+   "target": "Rapture's Delight",
+   "description": "is the ninth episode of the sixth season of"
+  },
+  {
+   "source": "Hayley",
+   "target": "Rapture's Delight",
+   "description": "character raptured in this episode"
+  },
+  {
+   "source": "Rapture's Delight",
+   "target": "Fox",
+   "description": "originally aired on"
+  },
+  {
+   "source": "Rapture's Delight",
+   "target": "Steve",
+   "description": "character raptured in this episode"
+  },
+  {
+   "source": "Rapture's Delight",
+   "target": "Francine",
+   "description": "main character in this episode"
+  },
+  {
+   "source": "Francine",
+   "target": "Jesus",
+   "description": "befriends and becomes the bride of"
+  },
+  {
+   "source": "Aidan Turner",
+   "target": "K\u00edli",
+   "description": "played the role of"
+  },
+  {
+   "source": "Aidan Turner",
+   "target": "The Hobbit",
+   "description": "acted in"
+  },
+  {
+   "source": "Aidan Turner",
+   "target": "Ross Poldark",
+   "description": "played the role of"
+  },
+  {
+   "source": "Aidan Turner",
+   "target": "Dante Gabriel Rossetti",
+   "description": "played the role of"
+  },
+  {
+   "source": "Aidan Turner",
+   "target": "Ruair\u00ed McGowan",
+   "description": "played the role of"
+  },
+  {
+   "source": "Aidan Turner",
+   "target": "John Mitchell",
+   "description": "played the role of"
+  },
+  {
+   "source": "Ross Poldark",
+   "target": "The Poldark Novels",
+   "description": "character from"
+  },
+  {
+   "source": "The Poldark Novels",
+   "target": "Winston Graham",
+   "description": "written by"
+  },
+  {
+   "source": "The Poldark Novels",
+   "target": "BBC",
+   "description": "adapted by in 2015"
+  },
+  {
+   "source": "Dante Gabriel Rossetti",
+   "target": "Desperate Romantics",
+   "description": "character in"
+  },
+  {
+   "source": "Ruair\u00ed McGowan",
+   "target": "The Clinic",
+   "description": "character in"
+  },
+  {
+   "source": "John Mitchell",
+   "target": "Being Human",
+   "description": "character in"
+  },
+  {
+   "source": "Dwight D. Eisenhower",
+   "target": "Abilene, Kansas",
+   "description": "His body was transported by funeral train to this location"
+  },
+  {
+   "source": "Dwight D. Eisenhower",
+   "target": "Eisenhower Presidential Library",
+   "description": "Was interred in a chapel on the grounds of this library"
+  },
+  {
+   "source": "Dwight D. Eisenhower",
+   "target": "Doud",
+   "description": "Buried alongside his son Doud"
+  },
+  {
+   "source": "Dwight D. Eisenhower",
+   "target": "Mamie",
+   "description": "His wife, buried next to him after her death"
+  },
+  {
+   "source": "Dwight D. Eisenhower",
+   "target": "Army Distinguished Service Medal",
+   "description": "Wore this medal at his burial"
+  },
+  {
+   "source": "Dwight D. Eisenhower",
+   "target": "Navy Distinguished Service Medal",
+   "description": "Wore this medal at his burial"
+  },
+  {
+   "source": "Dwight D. Eisenhower",
+   "target": "Legion of Merit",
+   "description": "Wore this medal at his burial"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "1982 United Nations Convention on the Law of the Sea",
+   "description": "defined by"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "12 nautical miles",
+   "description": "extends at most this distance"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "baseline",
+   "description": "measured from"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "coastal state",
+   "description": "regarded as sovereign territory of"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "innocent passage",
+   "description": "allows foreign civilian ships this right"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "transit passage",
+   "description": "allows this right for straits"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "airspace",
+   "description": "sovereignty extends to"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "seabed",
+   "description": "sovereignty extends to"
+  },
+  {
+   "source": "Territorial waters",
+   "target": "maritime delimitation",
+   "description": "boundary adjustment process related to"
+  },
+  {
+   "source": "baseline",
+   "target": "coastal state",
+   "description": "belongs to"
+  },
+  {
+   "source": "Southeast Library",
+   "target": "Ralph Rapson",
+   "description": "Designed the building that became Southeast Library"
+  },
+  {
+   "source": "Southeast Library",
+   "target": "State Capitol Credit Union building",
+   "description": "Purchased and converted into the Southeast Library"
+  },
+  {
+   "source": "State Capitol Credit Union building",
+   "target": "1222 Fourth Street Southeast",
+   "description": "Located at this address"
+  },
+  {
+   "source": "Falling Waters, West Virginia",
+   "target": "Potomac River",
+   "description": "located on the Potomac River"
+  },
+  {
+   "source": "Falling Waters, West Virginia",
+   "target": "Berkeley County, West Virginia",
+   "description": "located in Berkeley County"
+  },
+  {
+   "source": "Falling Waters, West Virginia",
+   "target": "Williamsport Pike (US 11)",
+   "description": "located along Williamsport Pike (US 11)"
+  },
+  {
+   "source": "Falling Waters, West Virginia",
+   "target": "Martinsburg",
+   "description": "located north of Martinsburg"
+  },
+  {
+   "source": "Falling Waters, West Virginia",
+   "target": "2010 census",
+   "description": "population of 876 reported in the 2010 census"
+  },
+  {
+   "source": "Falling Waters, West Virginia",
+   "target": "first U.S. railroad",
+   "description": "claimed to have been built in Falling Waters in 1814"
+  },
+  {
+   "source": "2010 census",
+   "target": "Stinson Beach, California",
+   "description": "had a population of 632 at this census"
+  },
+  {
+   "source": "2010 census",
+   "target": "Justice, West Virginia",
+   "description": "had population of 412 as recorded by"
+  },
+  {
+   "source": "Scientific American",
+   "target": "first U.S. railroad",
+   "description": "claimed in 1887 article that this railroad was built in Falling Waters in 1814"
+  },
+  {
+   "source": "Linden Hills Library",
+   "target": "Linden Hills",
+   "description": "Located in this neighborhood"
+  },
+  {
+   "source": "Linden Hills Library",
+   "target": "Lake Harriet Commercial Club building",
+   "description": "Originally opened in 1911 on the first floor of this building"
+  },
+  {
+   "source": "Linden Hills Library",
+   "target": "Gratia Countryman",
+   "description": "Moved to a new building in 1931 under her leadership"
+  },
+  {
+   "source": "Linden Hills Library",
+   "target": "2900 West 43rd Street",
+   "description": "Moved into its own building at this address in 1931"
+  },
+  {
+   "source": "Linden Hills Library",
+   "target": "Joseph Victor Vanderbilt",
+   "description": "Designed the library in the Tudor Revival style"
+  },
+  {
+   "source": "Linden Hills Library",
+   "target": "Edith Frost",
+   "description": "Served as head librarian for over thirty years"
+  },
+  {
+   "source": "Linden Hills Library",
+   "target": "National Register of Historic Places",
+   "description": "Listed on this register in 2000"
+  },
+  {
+   "source": "Linden Hills",
+   "target": "Minneapolis",
+   "description": "Neighborhood of southwest Minneapolis"
+  },
+  {
+   "source": "Minneapolis",
+   "target": "Minnesota",
+   "description": "City located in this state"
+  },
+  {
+   "source": "Minneapolis Public Library",
+   "target": "Gratia Countryman",
+   "description": "Served as chief librarian of this organization"
+  },
+  {
+   "source": "Secchi disk",
+   "target": "Angelo Secchi",
+   "description": "created the Secchi disk in 1865"
+  },
+  {
+   "source": "Secchi disk",
+   "target": "Secchi depth",
+   "description": "used to determine the Secchi depth, a measure of water transparency"
+  },
+  {
+   "source": "Stinson Beach, California",
+   "target": "Marin County, California",
+   "description": "located in"
+  },
+  {
+   "source": "Stinson Beach, California",
+   "target": "Bolinas",
+   "description": "located east-southeast of"
+  },
+  {
+   "source": "Clerke Rocks",
+   "target": "South Georgia",
+   "description": "located southeast of South Georgia"
+  },
+  {
+   "source": "Clerke Rocks",
+   "target": "The Office Boys",
+   "description": "includes The Office Boys at its northeastern end"
+  },
+  {
+   "source": "Clerke Rocks",
+   "target": "Nobby",
+   "description": "includes Nobby at its southeastern end"
+  },
+  {
+   "source": "Clerke Rocks",
+   "target": "South Georgia and the South Sandwich Islands",
+   "description": "belongs to this British Overseas Territory"
+  },
+  {
+   "source": "Clerke Rocks",
+   "target": "Argentina",
+   "description": "claimed by Argentina"
+  },
+  {
+   "source": "Argentina",
+   "target": "Tierra del Fuego Province",
+   "description": "claims the Clerke Rocks as part of this province"
+  },
+  {
+   "source": "Northwest Territory",
+   "target": "Battle of the Wabash",
+   "description": "Occurred during the war in the Northwest Territory"
+  },
+  {
+   "source": "Northwest Territory",
+   "target": "President Washington",
+   "description": "Dispatched a newly trained army to the region"
+  },
+  {
+   "source": "President Washington",
+   "target": "Battle of Fallen Timbers",
+   "description": "Dispatched the army that won this battle"
+  },
+  {
+   "source": "Battle of Fallen Timbers",
+   "target": "Indian confederacy",
+   "description": "U.S. forces decisively defeated the Indian confederacy at this battle"
+  },
+  {
+   "source": "Justice, West Virginia",
+   "target": "Mingo County",
+   "description": "is located in"
+  },
+  {
+   "source": "Justice, West Virginia",
+   "target": "U.S. Route 52",
+   "description": "is located on"
+  },
+  {
+   "source": "Justice, West Virginia",
+   "target": "Gilbert",
+   "description": "is located southeast of"
+  },
+  {
+   "source": "Justice, West Virginia",
+   "target": "24851",
+   "description": "has a post office with ZIP code"
+  },
+  {
+   "source": "Mingo County",
+   "target": "West Virginia",
+   "description": "is a county in"
+  }
+ ],
+ "communities": [
+  {
+   "id": "C0",
+   "members": [
+    "2010 census",
+    "24851",
+    "Battle of Fallen Timbers",
+    "Battle of the Wabash",
+    "Blanchard, North Dakota",
+    "Bolinas",
+    "British",
+    "Cherokee",
+    "Choctaw",
+    "Gilbert",
+    "Indian confederacy",
+    "Justice, West Virginia",
+    "KVLY-TV mast",
+    "Marin County, California",
+    "Mingo County",
+    "Northwest Territory",
+    "President Washington",
+    "Shawnee",
+    "Stinson Beach, California",
+    "Treaty of Paris",
+    "U.S. Route 52",
+    "United States",
+    "West Virginia"
+   ],
+   "report": "This community links three distinct geographic/historical clusters within the United States. In West Virginia, Justice, West Virginia is a census-designated place in Mingo County (which is itself a county in West Virginia), located along U.S. Route 52, southeast of the town of Gilbert; Justice had a population of 412 as recorded by the 2010 census, and it has a post office with ZIP code 24851. In California, Stinson Beach, California is a census-designated place in Marin County, California, situated on the west coast of the United States, located east-southeast of Bolinas; the 2010 census recorded Stinson Beach's population as 632. Separately, the KVLY-TV mast, a guyed mast built in 1963 standing 628.8 m (2,063 ft) tall and used for VHF-UHF transmission, is the tallest mast in the world and is located in Blanchard, North Dakota, itself a location within the United States. The community also covers early American frontier history: after the Revolution, the British ceded lands between the Appalachian Mountains and the Mississippi River to the United States via the Treaty of Paris, lands then inhabited by tribes including the Shawnee, Cherokee, and Choctaw, all of whom were compelled to sign away territory in postwar treaties with the United States. Disputes over this land settlement provoked war in the Northwest Territory; the United States suffered its most severe defeat at the hands of American Indians at the Battle of the Wabash in 1791 during this conflict. In response, President Washington dispatched a newly trained army to the Northwest Territory, which went on to decisively defeat the Indian confederacy\u2014a coalition of American Indian tribes\u2014at the Battle of Fallen Timbers in 1794.",
+   "sources": [
+    "m003",
+    "m015",
+    "m018",
+    "m048",
+    "m049",
+    "m055",
+    "m058",
+    "m059"
+   ]
+  },
+  {
+   "id": "C1",
+   "members": [
+    "Associated Press",
+    "Bloomberg",
+    "Canada",
+    "Constantines",
+    "David Cronenberg",
+    "Deborah Harry",
+    "Guelph, Ontario",
+    "James Woods",
+    "Lisa Moran",
+    "Marketwired",
+    "Ontario",
+    "Outside Music",
+    "Sonja Smits",
+    "Three Gut Records",
+    "Toronto",
+    "Tyler Clarke Burke",
+    "Videodrome"
+   ],
+   "report": "This community centers on Canadian cultural and business entities linked through geography and industry connections in Ontario, Canada. Three Gut Records, an independent record label founded in 1999, was based in Guelph, Ontario, Canada, and was co-founded by Lisa Moran and Tyler Clarke Burke; its releases were distributed by Outside Music, and the label achieved a breakout success with the Canadian band Constantines, whose self-titled 2001 album was released on Three Gut Records. Guelph, Ontario is located within Canada, as is the broader province of Ontario, which contains the city of Toronto. Toronto serves as the headquarters location for Marketwired, a press release distribution service founded in 1993 and incorporated in the United States in 1999; Marketwired distributes press releases via two traditional methods/services, Associated Press and Bloomberg. Toronto is also significant as the setting, during the early 1980s, for the 1983 Canadian science fiction body horror film Videodrome, which was written and directed by David Cronenberg and starred James Woods, Deborah Harry, and Sonja Smits.",
+   "sources": [
+    "m005",
+    "m009",
+    "m016"
+   ]
+  },
+  {
+   "id": "C2",
+   "members": [
+    "American Dad!",
+    "Arnaud Joyet",
+    "Fox",
+    "Francine",
+    "Francine Smith",
+    "Hayley",
+    "Hero Corp",
+    "Jesus",
+    "Rapture's Delight",
+    "Scott Grimes",
+    "Stan",
+    "Stan Smith",
+    "Steve",
+    "Steve Smith (American Dad!)"
+   ],
+   "report": "This community centers on the animated television series American Dad!, an American animated television series, and its fictional character Steve Smith (full name Steven Anita \"Steve\" Smith), who is voiced by actor Scott Grimes. Steve Smith is the only son of both Stan Smith (his father) and Francine Smith (his mother), and he is the younger brother of Hayley, his older sister. American Dad! also includes the episode \"Rapture's Delight,\" the ninth episode of the sixth season, which originally aired on December 13, 2009, on the Fox television network. In this episode, Steve is raptured along with his sister Hayley. The episode's main characters are Francine and Stan, whose marriage and relationship come to an end after mutual blame arises over the rapture event. During the episode, Francine befriends a man who is later revealed to be Jesus, and she subsequently becomes his bride. Separately, the character Stan (distinct in context but connected via character identity) is portrayed by French performer Arnaud Joyet, a singer, musician, comedian, and theatre director born on 3 April 1974, who plays Stan in the series Hero Corp, in which Stan is a character.",
+   "sources": [
+    "m025",
+    "m032",
+    "m037"
+   ]
+  },
+  {
+   "id": "C3",
+   "members": [
+    "Clyde Donovan",
+    "Eric Cartman",
+    "Jimmy Valmer",
+    "Mr. Garrison",
+    "Mr. Hankey",
+    "Mr. Mackey",
+    "Phillip",
+    "Randy Marsh",
+    "Stan Marsh",
+    "Stephen Stotch",
+    "Timmy Burch",
+    "Trey Parker",
+    "Tuong Lu Kim"
+   ],
+   "report": "This community centers on Trey Parker, the voice actor for the animated series South Park, who provides the voice for numerous main and recurring characters. Among the main characters he voices are Eric Cartman, Mr. Garrison, Randy Marsh, and Stan Marsh. Among the recurring characters he voices are Clyde Donovan, Jimmy Valmer, Mr. Hankey, Mr. Mackey, Phillip, Stephen Stotch, Timmy Burch, and Tuong Lu Kim. Each of these characters\u2014Clyde Donovan, Eric Cartman, Jimmy Valmer, Mr. Garrison, Mr. Hankey, Mr. Mackey, Phillip, Randy Marsh, Stan Marsh, Stephen Stotch, Timmy Burch, and Tuong Lu Kim\u2014is directly linked to Trey Parker through a \"voices\" relation, reflecting his role as their voice actor within the South Park franchise. The relation is bidirectional in naming convention for Tuong Lu Kim, explicitly noted as Trey Parker voicing Tuong Lu Kim, while the other characters are listed as voicing (being voiced by) Trey Parker, underscoring his extensive and central role as the primary voice performer for a wide range of the show's cast, spanning both its principal figures and its supporting, recurring cast members.",
+   "sources": [
+    "m028"
+   ]
+  },
+  {
+   "id": "C4",
+   "members": [
+    "Aidan Turner",
+    "BBC",
+    "Being Human",
+    "Dante Gabriel Rossetti",
+    "Desperate Romantics",
+    "John Mitchell",
+    "K\u00edli",
+    "Ross Poldark",
+    "Ruair\u00ed McGowan",
+    "The Clinic",
+    "The Hobbit",
+    "The Poldark Novels",
+    "Winston Graham"
+   ],
+   "report": "This community centers on Irish actor Aidan Turner (born 19 June 1983), whose career is defined by a series of notable television and film roles. Turner played K\u00edli in the three-part fantasy film The Hobbit, and portrayed Ruair\u00ed McGowan in the television series The Clinic. He also played John Mitchell, the central character of the supernatural drama television series Being Human. In Desperate Romantics, Turner took on the role of Dante Gabriel Rossetti. His most prominent role is Ross Poldark, the titular character from The Poldark Novels, a novel series written by author Winston Graham. This literary work was adapted by the BBC (British Broadcasting Corporation) in 2015 into a television series, in which Turner starred as Ross Poldark, bringing together the community's key figures: Aidan Turner as the connecting actor, the BBC as the adapting production organization, Winston Graham as the original author, and the interconnected web of characters\u2014K\u00edli, Ruair\u00ed McGowan, John Mitchell, Dante Gabriel Rossetti, and Ross Poldark\u2014that define Turner's acting career across The Hobbit, The Clinic, Being Human, Desperate Romantics, and the 2015 Poldark adaptation.",
+   "sources": [
+    "m039"
+   ]
+  },
+  {
+   "id": "C5",
+   "members": [
+    "Dallas, Texas",
+    "George",
+    "Levey",
+    "Mike Medavoy",
+    "Orion Pictures",
+    "Phoenix Pictures",
+    "TriStar Pictures",
+    "Tulsa, Oklahoma",
+    "UHF (film)",
+    "United Artists",
+    "Yankovic"
+   ],
+   "report": "This community centers on the 1989 film UHF, co-written by musician-comedian Yankovic and his collaborator Levey, who together applied parody and comedy techniques to the screenplay. The film features the character George, portrayed as a straight man with a vivid imagination. Principal filming of UHF took place in and around Tulsa, Oklahoma, with many of the extras drawn from Dallas, Texas, indicating that both Tulsa and the Dallas area contributed personnel to the production. The film received crucial financing support from Orion Pictures, a studio co-founded in 1978, after cost assurances were secured. Orion Pictures itself is linked to Mike Medavoy (full name Morris Mike Medavoy, born January 21, 1941), an American film producer and executive who co-founded the studio in 1978. Medavoy's career spans several major studios: he served as head of production at United Artists from 1974 to 1978, was later former chairman of TriStar Pictures, and currently serves as chairman and CEO of Phoenix Pictures. Thus, the community links UHF's creative team (Yankovic, Levey, and the character George) and its production geography (Tulsa and Dallas) to the broader industry network surrounding Orion Pictures and Mike Medavoy's extensive executive history across United Artists, TriStar Pictures, and Phoenix Pictures.",
+   "sources": [
+    "m007",
+    "m011"
+   ]
+  },
+  {
+   "id": "C6",
+   "members": [
+    "2900 West 43rd Street",
+    "Edith Frost",
+    "Gratia Countryman",
+    "Joseph Victor Vanderbilt",
+    "Lake Harriet Commercial Club building",
+    "Linden Hills",
+    "Linden Hills Library",
+    "Minneapolis",
+    "Minneapolis Public Library",
+    "Minnesota",
+    "National Register of Historic Places"
+   ],
+   "report": "The Linden Hills Library is a public library located in the Linden Hills neighborhood of southwest Minneapolis, Minnesota (a city situated in the state of Minnesota), and it opened in 1911 on the first floor of the Lake Harriet Commercial Club building. In 1931, under the leadership of Gratia Countryman\u2014who served as chief librarian of the Minneapolis Public Library, the system that oversaw the branch's move\u2014the library relocated into its own building at 2900 West 43rd Street. That building was designed in the Tudor Revival style by Joseph Victor Vanderbilt, an area resident. Edith Frost served as the library's head librarian for over thirty years. In recognition of its historical and architectural significance, the Linden Hills Library was listed on the National Register of Historic Places in 2000, and it was later renovated in 2002.",
+   "sources": [
+    "m049"
+   ]
+  },
+  {
+   "id": "C7",
+   "members": [
+    "Burden Brothers",
+    "Bush",
+    "Jenny Kirtland",
+    "John Kirtland",
+    "Kirtland Records",
+    "RED Distribution",
+    "Sarah Jaffe",
+    "The Polyphonic Spree",
+    "The Vanished",
+    "Toadies"
+   ],
+   "report": "Kirtland Records is a record label founded in 2003 by John Kirtland and his wife Jenny Kirtland, who also serves as a choir member of The Polyphonic Spree, one of the Texas-based indie bands signed to the label. Kirtland Records serves as the record label for a roster of Texas-based indie acts, including The Polyphonic Spree, Toadies, The Vanished, Burden Brothers, and Sarah Jaffe. The label secured a national distribution deal with RED Distribution, a deal made possible by leveraging the back catalog rights of the band Bush. Through this arrangement, Kirtland Records gained wider distribution access via RED Distribution while continuing to serve as the home label for its Texas-based indie artists.",
+   "sources": [
+    "m014"
+   ]
+  },
+  {
+   "id": "C8",
+   "members": [
+    "CBS Corporation",
+    "CBS Television Stations",
+    "Minneapolis, Minnesota",
+    "Nicollet Mall",
+    "Shoreview, Minnesota",
+    "South 11th Street",
+    "Telefarm complex",
+    "Twin Cities television market",
+    "WCCO-TV",
+    "downtown Minneapolis"
+   ],
+   "report": "This community centers on WCCO-TV, a CBS owned-and-operated television station broadcasting on virtual channel 4 (UHF digital channel 32), which serves the Twin Cities television market. WCCO-TV is owned by CBS Television Stations, a subsidiary of CBS Corporation, establishing a clear corporate ownership chain from CBS Corporation down through CBS Television Stations to WCCO-TV itself. The station is licensed to Minneapolis, Minnesota, and its studios are physically located on South 11th Street, a street situated in downtown Minneapolis that runs along Nicollet Mall. Separately, WCCO-TV's transmitter is located at the Telefarm complex, which is situated in Shoreview, Minnesota. Together, these relations map out both the corporate ownership structure behind WCCO-TV and the geographic footprint of its operations, spanning studio facilities in downtown Minneapolis and transmission infrastructure in Shoreview, Minnesota, all in service of the broader Twin Cities television market.",
+   "sources": [
+    "m015"
+   ]
+  },
+  {
+   "id": "C9",
+   "members": [
+    "12 nautical miles",
+    "1982 United Nations Convention on the Law of the Sea",
+    "Territorial waters",
+    "airspace",
+    "baseline",
+    "coastal state",
+    "innocent passage",
+    "maritime delimitation",
+    "seabed",
+    "transit passage"
+   ],
+   "report": "This community centers on the legal concept of territorial waters (also called the territorial sea), defined as the belt of coastal waters extending at most 12 nautical miles (equivalent to 22.2 km or 13.8 mi) from the baseline of a coastal state. This maximum extent and the definition of territorial waters are established by the 1982 United Nations Convention on the Law of the Sea, an international treaty from 1982. The baseline used to measure territorial waters is usually the mean low-water mark of a coastal state, and this baseline belongs to that coastal state. Territorial waters are regarded as the sovereign territory of the coastal state from which they are measured, and this sovereignty extends beyond the waters themselves to include the airspace above the territorial sea and the seabed below it. Despite this sovereignty, territorial waters allow certain rights of passage for foreign vessels: innocent passage permits foreign civilian ships to pass through, while transit passage specifically applies to passage through straits within territorial waters. Additionally, territorial waters are subject to maritime delimitation, the term in international law for the process of adjusting territorial sea boundaries between states.",
+   "sources": [
+    "m043"
+   ]
+  },
+  {
+   "id": "C10",
+   "members": [
+    "ADI (Airliners Distributing Inc.)",
+    "Airbus",
+    "Boeing",
+    "Embraer",
+    "GeminiJets",
+    "Las Vegas",
+    "McDonnell Douglas",
+    "Nevada",
+    "SkyJets"
+   ],
+   "report": "This community centers on GeminiJets, a diecast model airplane manufacturer based in Las Vegas, Nevada, United States, which is located in the state of Nevada. GeminiJets was founded in 1998 under the original name SkyJets before adopting its current name. The company's product line was established by its founding company, ADI (Airliners Distributing Inc.), which serves as the organizational backbone behind GeminiJets. ADI holds production licenses obtained from four major aircraft manufacturers\u2014Airbus, Boeing, McDonnell Douglas, and Embraer\u2014allowing it to produce licensed diecast models based on aircraft designs from these companies. This network of relationships establishes GeminiJets' operational foundation: its geographic base in Las Vegas, Nevada; its origin story as SkyJets in 1998; and its licensing relationships, mediated through ADI, with Airbus, Boeing, McDonnell Douglas, and Embraer, which collectively enable the manufacture of its diecast model airplane products.",
+   "sources": [
+    "m003"
+   ]
+  },
+  {
+   "id": "C11",
+   "members": [
+    "Fru\u00e4ngen",
+    "Gamla stan",
+    "Gamla stan metro station",
+    "Green line",
+    "H\u00f6torget",
+    "Red line",
+    "Slussen",
+    "Stockholm metro",
+    "T-Centralen"
+   ],
+   "report": "This community centers on Gamla stan metro station, a station of the Stockholm metro located in the Gamla stan district of Stockholm, which opened on 24 November 1957. The station is served by two lines: the Green line and the Red line. The Green line was formed by a 1957 connection linking the east and west parts of the network via Slussen and H\u00f6torget, with the Green line connecting to both Slussen and H\u00f6torget. The Red line's first stretch opened on 5 April 1964, running between T-Centralen, where it started, and Fru\u00e4ngen, where it ended. Together, these relations show Gamla stan metro station as a key interchange point within the broader Stockholm metro system, linking major locations including Slussen, H\u00f6torget, T-Centralen, and Fru\u00e4ngen through its two serving lines.",
+   "sources": [
+    "m023"
+   ]
+  },
+  {
+   "id": "C12",
+   "members": [
+    "Angus",
+    "Bain",
+    "Battleship",
+    "Helius",
+    "Hobbit film series",
+    "John Bell",
+    "Toby Coleman",
+    "Tracy Beaker Returns",
+    "Wrath of the Titans"
+   ],
+   "report": "John Bell is a Scottish actor born October 20, 1997, whose career spans both film and television roles. He portrayed Angus in the film Battleship, and separately took on the role of Helius in Wrath of the Titans. On television, John Bell played the character Toby Coleman in the series Tracy Beaker Returns. He also had a significant recurring role as Bain in the Hobbit film series, appearing as this character in two separate installments of the franchise. Across these varied projects, John Bell has consistently portrayed distinct characters\u2014Angus, Bain, Helius, and Toby Coleman\u2014demonstrating range across the film and television mediums represented by Battleship, Wrath of the Titans, the Hobbit film series, and Tracy Beaker Returns.",
+   "sources": [
+    "m024"
+   ]
+  },
+  {
+   "id": "C13",
+   "members": [
+    "Allanon",
+    "Arrow",
+    "Azog the Defiler",
+    "Crixus",
+    "Manu Bennett",
+    "Slade Wilson / Deathstroke",
+    "Spartacus",
+    "The Shannara Chronicles",
+    "the Hobbit film trilogy"
+   ],
+   "report": "This community centers on Manu Bennett (full name Jonathan Manu Bennett, born 10 October 1969), a New Zealand-Australian actor known for portraying several notable characters across television and film. Manu Bennett acted in Arrow, where he portrayed the character Slade Wilson / Deathstroke. He also acted in Spartacus, playing the character Crixus. In The Shannara Chronicles, Manu Bennett acted in the series and portrayed the character Allanon. Additionally, he acted in the Hobbit film trilogy, in which he portrayed the character Azog the Defiler. Each character is directly tied to its respective production: Slade Wilson / Deathstroke is a character in Arrow; Crixus is a character in Spartacus; Allanon is a character in The Shannara Chronicles; and Azog the Defiler is a character in the Hobbit film trilogy. Together, these relations illustrate Manu Bennett's range as an actor, having portrayed four distinct characters\u2014Allanon, Azog the Defiler, Crixus, and Slade Wilson / Deathstroke\u2014across four major productions: The Shannara Chronicles, the Hobbit film trilogy, Spartacus, and Arrow.",
+   "sources": [
+    "m026"
+   ]
+  },
+  {
+   "id": "C14",
+   "members": [
+    "Buzz Lightyear",
+    "Buzz Lightyear movie",
+    "Disney Parks",
+    "Pat Fraley",
+    "Patrick Warburton",
+    "TV series",
+    "Tim Allen",
+    "Toy Story",
+    "video games"
+   ],
+   "report": "This community centers on the fictional character Buzz Lightyear, a spin-off figure who has been featured across multiple media formats: the Toy Story film series, a standalone Buzz Lightyear movie, a TV series, video games, and Disney Parks attractions. The character has been voiced by three distinct performers, each associated with specific media: Tim Allen voiced Buzz Lightyear in both the Toy Story film series and the standalone Buzz Lightyear movie; Patrick Warburton provided the character's voice for the TV series; and Pat Fraley voiced Buzz Lightyear for video games as well as for the Disney Parks attractions featuring the character. These relationships establish a clear division of voice work by medium\u2014Tim Allen for theatrical/film appearances (Toy Story and the Buzz Lightyear movie), Patrick Warburton for television, and Pat Fraley for both video games and theme park attractions\u2014illustrating how a single character has been adapted and voiced differently depending on the platform.",
+   "sources": [
+    "m027"
+   ]
+  },
+  {
+   "id": "C15",
+   "members": [
+    "Abilene, Kansas",
+    "Army Distinguished Service Medal",
+    "Doud",
+    "Dwight D. Eisenhower",
+    "Eisenhower Presidential Library",
+    "Legion of Merit",
+    "Mamie",
+    "Navy Distinguished Service Medal"
+   ],
+   "report": "This community centers on the death, burial, and commemoration of Dwight D. Eisenhower, the American president, who was buried as a General of the Army following his death. His body was transported by funeral train to Abilene, Kansas, the town where he was ultimately interred. There, Eisenhower was laid to rest in a chapel located on the grounds of the Eisenhower Presidential Library. At his burial, his body wore several military honors: the Army Distinguished Service Medal, adorned with three oak leaf clusters, as well as the Navy Distinguished Service Medal and the Legion of Merit. Eisenhower was buried alongside his son, Doud, who had died at the young age of 3 in 1921. Later, his wife, Mamie, was buried next to him after her own death in 1979, reuniting the family within the same burial site at Abilene, Kansas.",
+   "sources": [
+    "m041"
+   ]
+  },
+  {
+   "id": "C16",
+   "members": [
+    "Italian Armed Forces",
+    "Italian defense ministry",
+    "Italsat 3000",
+    "NATO",
+    "SICRAL 1B",
+    "Telespazio",
+    "Thales Alenia Space"
+   ],
+   "report": "SICRAL 1B is a military communications satellite and dual-use spacecraft built by Thales Alenia Space for the Italian Armed Forces, designed to be operable for 13 years, and based on the Italsat 3000 satellite bus. Once operational, its transmission capacity will be shared among multiple users: the Italian defense ministry, NATO, and Telespazio, all of whom will draw on the satellite's communications resources for their respective needs, reflecting SICRAL 1B's role as a multi-purpose asset serving both national defense and allied military communication requirements, as well as commercial or governmental telecommunications interests through Telespazio.",
+   "sources": [
+    "m001"
+   ]
+  },
+  {
+   "id": "C17",
+   "members": [
+    "Argyll",
+    "Northern Europe",
+    "Perthshire",
+    "Salix arbuscula",
+    "Scandinavia",
+    "Scotland",
+    "Siberia"
+   ],
+   "report": "Salix arbuscula, commonly known as the mountain willow, is a low, much-branched shrub that grows to a height of 0.7 metres. It has a limited distribution within Northern Europe, occurring specifically from north Scandinavia eastwards, with its range extending as far as Siberia to the east. Within Scotland, the species is characteristically found on damp rocky mountain slopes and ledges, but its Scottish occurrence is highly restricted, being rarely found outside of the areas of Perthshire and Argyll.",
+   "sources": [
+    "m002"
+   ]
+  },
+  {
+   "id": "C18",
+   "members": [
+    "Greece",
+    "Pagan Records",
+    "Roadrunner Records",
+    "SPV",
+    "Sleaszy Rider Records",
+    "Sony Music/EMI",
+    "Tolis G. Palantzas"
+   ],
+   "report": "Sleaszy Rider Records is an independent record label founded in 1999 by Tolis G. Palantzas, with its head office located in Greece. The label operates as a distribution hub within Greece, handling the local distribution of releases from several international labels, including Pagan Records, Roadrunner Records, and SPV, all of which rely on Sleaszy Rider Records to bring their music to the Greek market. Beyond its distribution role for these partner labels domestically, Sleaszy Rider Records itself is primarily distributed across the wider European market by Sony Music/EMI, establishing a network in which the Greek-based label serves as both a recipient of distribution services from major European entities and a provider of distribution services for other labels within its home country of Greece.",
+   "sources": [
+    "m012"
+   ]
+  },
+  {
+   "id": "C19",
+   "members": [
+    "Americas",
+    "Common nightingale",
+    "Europe",
+    "Germany",
+    "south-west Asia",
+    "sub-Saharan Africa",
+    "thrush nightingale"
+   ],
+   "report": "This community centers on the common nightingale, a migratory insectivorous bird species that breeds across Europe and south-west Asia in forest and scrub habitats, and winters in sub-Saharan Africa, completing an extensive annual migratory cycle between these regions. The common nightingale is notably absent from the Americas, a continent where it is not naturally found. It is closely related to the thrush nightingale (Luscinia luscinia), a species that shares habitat characteristics but occupies a more northerly distribution, while the common nightingale itself maintains a more southerly range by comparison. Research into the common nightingale's favoured breeding habitat has been conducted in Germany, contributing to the scientific understanding of its ecological preferences within its broader European and south-west Asian breeding range.",
+   "sources": [
+    "m013"
+   ]
+  },
+  {
+   "id": "C20",
+   "members": [
+    "Amblin Entertainment",
+    "Amblin Partners",
+    "Frank Marshall",
+    "Kathleen Kennedy",
+    "Steven Spielberg",
+    "Universal City, California",
+    "Universal Studios"
+   ],
+   "report": "Amblin Entertainment is an American film production company founded in 1981 by director and producer Steven Spielberg, alongside co-founders and film producers Kathleen Kennedy and Frank Marshall. The company's headquarters are located on the backlot of Universal Studios, which is itself situated in Universal City, California. Amblin Entertainment maintains a close relationship with Amblin Partners, distributing all films produced by Amblin Partners under the Amblin Entertainment name. This structure reflects the collaborative founding partnership between Spielberg, Kennedy, and Marshall, who established the company in 1981, and its enduring physical presence at the Universal Studios lot in Universal City, California.",
+   "sources": [
+    "m019"
+   ]
+  },
+  {
+   "id": "C21",
+   "members": [
+    "Berkeley County, West Virginia",
+    "Falling Waters, West Virginia",
+    "Martinsburg",
+    "Potomac River",
+    "Scientific American",
+    "Williamsport Pike (US 11)",
+    "first U.S. railroad"
+   ],
+   "report": "Falling Waters, West Virginia is a census-designated place (CDP) located in Berkeley County, West Virginia, situated on the Potomac River. It lies along Williamsport Pike (US 11), positioned north of the nearby town of Martinsburg. According to the 2010 census, Falling Waters had a population of 876. The community holds a notable historical claim: in 1887, the publication Scientific American published an article asserting that the first U.S. railroad was built in Falling Waters in 1814, attributing this significant early railroad construction to the location.",
+   "sources": [
+    "m048"
+   ]
+  },
+  {
+   "id": "C22",
+   "members": [
+    "Argentina",
+    "Clerke Rocks",
+    "Nobby",
+    "South Georgia",
+    "South Georgia and the South Sandwich Islands",
+    "The Office Boys",
+    "Tierra del Fuego Province"
+   ],
+   "report": "The Clerke Rocks are a group of small rocky islands situated southeast of South Georgia, forming a chain that extends from east to west. This island group is administratively part of South Georgia and the South Sandwich Islands, a British Overseas Territory. At the northeastern end of the Clerke Rocks group lie The Office Boys, while at the southeastern end is Nobby, a rock also known by its Spanish-language names, Islote Llamativo or Roca Notable. Despite the British administration of South Georgia and the South Sandwich Islands, Argentina claims sovereignty over the Clerke Rocks, asserting that they form part of Tierra del Fuego Province, an Argentine province, thereby placing the Clerke Rocks at the center of an overlapping territorial claim between the two nations.",
+   "sources": [
+    "m056"
+   ]
+  },
+  {
+   "id": "C23",
+   "members": [
+    "Le Mauricien",
+    "Le Mauricien Ltd.",
+    "Mauritius",
+    "Turf Magazine",
+    "Week-End",
+    "Week-End Scope"
+   ],
+   "report": "This community centers on **Le Mauricien**, a French-language newspaper founded in 1908 that is based and distributed in **Mauritius**; it is released daily and stands as one of the most widely read newspapers in the country, notable also for its status as an independent newspaper. Le Mauricien is published by **Le Mauricien Ltd.**, the organization responsible for its production and distribution. Beyond Le Mauricien itself, Le Mauricien Ltd. serves as a broader publishing entity, also producing three additional publications: **Turf Magazine**, **Week-End**, and **Week-End Scope**. Together, these relations illustrate a media network in Mauritius anchored by a century-old, independent, daily French-language newspaper, supported by a publishing company with a diversified portfolio spanning news (Le Mauricien), weekend-oriented content (Week-End and Week-End Scope), and specialized interest material (Turf Magazine).",
+   "sources": [
+    "m006"
+   ]
+  },
+  {
+   "id": "C24",
+   "members": [
+    "Comedy Central",
+    "Kanye West",
+    "Kim Kardashian",
+    "South Park",
+    "The Hobbit (South Park)",
+    "Wendy Testaburger"
+   ],
+   "report": "\"The Hobbit (South Park)\" is the tenth and final episode of the seventeenth season of the animated television series South Park, standing as the 247th episode overall in the show's run. It premiered on Comedy Central, the American television network responsible for airing South Park, on December 11, 2013. The episode's plot centers on two intertwined storylines: Wendy Testaburger's attempts to raise awareness of the media's impact on body image, and rapper Kanye West's crusade to convince the world that his fianc\u00e9e, Kim Kardashian, is not a hobbit, despite accusations within the episode's plot suggesting otherwise. Kanye West, as Kim Kardashian's fianc\u00e9, is depicted defending her against these hobbit accusations throughout the episode, making his relationship to her and his mission a central comedic thread of this particular South Park installment.",
+   "sources": [
+    "m021"
+   ]
+  },
+  {
+   "id": "C25",
+   "members": [
+    "2011 Sundance Film Festival",
+    "Kevin Smith",
+    "Red State",
+    "SModcast Pictures"
+   ],
+   "report": "This community centers on filmmaker Kevin Smith and his 2011 venture into independent film distribution. At the 2011 Sundance Film Festival, Kevin Smith made a notable announcement regarding the release plans for his movie Red State, revealing his intention to bypass traditional distribution methods in favor of a self-organized touring release. Following this announcement, Kevin Smith founded SModcast Pictures in 2011, establishing it as an American film distribution company as well as a film and television production company. Red State, directed and created by Kevin Smith, became the flagship release for this new venture, with SModcast Pictures serving as the distribution company used to bring the film to audiences through touring rather than conventional theatrical distribution channels. This interconnected set of events illustrates Kevin Smith's direct control over the entire lifecycle of Red State\u2014from its creation and public announcement at a major industry festival, to the founding of his own company specifically to handle its distribution, to the unconventional touring release strategy that defined how the film ultimately reached viewers.",
+   "sources": [
+    "m010"
+   ]
+  },
+  {
+   "id": "C26",
+   "members": [
+    "Clint Black",
+    "E1 Entertainment",
+    "Equity Music Group",
+    "Koch Entertainment"
+   ],
+   "report": "Equity Music Group was an American country music record label founded in 2003 by singer Clint Black. The label was distributed by Koch Entertainment, a company that has since undergone a name change and is now known as E1 Entertainment. This community centers on the relationships between Clint Black as the founder of Equity Music Group, and the corporate distribution and rebranding history connecting Koch Entertainment to its current identity as E1 Entertainment, which handled the distribution of Equity Music Group's releases within the country music industry.",
+   "sources": [
+    "m017"
+   ]
+  },
+  {
+   "id": "C27",
+   "members": [
+    "1222 Fourth Street Southeast",
+    "Ralph Rapson",
+    "Southeast Library",
+    "State Capitol Credit Union building"
+   ],
+   "report": "This community centers on the building located at 1222 Fourth Street Southeast, which originally served as the State Capitol Credit Union building. The building was designed by master architect Ralph Rapson, who created the structure that would later become the Southeast Library. On December 29, 1966, the State Capitol Credit Union building was purchased with the intent of converting it into a library, and this conversion process culminated in the opening of the Southeast Library in 1967. Thus, the Southeast Library occupies the same physical structure at 1222 Fourth Street Southeast that Ralph Rapson designed, with its origins as a credit union building purchased and repurposed through this transformation.",
+   "sources": [
+    "m045"
+   ]
+  },
+  {
+   "id": "C28",
+   "members": [
+    "Dog Star Man",
+    "Jane Wodening",
+    "Stan Brakhage"
+   ],
+   "report": "Dog Star Man is a series of short experimental films released between 1961 and 1964, comprising a prelude and four parts. The entire series was directed by Stan Brakhage, who created all the films within it. The series prominently features Jane Wodening as a performer, marking her as a key figure in this body of experimental cinematic work. Together, these elements form a tightly interconnected community centered on Brakhage's directorial vision and Wodening's on-screen presence across the multi-part film project spanning the early 1960s.",
+   "sources": [
+    "m031"
+   ]
+  },
+  {
+   "id": "C29",
+   "members": [
+    "Angelo Secchi",
+    "Secchi depth",
+    "Secchi disk"
+   ],
+   "report": "This community centers on the Secchi disk, a plain white circular disk created in 1865, and its creator, Angelo Secchi, an Italian person credited with inventing this device that same year, 1865. The Secchi disk serves as a practical instrument used to measure water transparency or turbidity, functioning as the tool from which the Secchi depth is determined\u2014the specific measure of depth at which the disk is no longer visible when lowered into a body of water, directly correlating with the level of water turbidity present. The relational structure of this community is straightforward yet foundational: Angelo Secchi created the Secchi disk in 1865, establishing his role as the originator of this scientific measurement tool, while the Secchi depth as a concept relies entirely on the Secchi disk for its practical application, being derived from observations made using this device to assess and quantify water clarity. Together, these three entities\u2014the person Angelo Secchi, the physical instrument known as the Secchi disk, and the resulting measurement metric called Secchi depth\u2014form an interconnected system for scientific water quality assessment that originated in 1865 and continues to link the inventor's name to both the tool and the depth measurement standard it produces.",
+   "sources": [
+    "m050"
+   ]
+  },
+  {
+   "id": "C30",
+   "members": [
+    "Appalachian Mountains"
+   ],
+   "report": "The Appalachian Mountains, a major mountain range in eastern North America, hold particular significance as the geographic marker delineating the eastern boundary of ceded lands in this context. Functioning as a natural and political demarcation line, the Appalachian Mountains served to define the extent of territory that was surrendered or transferred, establishing the range itself as the easternmost limit of these ceded lands. As the sole community member in this dataset, the Appalachian Mountains stand as the key spatial reference point, with no other entities or relations currently documented in connection with this geographic feature beyond its defining role as a boundary marker for the ceded territory.",
+   "sources": [
+    "m058"
+   ]
+  },
+  {
+   "id": "C31",
+   "members": [
+    "Mississippi River"
+   ],
+   "report": "The Mississippi River, a place entity within this community, is defined specifically by its function as a boundary marker in territorial cession\u2014serving as the western boundary of ceded lands. This positions the river not merely as a geographic feature but as a legally and politically significant demarcation line, delineating the extent of a land cession agreement (the specific parties, treaty, or date of cession are not detailed in the available data, but the relation explicitly identifies the Mississippi River as marking where the ceded territory ends on its western edge). No further attributes, dates, or additional relations are provided for this entity within the current community structure; the sole documented fact is this boundary-defining role, which situates the Mississippi River as a key reference point for understanding the geographic scope of the associated land cession.",
+   "sources": [
+    "m058"
+   ]
+  }
+ ],
+ "extraction_failures": [
+  {
+   "pid": "m004",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"DeSoto Records\", \"type\": \"organization\", \"description\": \"American record label based in Washington, D.C., founded in 1989\"},\n    {\"name\": \"Washington, D.C.\", \"type\": \"p"
+  },
+  {
+   "pid": "m008",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Coop et al. (2009)\", \"type\": \"other\", \"description\": \"A 2009 genetic study analyzing selected alleles and geographic distribution patterns among human populations\"},\n  {\"nam"
+  },
+  {
+   "pid": "m020",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"CFVS-DT\", \"type\": \"organization\", \"description\": \"French language television station affiliated with V, licensed to Val-d'Or, Quebec, Canada; branded on-air as V Abitibi-T\u00e9m"
+  },
+  {
+   "pid": "m022",
+   "error": "ValueError: could not parse JSON: {\"entities\": [{\"name\": \"Stan\", \"type\": \"person\", \"description\": \"The James-Jennings family's dog who can talk and blogs, voiced by Stephen Full\"}, {\"name\": \"Stephen Full\", \"type\": \"person\", \"descripti"
+  },
+  {
+   "pid": "m029",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Gemini Division\", \"type\": \"film\", \"description\": \"American science fiction online series of five- to seven-minute episodes, went into production March 2008, began airing Aug"
+  },
+  {
+   "pid": "m030",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Dian Bachar\", \"type\": \"person\", \"description\": \"American actor born October 26, 1970 in Denver, Colorado\"},\n  {\"name\": \"Denver, Colorado\", \"type\": \"place\", \"description\": \"B"
+  },
+  {
+   "pid": "m033",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"Richard Armitage (actor)\", \"type\": \"person\", \"description\": \"Richard Crispin Armitage, born 22 August 1971, English film, television, theatre and voice actor\"},\n    {\"n"
+  },
+  {
+   "pid": "m034",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"Not What He Seems\", \"type\": \"other\", \"description\": \"Eleventh episode of the second season of the American animated television series Gravity Falls\"},\n    {\"name\": \"Gra"
+  },
+  {
+   "pid": "m035",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Mikael Persbrandt\", \"type\": \"person\", \"description\": \"Swedish actor, born Mikael \u00c5ke Persbrandt on 25 September 1963\"},\n  {\"name\": \"Gunvald Larsson\", \"type\": \"other\", \"descr"
+  },
+  {
+   "pid": "m036",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"Seed of Chucky\", \"type\": \"film\", \"description\": \"Film for which the cast list is provided\"},\n    {\"name\": \"Brad Dourif\", \"type\": \"person\", \"description\": \"Voice actor f"
+  },
+  {
+   "pid": "m038",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"Spider-Man (1967 TV series)\", \"type\": \"other\", \"description\": \"Animated television series in the superhero fiction genre, ran from September 9, 1967, to June 14, 1970.\""
+  },
+  {
+   "pid": "m040",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"Barry Robinson\", \"type\": \"person\", \"description\": \"Steve's morbidly obese friend with an inarticulate, strident vocal quality; borderline mentally retarded due to anti-"
+  },
+  {
+   "pid": "m042",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Riverside Plaza\", \"type\": \"place\", \"description\": \"Modernist and brutalist apartment complex that opened in Minneapolis, Minnesota in 1973\"},\n  {\"name\": \"Ralph Rapson\", \"typ"
+  },
+  {
+   "pid": "m044",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Wilkes Land\", \"type\": \"place\", \"description\": \"Large district of land in eastern Antarctica, about 2,600,000 km\u00b2 in area, mostly glaciated, extending about 2600 km toward th"
+  },
+  {
+   "pid": "m046",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Kanije Eyalet\", \"type\": \"place\", \"description\": \"Ottoman province established in 1600, existed until 1690\"},\n  {\"name\": \"Kanije\", \"type\": \"place\", \"description\": \"Town captu"
+  },
+  {
+   "pid": "m047",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Stockton\", \"type\": \"person\", \"description\": \"Military commander who helped recover Los Angeles and force capitulation of Alta California in 1847\"},\n  {\"name\": \"Kearny\", \"typ"
+  },
+  {
+   "pid": "m051",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"French and Indian War\", \"type\": \"other\", \"description\": \"A century of Anglo-French conflict whose outcome reshaped colonial territories in North America\"},\n    {\"name\":"
+  },
+  {
+   "pid": "m052",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Minneapolis\", \"type\": \"place\", \"description\": \"City on both banks of the Mississippi River, former flour milling capital, categorized as a global city as of 2018\"},\n  {\"name"
+  },
+  {
+   "pid": "m053",
+   "error": "ValueError: could not parse JSON: {\n  \"entities\": [\n    {\"name\": \"Northwest Territories\", \"type\": \"place\", \"description\": \"Territory in northern Canada with a land area of 1,183,085 km2 (456,792 sq mi)\"},\n    {\"name\": \"Canada\", \"type\""
+  },
+  {
+   "pid": "m054",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Pimpirev Glacier\", \"type\": \"place\", \"description\": \"Glacier on Livingston Island, South Shetland Islands, Antarctica; extends 5.5 km SE-NW and 1.8 km NW-SE, drains toward Pi"
+  },
+  {
+   "pid": "m057",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"Louisiana Purchase\", \"type\": \"other\", \"description\": \"1803 acquisition of the Louisiana territory by the United States\"},\n  {\"name\": \"Spain\", \"type\": \"organization\", \"descri"
+  },
+  {
+   "pid": "m060",
+   "error": "ValueError: could not parse JSON: {\"entities\": [\n  {\"name\": \"United States\", \"type\": \"place\", \"description\": \"Country whose geography is described, including land and territorial water borders\"},\n  {\"name\": \"Canada\", \"type\": \"place\", "
+  }
+ ]
+}

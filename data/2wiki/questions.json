@@ -1,0 +1,1026 @@
+[
+ {
+  "id": "q1",
+  "question": "Which film has the director who is older, The Gamecock (Film) or Monster A Go-Go?",
+  "answer": "Monster A Go-Go",
+  "hop": 4,
+  "type": "bridge_comparison",
+  "context_pids": [
+   "p001",
+   "p002",
+   "p003",
+   "p004",
+   "p005",
+   "p006",
+   "p007",
+   "p008",
+   "p009",
+   "p010"
+  ],
+  "gold_pids": [
+   "p007",
+   "p002",
+   "p006",
+   "p005"
+  ],
+  "distractor_pids": [
+   "p001",
+   "p003",
+   "p004",
+   "p008",
+   "p009",
+   "p010"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p007",
+    "title": "The Gamecock (film)",
+    "sent_id": 0
+   },
+   {
+    "pid": "p002",
+    "title": "Monster a Go-Go",
+    "sent_id": 0
+   },
+   {
+    "pid": "p006",
+    "title": "Pasquale Festa Campanile",
+    "sent_id": 0
+   },
+   {
+    "pid": "p005",
+    "title": "Herschell Gordon Lewis",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "The Gamecock (film)",
+    "director",
+    "Pasquale Festa Campanile"
+   ],
+   [
+    "Monster a Go-Go",
+    "director",
+    "Herschell Gordon Lewis"
+   ],
+   [
+    "Pasquale Festa Campanile",
+    "date of birth",
+    "28 July 1927"
+   ],
+   [
+    "Herschell Gordon Lewis",
+    "date of birth",
+    "June 15, 1926"
+   ]
+  ],
+  "src_id": "f1145dc6084f11ebbd56ac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark) — paper Appendix H Case 1"
+ },
+ {
+  "id": "q2",
+  "question": "Who is the mother of the director of film Polish-Russian War (Film)?",
+  "answer": "Małgorzata Braunek",
+  "hop": 2,
+  "type": "compositional",
+  "context_pids": [
+   "p011",
+   "p012",
+   "p013",
+   "p014",
+   "p015",
+   "p016",
+   "p017",
+   "p018",
+   "p019",
+   "p020"
+  ],
+  "gold_pids": [
+   "p015",
+   "p018"
+  ],
+  "distractor_pids": [
+   "p011",
+   "p012",
+   "p013",
+   "p014",
+   "p016",
+   "p017",
+   "p019",
+   "p020"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p015",
+    "title": "Polish-Russian War (film)",
+    "sent_id": 1
+   },
+   {
+    "pid": "p018",
+    "title": "Xawery Żuławski",
+    "sent_id": 2
+   }
+  ],
+  "evidences": [
+   [
+    "Polish-Russian War",
+    "director",
+    "Xawery Żuławski"
+   ],
+   [
+    "Xawery Żuławski",
+    "mother",
+    "Małgorzata Braunek"
+   ]
+  ],
+  "src_id": "8813f87c0bdd11eba7f7acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q3",
+  "question": "Which film came out first, Blind Shaft or The Mask Of Fu Manchu?",
+  "answer": "The Mask Of Fu Manchu",
+  "hop": 2,
+  "type": "comparison",
+  "context_pids": [
+   "p021",
+   "p022",
+   "p023",
+   "p024",
+   "p025",
+   "p026",
+   "p027",
+   "p028",
+   "p029",
+   "p030"
+  ],
+  "gold_pids": [
+   "p021",
+   "p023"
+  ],
+  "distractor_pids": [
+   "p022",
+   "p024",
+   "p025",
+   "p026",
+   "p027",
+   "p028",
+   "p029",
+   "p030"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p021",
+    "title": "Blind Shaft",
+    "sent_id": 0
+   },
+   {
+    "pid": "p023",
+    "title": "The Mask of Fu Manchu",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Blind Shaft",
+    "publication date",
+    "2003"
+   ],
+   [
+    "The Mask of Fu Manchu",
+    "publication date",
+    "1932"
+   ]
+  ],
+  "src_id": "61a46987092f11ebbdaeac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q4",
+  "question": "When did John V, Prince Of Anhalt-Zerbst's father die?",
+  "answer": "12 June 1516",
+  "hop": 2,
+  "type": "compositional",
+  "context_pids": [
+   "p031",
+   "p032",
+   "p033",
+   "p034",
+   "p035",
+   "p036",
+   "p037",
+   "p038",
+   "p039",
+   "p040"
+  ],
+  "gold_pids": [
+   "p037",
+   "p038"
+  ],
+  "distractor_pids": [
+   "p031",
+   "p032",
+   "p033",
+   "p034",
+   "p035",
+   "p036",
+   "p039",
+   "p040"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p037",
+    "title": "John V, Prince of Anhalt-Zerbst",
+    "sent_id": 2
+   },
+   {
+    "pid": "p038",
+    "title": "Ernest I, Prince of Anhalt-Dessau",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "John V of Anhalt-Zerbst",
+    "father",
+    "Ernest I, Prince of Anhalt-Dessau"
+   ],
+   [
+    "Ernest I, Prince of Anhalt-Dessau",
+    "date of death",
+    "12 June 1516"
+   ]
+  ],
+  "src_id": "e2a3bf2a0bdd11eba7f7acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q5",
+  "question": "What is the award that the director of film Wearing Velvet Slippers Under A Golden Umbrella won?",
+  "answer": "Myanmar Motion Picture Academy Awards",
+  "hop": 2,
+  "type": "compositional",
+  "context_pids": [
+   "p041",
+   "p042",
+   "p043",
+   "p044",
+   "p045",
+   "p046",
+   "p047",
+   "p048",
+   "p049",
+   "p050"
+  ],
+  "gold_pids": [
+   "p047",
+   "p046"
+  ],
+  "distractor_pids": [
+   "p041",
+   "p042",
+   "p043",
+   "p044",
+   "p045",
+   "p048",
+   "p049",
+   "p050"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p047",
+    "title": "Wearing Velvet Slippers under a Golden Umbrella",
+    "sent_id": 0
+   },
+   {
+    "pid": "p046",
+    "title": "Wunna",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Wearing Velvet Slippers under a Golden Umbrella",
+    "director",
+    "Wunna"
+   ],
+   [
+    "Wunna",
+    "award received",
+    "Myanmar Motion Picture Academy Awards"
+   ]
+  ],
+  "src_id": "0cd3bdea0bde11eba7f7acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q6",
+  "question": "Where was the director of film Ronnie Rocket born?",
+  "answer": "Missoula, Montana",
+  "hop": 2,
+  "type": "compositional",
+  "context_pids": [
+   "p051",
+   "p052",
+   "p053",
+   "p044",
+   "p054",
+   "p055",
+   "p056",
+   "p057",
+   "p045",
+   "p042"
+  ],
+  "gold_pids": [
+   "p057",
+   "p056"
+  ],
+  "distractor_pids": [
+   "p051",
+   "p052",
+   "p053",
+   "p044",
+   "p054",
+   "p055",
+   "p045",
+   "p042"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p057",
+    "title": "Ronnie Rocket",
+    "sent_id": 0
+   },
+   {
+    "pid": "p056",
+    "title": "David Lynch",
+    "sent_id": 4
+   }
+  ],
+  "evidences": [
+   [
+    "Ronnie Rocket",
+    "director",
+    "David Lynch"
+   ],
+   [
+    "David Lynch",
+    "place of birth",
+    "Missoula, Montana"
+   ]
+  ],
+  "src_id": "f9dcb4a60bda11eba7f7acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q7",
+  "question": "Who is Charles Bretagne Marie De La Trémoille's paternal grandfather?",
+  "answer": "Charles Armand René de La Trémoille",
+  "hop": 2,
+  "type": "inference",
+  "context_pids": [
+   "p058",
+   "p059",
+   "p060",
+   "p061",
+   "p062",
+   "p063",
+   "p064",
+   "p065",
+   "p066",
+   "p067"
+  ],
+  "gold_pids": [
+   "p059",
+   "p063"
+  ],
+  "distractor_pids": [
+   "p058",
+   "p060",
+   "p061",
+   "p062",
+   "p064",
+   "p065",
+   "p066",
+   "p067"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p059",
+    "title": "Charles Bretagne Marie de La Trémoille",
+    "sent_id": 0
+   },
+   {
+    "pid": "p063",
+    "title": "Jean Bretagne Charles de La Trémoille",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Charles Bretagne Marie de La Trémoille",
+    "father",
+    "Jean Bretagne Charles de La Trémoille"
+   ],
+   [
+    "Jean Bretagne Charles de La Trémoille",
+    "father",
+    "Charles Armand René de La Trémoille"
+   ]
+  ],
+  "src_id": "8981e1ce0bb011ebab90acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q8",
+  "question": "Are North Marion High School (Oregon) and Seoul High School both located in the same country?",
+  "answer": "no",
+  "hop": 2,
+  "type": "comparison",
+  "context_pids": [
+   "p068",
+   "p069",
+   "p070",
+   "p071",
+   "p072",
+   "p073",
+   "p074",
+   "p075",
+   "p076",
+   "p077"
+  ],
+  "gold_pids": [
+   "p077",
+   "p075"
+  ],
+  "distractor_pids": [
+   "p068",
+   "p069",
+   "p070",
+   "p071",
+   "p072",
+   "p073",
+   "p074",
+   "p076"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p077",
+    "title": "North Marion High School (Oregon)",
+    "sent_id": 0
+   },
+   {
+    "pid": "p075",
+    "title": "Seoul High School",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "North Marion High School (Oregon)",
+    "country",
+    "United States"
+   ],
+   [
+    "Seoul High School",
+    "country",
+    "South Korea"
+   ]
+  ],
+  "src_id": "a7b9672009c311ebbdb0ac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q9",
+  "question": "Which film has the director who was born later, El Extraño Viaje or Love In Pawn?",
+  "answer": "El Extraño Viaje",
+  "hop": 4,
+  "type": "bridge_comparison",
+  "context_pids": [
+   "p078",
+   "p079",
+   "p080",
+   "p081",
+   "p082",
+   "p083",
+   "p084",
+   "p085",
+   "p086",
+   "p087"
+  ],
+  "gold_pids": [
+   "p079",
+   "p082",
+   "p085",
+   "p087"
+  ],
+  "distractor_pids": [
+   "p078",
+   "p080",
+   "p081",
+   "p083",
+   "p084",
+   "p086"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p079",
+    "title": "El extraño viaje",
+    "sent_id": 0
+   },
+   {
+    "pid": "p082",
+    "title": "Love in Pawn",
+    "sent_id": 0
+   },
+   {
+    "pid": "p085",
+    "title": "Fernando Fernán Gómez",
+    "sent_id": 0
+   },
+   {
+    "pid": "p087",
+    "title": "Charles Saunders (director)",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "El extraño viaje",
+    "director",
+    "Fernando Fernán Gómez"
+   ],
+   [
+    "Love in Pawn",
+    "director",
+    "Charles Saunders"
+   ],
+   [
+    "Fernando Fernán Gómez",
+    "date of birth",
+    "28 August 1921"
+   ],
+   [
+    "Charles Saunders (director)",
+    "date of birth",
+    "8 April 1904"
+   ]
+  ],
+  "src_id": "298f23b8088a11ebbd6eac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q10",
+  "question": "Who is the maternal grandfather of Antiochus X Eusebes?",
+  "answer": "Ptolemy IX Lathyros",
+  "hop": 2,
+  "type": "inference",
+  "context_pids": [
+   "p088",
+   "p089",
+   "p090",
+   "p091",
+   "p092",
+   "p093",
+   "p094",
+   "p095",
+   "p096",
+   "p097"
+  ],
+  "gold_pids": [
+   "p091",
+   "p093"
+  ],
+  "distractor_pids": [
+   "p088",
+   "p089",
+   "p090",
+   "p092",
+   "p094",
+   "p095",
+   "p096",
+   "p097"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p091",
+    "title": "Antiochus X Eusebes",
+    "sent_id": 1
+   },
+   {
+    "pid": "p093",
+    "title": "Cleopatra IV of Egypt",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Antiochus X Eusebes",
+    "mother",
+    "Cleopatra IV"
+   ],
+   [
+    "Cleopatra IV",
+    "father",
+    "Ptolemy IX Lathyros"
+   ]
+  ],
+  "src_id": "2ec440560bb011ebab90acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q11",
+  "question": "Which film has the director died first, Crimen A Las Tres or The Working Class Goes To Heaven?",
+  "answer": "The Working Class Goes To Heaven",
+  "hop": 4,
+  "type": "bridge_comparison",
+  "context_pids": [
+   "p098",
+   "p099",
+   "p100",
+   "p101",
+   "p102",
+   "p103",
+   "p104",
+   "p105",
+   "p106",
+   "p107"
+  ],
+  "gold_pids": [
+   "p101",
+   "p103",
+   "p102",
+   "p104"
+  ],
+  "distractor_pids": [
+   "p098",
+   "p099",
+   "p100",
+   "p105",
+   "p106",
+   "p107"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p101",
+    "title": "Crimen a las tres",
+    "sent_id": 0
+   },
+   {
+    "pid": "p103",
+    "title": "The Working Class Goes to Heaven",
+    "sent_id": 0
+   },
+   {
+    "pid": "p102",
+    "title": "Luis Saslavsky",
+    "sent_id": 0
+   },
+   {
+    "pid": "p104",
+    "title": "Elio Petri",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Crimen a las tres",
+    "director",
+    "Luis Saslavsky"
+   ],
+   [
+    "The Working Class Goes to Heaven",
+    "director",
+    "Elio Petri"
+   ],
+   [
+    "Luis Saslavsky",
+    "date of death",
+    "March 20, 1995"
+   ],
+   [
+    "Elio Petri",
+    "date of death",
+    "10 November 1982"
+   ]
+  ],
+  "src_id": "05f8a691087b11ebbd67ac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q12",
+  "question": "Which film has the director born first, Once A Gentleman or The Girl In White?",
+  "answer": "Once A Gentleman",
+  "hop": 4,
+  "type": "bridge_comparison",
+  "context_pids": [
+   "p108",
+   "p109",
+   "p110",
+   "p111",
+   "p112",
+   "p113",
+   "p114",
+   "p115",
+   "p116",
+   "p117"
+  ],
+  "gold_pids": [
+   "p108",
+   "p116",
+   "p113",
+   "p114"
+  ],
+  "distractor_pids": [
+   "p109",
+   "p110",
+   "p111",
+   "p112",
+   "p115",
+   "p117"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p108",
+    "title": "Once a Gentleman",
+    "sent_id": 0
+   },
+   {
+    "pid": "p116",
+    "title": "The Girl in White",
+    "sent_id": 0
+   },
+   {
+    "pid": "p113",
+    "title": "James Cruze",
+    "sent_id": 0
+   },
+   {
+    "pid": "p114",
+    "title": "John Sturges",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Once a Gentleman",
+    "director",
+    "James Cruze"
+   ],
+   [
+    "The Girl in White",
+    "director",
+    "John Sturges"
+   ],
+   [
+    "James Cruze",
+    "date of birth",
+    "March 27, 1884"
+   ],
+   [
+    "John Sturges",
+    "date of birth",
+    "January 3, 1910"
+   ]
+  ],
+  "src_id": "645c9a5a08c311ebbd8dac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q13",
+  "question": "Who died first, Fleetwood Sheppard or George William Whitaker?",
+  "answer": "Fleetwood Sheppard",
+  "hop": 2,
+  "type": "comparison",
+  "context_pids": [
+   "p118",
+   "p119",
+   "p120",
+   "p121",
+   "p122",
+   "p123",
+   "p124",
+   "p125",
+   "p126",
+   "p127"
+  ],
+  "gold_pids": [
+   "p119",
+   "p118"
+  ],
+  "distractor_pids": [
+   "p120",
+   "p121",
+   "p122",
+   "p123",
+   "p124",
+   "p125",
+   "p126",
+   "p127"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p119",
+    "title": "Fleetwood Sheppard",
+    "sent_id": 0
+   },
+   {
+    "pid": "p118",
+    "title": "George William Whitaker",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Fleetwood Sheppard",
+    "date of death",
+    "25 August 1698"
+   ],
+   [
+    "George William Whitaker",
+    "date of death",
+    "March 6, 1916"
+   ]
+  ],
+  "src_id": "ada1b358085211ebbd58ac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q14",
+  "question": "Which film was released earlier, Moment Of Danger or The Ballad Of Josie?",
+  "answer": "Moment Of Danger",
+  "hop": 2,
+  "type": "comparison",
+  "context_pids": [
+   "p128",
+   "p129",
+   "p130",
+   "p131",
+   "p132",
+   "p133",
+   "p132",
+   "p134",
+   "p135",
+   "p136"
+  ],
+  "gold_pids": [
+   "p128",
+   "p131"
+  ],
+  "distractor_pids": [
+   "p129",
+   "p130",
+   "p132",
+   "p133",
+   "p132",
+   "p134",
+   "p135",
+   "p136"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p128",
+    "title": "Moment of Danger",
+    "sent_id": 0
+   },
+   {
+    "pid": "p131",
+    "title": "The Ballad of Josie",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Moment of Danger",
+    "publication date",
+    "1960"
+   ],
+   [
+    "The Ballad of Josie",
+    "publication date",
+    "1967"
+   ]
+  ],
+  "src_id": "d8c36503097411ebbdb0ac1f6bf848b6",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q15",
+  "question": "Who is Catherine Of Pomerania, Countess Palatine Of Neumarkt's father-in-law?",
+  "answer": "Rupert",
+  "hop": 2,
+  "type": "inference",
+  "context_pids": [
+   "p137",
+   "p138",
+   "p139",
+   "p140",
+   "p141",
+   "p142",
+   "p143",
+   "p144",
+   "p145",
+   "p146"
+  ],
+  "gold_pids": [
+   "p141",
+   "p140"
+  ],
+  "distractor_pids": [
+   "p137",
+   "p138",
+   "p139",
+   "p142",
+   "p143",
+   "p144",
+   "p145",
+   "p146"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p141",
+    "title": "Catherine of Pomerania, Countess Palatine of Neumarkt",
+    "sent_id": 3
+   },
+   {
+    "pid": "p140",
+    "title": "John, Count Palatine of Neumarkt",
+    "sent_id": 1
+   }
+  ],
+  "evidences": [
+   [
+    "Catherine of Pomerania, Countess Palatine of Neumarkt",
+    "spouse",
+    "John"
+   ],
+   [
+    "John",
+    "father",
+    "Rupert"
+   ]
+  ],
+  "src_id": "2002bf0c0bb011ebab90acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ },
+ {
+  "id": "q16",
+  "question": "Who is Marie Zéphyrine Of France's paternal grandmother?",
+  "answer": "Marie Leszczyńska",
+  "hop": 2,
+  "type": "inference",
+  "context_pids": [
+   "p147",
+   "p148",
+   "p149",
+   "p150",
+   "p151",
+   "p152",
+   "p153",
+   "p154",
+   "p155",
+   "p156"
+  ],
+  "gold_pids": [
+   "p153",
+   "p154"
+  ],
+  "distractor_pids": [
+   "p147",
+   "p148",
+   "p149",
+   "p150",
+   "p151",
+   "p152",
+   "p155",
+   "p156"
+  ],
+  "gold_supporting_facts": [
+   {
+    "pid": "p153",
+    "title": "Marie Zéphyrine of France",
+    "sent_id": 0
+   },
+   {
+    "pid": "p154",
+    "title": "Louis, Dauphin of France (son of Louis XV)",
+    "sent_id": 0
+   }
+  ],
+  "evidences": [
+   [
+    "Marie Zéphyrine of France",
+    "father",
+    "Louis, Dauphin of France"
+   ],
+   [
+    "Louis, Dauphin of France",
+    "mother",
+    "Marie Leszczyńska"
+   ]
+  ],
+  "src_id": "c531e7560baf11ebab90acde48001122",
+  "note": "2WikiMultihopQA validation (real benchmark)"
+ }
+]

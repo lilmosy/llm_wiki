@@ -1,172 +1,335 @@
-"""End-to-end runner: Phase 1 compile -> Phase 2 query (LLM-Wiki vs BM25) ->
-Phase 3 evaluate. Writes runs/*.json and REPORT.md.
+"""End-to-end runner over N arms.
+
+  Phase 1  build   -- every arm that needs an OFFLINE INDEX builds it once
+  Phase 2  query   -- every arm answers every question
+  Phase 3  score   -- shared harness, then REPORT.md
+
+Adding an arm = write the module, add ONE entry to ARMS below. Nothing else in
+this file (or in make_report.py) is arm-specific.
+
+    python3 run_all.py            full run (rebuilds every index)
+    python3 run_all.py --reuse    reuse existing indexes/ (query only)
+    python3 run_all.py --dry-run  wire everything up, load indexes, make 0 API calls
+    python3 run_all.py --only llm_wiki,bm25    restrict to some arms
+    python3 run_all.py --questions q2,q7,q3,q12,q1   query a diagnostic subset
 """
 import json
+import hashlib
 import os
 import sys
-from collections import defaultdict
+import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import yaml
-from llm import USAGE
-from indexing.compile import run_compile
-from retrieval.agent import answer_question
-from baseline.bm25_rag import BM25Rag
-from harness.evaluate import score
+from core.llm import USAGE
+from core.evaluate import score
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 cfg = yaml.safe_load(open(os.path.join(HERE, "config.yaml")))
-corpus = [json.loads(l) for l in open(os.path.join(HERE, "data/corpus.jsonl")) if l.strip()]
-questions = json.load(open(os.path.join(HERE, "data/questions.json")))
+
+# --data lets datasets live beneath data/. Everything an arm writes (indexes,
+# wiki tree, results) gets a stable dataset namespace so a swap never clobbers
+# another run. `data/2wiki` -> ns "2wiki"; `data/musique` -> ns "musique".
+DATA = "data/2wiki"
+if "--data" in sys.argv:
+    DATA = sys.argv[sys.argv.index("--data") + 1].rstrip("/")
+if DATA.startswith("data/"):
+    NS = DATA[len("data/"):].replace("/", "_")
+elif DATA.startswith("data_"):  # compatibility with earlier flat layout
+    NS = DATA[5:]
+else:
+    NS = ""
+SFX = f"_{NS}" if NS else ""
+
+corpus = [json.loads(l) for l in open(os.path.join(HERE, DATA, "corpus.jsonl")) if l.strip()]
+questions = json.load(open(os.path.join(HERE, DATA, "questions.json")))
+ALL_QUESTION_IDS = [q["id"] for q in questions]
+QUESTION_FILTER = None
+if "--questions" in sys.argv:
+    QUESTION_FILTER = [q.strip() for q in sys.argv[sys.argv.index("--questions") + 1].split(",") if q.strip()]
+    unknown = [q for q in QUESTION_FILTER if q not in ALL_QUESTION_IDS]
+    if unknown:
+        raise SystemExit(f"unknown question id(s): {', '.join(unknown)}; available: {', '.join(ALL_QUESTION_IDS)}")
+    wanted = set(QUESTION_FILTER)
+    # Preserve the canonical file order rather than the command-line order so
+    # rows remain directly comparable with a later all-question run.
+    questions = [q for q in questions if q["id"] in wanted]
+
+# Reusing an index compiled from another corpus or configuration silently
+# invalidates every comparison. Keep one stable fingerprint for this run and
+# write it beside each offline artifact after a successful build.
+_corpus_bytes = open(os.path.join(HERE, DATA, "corpus.jsonl"), "rb").read()
+_questions_bytes = open(os.path.join(HERE, DATA, "questions.json"), "rb").read()
+DATA_FINGERPRINT = hashlib.sha256(_corpus_bytes + b"\0" + _questions_bytes).hexdigest()
+CONFIG_FINGERPRINT = hashlib.sha256(json.dumps(cfg, sort_keys=True).encode()).hexdigest()
+
+from baseline._common import set_index_namespace
+set_index_namespace(NS)
+
+# Every arm now writes under indexes/<arm>/, LLM-Wiki included -- the md tree
+# is that arm's index, not a separate kind of artifact.
+WIKI_DIR = os.path.join(HERE, "indexes" + SFX, "llm_wiki", "wiki")
+RESULTS = os.path.join(HERE, f"runs/results{SFX}.json")
+COMPILE_INFO = os.path.join(HERE, f"runs/compile_info{SFX}.json")
+
+# Guard: this file is an entry-point script, not an importable module. Importing
+# it must NOT run the pipeline (hundreds of API calls + overwrites results.json).
+if __name__ != "__main__":
+    raise SystemExit("run_all.py is a script; run `python3 run_all.py`, do not import it.")
+
+REUSE = "--reuse" in sys.argv
+# --dry-run wires up every arm and loads every on-disk index, then stops before
+# the first API call. It is how a refactor gets verified when the pipeline
+# itself costs hundreds of calls: if the registry, the imports and the artifact
+# paths are wrong, this fails in seconds and for free.
+DRY = "--dry-run" in sys.argv
+ONLY = None
+if "--only" in sys.argv:
+    ONLY = set(sys.argv[sys.argv.index("--only") + 1].split(","))
 
 
 def mean(xs):
     return sum(xs) / len(xs) if xs else 0.0
 
 
-# Guard: this file is an entry-point script, not an importable module. Importing
-# it must NOT run the pipeline (~80 API calls + overwrites runs/results.json).
-if __name__ != "__main__":
-    raise SystemExit("run_all.py is a script; run `python3 run_all.py`, do not import it.")
+def calls():
+    return USAGE["calls"]
 
 
-print(f"[Phase 1] compiling {len(corpus)} passages ...", flush=True)
-usage_before_compile = dict(USAGE)
-wiki, eb, cinfo = run_compile(corpus, cfg, os.path.join(HERE, "wiki"),
-                              os.path.join(HERE, "error_book.yaml"))
-compile_calls = USAGE["calls"] - usage_before_compile["calls"]
-print(f"  -> {len(wiki.pages)} pages, {len(wiki.sources)} sources, {compile_calls} LLM calls", flush=True)
+# ===========================================================================
+# ARM REGISTRY  -- the whole point of the refactor.
+#   name      : key used in results.json / REPORT.md
+#   label     : display name
+#   paradigm  : paper §4.2 grouping
+#   build     : callable() -> stats dict, or None if the arm needs no index
+#   make      : callable() -> object with .answer(question)
+# ===========================================================================
+def _arms():
+    from baseline.llm_wiki.build import run_compile
+    from baseline.llm_wiki.wiki import Wiki
+    from baseline.llm_wiki.answer import answer_question
+    from baseline.b1_bm25.answer import BM25Rag
+    from baseline.b0_closed_book.answer import ClosedBook
+    from baseline.b2_dense.answer import DenseRag
+    from baseline.b3_raptor.build import build as raptor_build
+    from baseline.b3_raptor.answer import Raptor
+    from baseline.b4_graphrag.build import build as graphrag_build
+    from baseline.b4_graphrag.answer import GraphRag
+    from baseline.b5_lightrag.build import build as lightrag_build
+    from baseline.b5_lightrag.answer import LightRag
+    from baseline.b6_hipporag.build import build as hipporag_build
+    from baseline.b6_hipporag.answer import HippoRag
 
-print(f"[Phase 2] answering {len(questions)} questions (LLM-Wiki + BM25 baseline) ...", flush=True)
+    state = {}
+
+    def wiki_build():
+        w, eb, cinfo = run_compile(corpus, cfg, WIKI_DIR,
+                                   os.path.join(HERE, f"indexes{SFX}", "llm_wiki", "error_book.yaml"))
+        state["wiki"], state["eb"], state["cinfo"] = w, eb, cinfo
+        pages_by_source = {x["pid"]: [] for x in corpus}
+        for slug, page in w.pages.items():
+            for pid in page.get("sources", []):
+                if pid in pages_by_source:
+                    pages_by_source[pid].append(slug)
+        gold_pids = {pid for q in questions for pid in q.get("gold_pids", [])}
+        covered = {pid for pid, pages in pages_by_source.items() if pages}
+        cinfo["coverage"] = {
+            "source_passages": len(corpus),
+            "passages_with_compiled_page": len(covered),
+            "missing_source_pids": sorted(set(pages_by_source) - covered),
+            "gold_passages": len(gold_pids),
+            "gold_passages_with_compiled_page": len(gold_pids & covered),
+            "missing_gold_pids": sorted(gold_pids - covered),
+            "pages_by_source": pages_by_source,
+        }
+        json.dump(cinfo, open(COMPILE_INFO, "w"), indent=1, default=str)
+        return {"pages": len(w.pages), "sources": len(w.sources),
+                "structural_errors": len(cinfo["final_errors"]),
+                "passage_coverage": f"{len(covered)}/{len(corpus)}",
+                "gold_coverage": f"{len(gold_pids & covered)}/{len(gold_pids)}"}
+
+    def wiki_load():
+        state["wiki"] = Wiki.load(WIKI_DIR)
+        state["cinfo"] = json.load(open(COMPILE_INFO)) if os.path.exists(COMPILE_INFO) else None
+        return {"pages": len(state["wiki"].pages)}
+
+    class _WikiArm:
+        def answer(self, q):
+            return answer_question(q, state["wiki"], cfg)
+
+    dense = DenseRag(corpus, cfg)
+    lightrag = LightRag(corpus, cfg)
+    hipporag = HippoRag(corpus, cfg)
+
+    # "artifact" = the file whose existence proves the offline index is already
+    # built. --reuse only skips a build when this file is present, so a partial
+    # run can be resumed without silently querying a missing index.
+    return [
+        {"name": "llm_wiki", "label": "LLM-Wiki (ours)", "paradigm": "agent-native wiki",
+         "artifact": f"indexes{SFX}/llm_wiki/wiki/_manifest.json",
+         "build": wiki_build, "load": wiki_load, "make": lambda: _WikiArm()},
+
+        {"name": "closed_book", "label": "None (Closed-book)", "paradigm": "no retrieval",
+         "artifact": None, "build": None, "load": None, "make": lambda: ClosedBook(cfg)},
+
+        {"name": "bm25", "label": "Vanilla RAG (BM25)", "paradigm": "flat sparse",
+         "artifact": None, "build": None, "load": None, "make": lambda: BM25Rag(corpus, cfg)},
+
+        {"name": "dense", "label": "Vanilla RAG (Dense)", "paradigm": "flat dense",
+         "artifact": f"indexes{SFX}/dense/vectors.npz",
+         "build": dense.build, "load": dense.load, "make": lambda: dense},
+
+        {"name": "raptor", "label": "RAPTOR", "paradigm": "hierarchical summary tree",
+         "artifact": f"indexes{SFX}/raptor/tree.json",
+         "build": lambda: raptor_build(corpus, cfg), "load": None, "make": lambda: Raptor(cfg)},
+
+        {"name": "graphrag", "label": "GraphRAG", "paradigm": "graph + community reports",
+         "artifact": f"indexes{SFX}/graphrag/graph.json",
+         "build": lambda: graphrag_build(corpus, cfg), "load": None, "make": lambda: GraphRag(cfg)},
+
+        {"name": "lightrag", "label": "LightRAG", "paradigm": "graph dual-level",
+         "artifact": f"indexes{SFX}/lightrag/graph.json",
+         "build": lambda: lightrag_build(corpus, cfg), "load": lightrag.load,
+         "make": lambda: lightrag},
+
+        {"name": "hipporag", "label": "HippoRAG 2", "paradigm": "graph + PPR",
+         "artifact": f"indexes{SFX}/hipporag/triples.json",
+         "build": lambda: hipporag_build(corpus, cfg), "load": hipporag.load,
+         "make": lambda: hipporag},
+    ]
+
+
+ARMS = [a for a in _arms() if not ONLY or a["name"] in ONLY]
+os.makedirs(os.path.join(HERE, "runs", "history"), exist_ok=True)
+
+
+def _build_meta_path(arm):
+    return os.path.join(HERE, f"indexes{SFX}", arm["name"], "_build_meta.json")
+
+
+def _reuse_is_compatible(arm):
+    path = _build_meta_path(arm)
+    try:
+        meta = json.load(open(path))
+        return (meta.get("data_fingerprint") == DATA_FINGERPRINT and
+                meta.get("config_fingerprint") == CONFIG_FINGERPRINT)
+    except (OSError, ValueError, json.JSONDecodeError):
+        return False
+
+
+def _write_build_meta(arm):
+    path = _build_meta_path(arm)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    json.dump({"data": DATA, "data_fingerprint": DATA_FINGERPRINT,
+               "config_fingerprint": CONFIG_FINGERPRINT}, open(path, "w"), indent=1)
+
+# ---------------------------------------------------------------- Phase 1
+q_note = "" if QUESTION_FILTER is None else f" | query filter={','.join(QUESTION_FILTER)}"
+print(f"[Phase 1] data={DATA} ({len(corpus)} passages, {len(questions)} q) | {len(ARMS)} arms, reuse={REUSE}{q_note}", flush=True)
+meta = []
+for a in ARMS:
+    before = calls()
+    t0 = time.time()
+    stats, note = {}, ""
+    have = a["artifact"] and os.path.exists(os.path.join(HERE, a["artifact"]))
+    compatible = have and _reuse_is_compatible(a)
+    if DRY:
+        stats = a["load"]() if (a["load"] and have) else {}
+        note = "dry-run: " + ("loaded" if have else "no artifact")
+    elif a["build"] is None:
+        note = "no index"
+    elif REUSE and compatible:
+        stats = a["load"]() if a["load"] else {}
+        note = "reused (fingerprint match)"
+    else:
+        stats = a["build"]() or {}
+        if a["artifact"]:
+            _write_build_meta(a)
+        note = "built" + ("" if not REUSE else
+                           (" (no artifact to reuse)" if not have else " (fingerprint mismatch)"))
+    spent = calls() - before
+    meta.append({"name": a["name"], "label": a["label"], "paradigm": a["paradigm"],
+                 "build_calls": spent, "build_stats": stats, "build_note": note,
+                 "build_sec": round(time.time() - t0, 1)})
+    print(f"  {a['name']:<12} {note:<24} {spent:>3} LLM calls  {stats}", flush=True)
+
+RUNNERS = {a["name"]: a["make"]() for a in ARMS}
+
+if DRY:
+    print("\n[dry-run] arms constructed and indexes loaded; stopping before any API call")
+    for a in ARMS:
+        art = a["artifact"]
+        ok = "-" if not art else ("있음" if os.path.exists(os.path.join(HERE, art)) else "없음")
+        print(f"  {a['name']:<12} {type(RUNNERS[a['name']]).__name__:<12} artifact={art or '(없음)'} [{ok}]")
+    print(f"\nAPI 호출: {calls()}회")
+    raise SystemExit(0)
+
+# ---------------------------------------------------------------- Phase 2
+print(f"\n[Phase 2] answering {len(questions)} questions x {len(ARMS)} arms", flush=True)
 rows = []
 for q in questions:
-    w = answer_question(q["question"], wiki, cfg)
-    b = BM25Rag(corpus, cfg).answer(q["question"])
-    ws, bs = score(w["pred"], q["answer"]), score(b["pred"], q["answer"])
-    rows.append({**q, "wiki": w, "base": b, "wiki_score": ws, "base_score": bs})
-    print(f"  {q['id']} hop{q['hop']:>1} | wiki f1={ws['f1']:.2f} em={ws['em']:.0f} "
-          f"({w['tool_calls']} calls) | base f1={bs['f1']:.2f} em={bs['em']:.0f}", flush=True)
+    per = {}
+    for a in ARMS:
+        before = calls()
+        query_t0 = time.time()
+        try:
+            out = RUNNERS[a["name"]].answer(q["question"])
+        except Exception as e:
+            out = {"pred": "", "raw": f"ERROR: {type(e).__name__}: {e}", "error": True}
+        out["query_sec"] = round(time.time() - query_t0, 3)
+        out["score"] = score(out.get("pred", ""), q["answer"])
+        out["calls"] = calls() - before
+        # Evidence recall is measured against raw-passage provenance. Each arm
+        # exposes retrieved_pids even when its answer context was a compiled page,
+        # summary node, or community report. `retrieved` remains a method-native
+        # trace (page slug, RAPTOR node, community id, etc.).
+        gold = set(q.get("gold_pids") or [])
+        if "retrieved_pids" in out:
+            got = set(out["retrieved_pids"])
+            out["evidence_recall"] = len(gold & got) / len(gold) if gold else None
+        else:
+            # Compatibility for a third-party arm that has not yet adopted the
+            # standard trace field. Its recall is intentionally left unknown.
+            out["evidence_recall"] = None
+        per[a["name"]] = out
+    rows.append({**q, "arms": per})
+    flags = "  ".join(f"{a['name'][:8]}:{'O' if per[a['name']]['score']['cover'] else 'X'}" for a in ARMS)
+    print(f"  {q['id']} hop{q['hop']}  {flags}", flush=True)
 
-json.dump({"rows": rows, "compile": cinfo, "usage": USAGE},
-          open(os.path.join(HERE, "runs/results.json"), "w"), indent=1, default=str)
+# --only re-runs a subset. Writing the payload as-is would drop every arm that
+# was not selected, so merge this run's arms over the previous results file.
+if ONLY and os.path.exists(RESULTS):
+    prev = json.load(open(RESULTS))
+    order = [m["name"] for m in prev.get("arms", [])]
+    by_name = {m["name"]: m for m in prev.get("arms", []) if m["name"] not in ONLY}
+    by_name.update({m["name"]: m for m in meta})
+    meta = [by_name[n] for n in order if n in by_name] + \
+           [m for m in meta if m["name"] not in order]
+    prev_rows = {r["id"]: r for r in prev.get("rows", [])}
+    for r in rows:                       # same questions, so a plain per-row merge
+        old = prev_rows.get(r["id"])
+        if old:
+            r["arms"] = {**old["arms"], **r["arms"]}
 
-# ---- aggregate ----
-wf1 = mean([r["wiki_score"]["f1"] for r in rows]); wem = mean([r["wiki_score"]["em"] for r in rows])
-bf1 = mean([r["base_score"]["f1"] for r in rows]); bem = mean([r["base_score"]["em"] for r in rows])
-wcov = mean([r["wiki_score"]["cover"] for r in rows]); bcov = mean([r["base_score"]["cover"] for r in rows])
+payload = {"arms": meta, "rows": rows, "usage": dict(USAGE), "config": cfg,
+           "data": {"path": DATA, "fingerprint": DATA_FINGERPRINT,
+                    "passages": len(corpus), "questions": len(questions),
+                    "question_filter": QUESTION_FILTER},
+           "compile": None}
+if ONLY:
+    payload["usage_note"] = (f"partial re-run (--only {','.join(sorted(ONLY))}); "
+                             "'usage' counts only these arms. Per-arm build/query "
+                             "call counts in arms[]/rows[] stay accurate.")
+if os.path.exists(COMPILE_INFO):
+    payload["compile"] = json.load(open(COMPILE_INFO))
 
-by_hop = defaultdict(lambda: {"w": [], "b": []})
-by_type = defaultdict(lambda: {"w": [], "b": []})
-for r in rows:
-    by_hop[r["hop"]]["w"].append(r["wiki_score"]["f1"]); by_hop[r["hop"]]["b"].append(r["base_score"]["f1"])
-    by_type[r["type"]]["w"].append(r["wiki_score"]["f1"]); by_type[r["type"]]["b"].append(r["base_score"]["f1"])
+json.dump(payload, open(RESULTS, "w"), indent=1, default=str)
+stamp = time.strftime("%Y%m%d_%H%M%S")
+json.dump(payload, open(os.path.join(HERE, f"runs/history/{stamp}{SFX}.json"), "w"), indent=1, default=str)
+print(f"\n  -> {RESULTS}  (+ runs/history/{stamp}{SFX}.json)", flush=True)
 
-# ---- REPORT.md ----
-L = []
-A = L.append
-A("# LLM-Wiki 재현 MVP — 실행 리포트\n")
-A("> 논문 *Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki* (arXiv 2605.25480) 재구현.")
-A("> 코퍼스 = 2Wiki 스타일 큐레이션 세트(논문 Appendix H의 정답 케이스 2건 포함). 모델 = `%s` (전 비교군 동일).\n" % cfg["model"])
-
-A("## 0. 한눈에 보기\n")
-A("| 지표 | Flat-RAG (BM25) baseline | **LLM-Wiki (ours)** |")
-A("|---|---|---|")
-A(f"| 평균 F1 (토큰 overlap) | {bf1:.3f} | {wf1:.3f} |")
-A(f"| 평균 EM | {bem:.3f} | {wem:.3f} |")
-A(f"| **정답 포함율(cover, 장황함에 강건)** | {bcov:.3f} | **{wcov:.3f}** |")
-A(f"\n→ **세 지표 모두 LLM-Wiki 우위** (cover {wcov:.3f} vs {bcov:.3f}, F1 {wf1:.3f} vs {bf1:.3f}, EM {wem:.3f} vs {bem:.3f}). "
-  "답변을 짧은 정답 스팬(terse-span)으로 강제해, 문장형 답변으로 토큰 overlap이 깎이던 아티팩트를 제거. "
-  "핵심은 baseline이 **q1(4-hop)에서 오답**을 내는 지점 — 논문 Case 1의 실패를 그대로 재현.\n")
-
-A("## Phase 1 — 인덱스 타임 컴파일 (Algorithm 1)\n")
-A(f"- 입력 passage: **{len(corpus)}개** → 컴파일된 위키 페이지: **{len(wiki.pages)}개** "
-  f"(passage:page ≠ 1:1 — 여러 passage가 한 엔티티로 모이고 한 passage가 여러 엔티티로 분배됨)")
-A(f"- source 아카이브: {len(wiki.sources)}개 (articles 원문 + digests 요약)")
-A(f"- 컴파일 LLM 호출: **{compile_calls}회** (= digest {len(corpus)} + passage당 SELECTPAGES+COMPILEWIKIPAGES 2회)\n")
-A("**passage별 컴파일 기록** (엔티티 중심 재조직):\n")
-A("| pid | batch | SELECTPAGES(기존 갱신) | COMPILEWIKIPAGES(생성 엔티티) | 구조오류 |")
-A("|---|---|---|---|---|")
-for t in cinfo["trace"]:
-    sel = ", ".join(t["selected"]) or "–"
-    em_ = ", ".join(t["pages_emitted"]) or "–"
-    er = ", ".join(f"{e['type']}({e['detail']})" for e in t["errors"]) or "–"
-    A(f"| {t['pid']} | {t['batch']} | {sel} | {em_} | {er} |")
-
-A("\n**컴파일된 위키 카테고리 구조** (LLM이 type을 결정 → 디렉토리 생성):\n")
-cats = defaultdict(list)
-for s, p in wiki.pages.items():
-    cats[p["type"]].append(s)
-for c, ss in sorted(cats.items()):
-    A(f"- `{c}/` : {', '.join(sorted(ss))}")
-
-A("\n## Phase 1b — Error Book 교정 과정 (자기교정 루프)\n")
-A("구조 검증 → error_book.yaml 기록 → 제약 주입 → 코드 자동수정, 배치를 거치며 진행.\n")
-A("| 에러 타입 | 발생 | 상태 | 주입된 제약(constraint) |")
-A("|---|---|---|---|")
-for en in eb.entries.values():
-    A(f"| {en['type']} | {en['count']}회 (batch {en['first_batch']}→{en['last_batch']}) | **{en['status']}** | {en['constraint'][:70]}… |")
-if not eb.entries:
-    A("| (검출된 구조 오류 없음) | – | – | – |")
-A(f"\n- 최종화(finalization) 단계: 링크 양방향화 후 전역 구조검증 → **dangling link {cinfo['final_fixed']}건 코드 자동수정**.")
-A(f"- 발생 이력(occurrences): 총 {len(eb.log)}건. "
-  "구조 오류가 배치를 거치며 제약으로 축적되고, 최종화에서 잔여 오류가 결정론적으로 정리됨(= self-evolving의 구조 측면).\n")
-
-A("## Phase 2 — 쿼리 타임 (compositional traversal vs one-shot lookup)\n")
-A("| id | hop | type | 정답 | LLM-Wiki 예측 | F1 | cover | calls | Flat-RAG 예측 | F1 | cover |")
-A("|---|---|---|---|---|---|---|---|---|---|---|")
-for r in rows:
-    A(f"| {r['id']} | {r['hop']} | {r['type']} | {r['answer']} | {r['wiki']['pred'][:30]} | "
-      f"{r['wiki_score']['f1']:.2f} | {r['wiki_score']['cover']:.0f} | {r['wiki']['tool_calls']} | "
-      f"{r['base']['pred'][:30]} | {r['base_score']['f1']:.2f} | {r['base_score']['cover']:.0f} |")
-
-A("\n### Appendix H 트레이스 재현 검증\n")
-for qid, bridge in [("q1", "director"), ("q2", "ernest")]:
-    r = next(x for x in rows if x["id"] == qid)
-    reads = [step for step in r["wiki"]["trace"] if step.get("tool") == "wiki_read"]
-    read_slugs = [p for step in reads for p in (step["arg"] if isinstance(step["arg"], list) else [step["arg"]])]
-    hit = any(bridge in s.lower() for s in read_slugs)
-    A(f"- **{qid}** ({r['question']}): tool 경로 = " +
-      " → ".join(f"{s['tool']}({s.get('arg')})" if 'tool' in s else str(s) for s in r["wiki"]["trace"][:6]))
-    A(f"  - 브리지 엔티티('{bridge}') 페이지 도달: {'✅ 예' if hit else '❌ 아니오'} | "
-      f"예측='{r['wiki']['pred']}' 정답='{r['answer']}' (F1 {r['wiki_score']['f1']:.2f})")
-
-A("\n## Phase 3 — 논문과의 비교 지점\n")
-A("### hop별 F1 (논문 핵심 주장: hop↑ → 격차↑)\n")
-A("| hop | LLM-Wiki F1 | Flat-RAG F1 | 격차 |")
-A("|---|---|---|---|")
-for h in sorted(by_hop):
-    w, b = mean(by_hop[h]["w"]), mean(by_hop[h]["b"])
-    A(f"| {h}-hop | {w:.3f} | {b:.3f} | {w-b:+.3f} |")
-A("\n### type별 F1\n")
-A("| type | LLM-Wiki F1 | Flat-RAG F1 |")
-A("|---|---|---|")
-for ty in sorted(by_type):
-    A(f"| {ty} | {mean(by_type[ty]['w']):.3f} | {mean(by_type[ty]['b']):.3f} |")
-
-A("\n### 논문 결과와의 대조\n")
-A("| | 논문(2WikiMHQA 500문항) | 이 MVP(소규모) |")
-A("|---|---|---|")
-A("| 전체 경향 | LLM-Wiki > 모든 baseline | 아래 수치로 판정 |")
-A("| Dense/BM25 대비 | +상당폭 | F1 %+.3f |" % (wf1 - bf1))
-A("| hop 깊이 효과 | 2→4hop 격차 5.7→8.3 F1p 증가 | 위 hop별 표 참조 |")
-A("| 효율 | 위키가 RAG와 비슷/더 빠름(평균 2.5~3.9 페이지 read) | 평균 %.1f tool calls |"
-  % mean([r["wiki"]["tool_calls"] for r in rows]))
-
-A("\n> ⚠️ **해석 주의**: 코퍼스가 %d문항 소규모라 절대 수치의 통계적 의미는 제한적입니다. "
-  "목표는 논문의 절대 F1 복제가 아니라 (a) 파이프라인이 end-to-end로 돌고 (b) Appendix H 트레이스가 재현되며 "
-  "(c) 위키>flat·hop깊을수록 격차↑ **패턴**이 나타나는지 확인하는 것. 실제 2Wiki dev 앞 50개로 스케일업은 "
-  "`data/corpus.jsonl`·`questions.json` 교체만으로 가능(로더는 동일).\n" % len(questions))
-
-A("## 비용 (compile-time vs query-time)\n")
-A(f"- 총 LLM 호출: **{USAGE['calls']}회** | 입력 토큰 {USAGE['input_tokens']:,} | 출력 토큰 {USAGE['output_tokens']:,}")
-A(f"- 컴파일(오프라인 1회): {compile_calls}회 — 논문이 지적한 '컴파일 비용'이 여기서 관측됨")
-A(f"- 쿼리(문항당): 평균 {mean([r['wiki']['tool_calls'] for r in rows]):.1f} tool calls\n")
-
-A("## 산출물\n")
-A("- `wiki/` : 컴파일된 마크다운 위키 트리 (index.md / 카테고리 _index.md / 페이지 / sources)")
-A("- `error_book.yaml` : 에러 장부(교정 이력)")
-A("- `runs/results.json` : 문항별 예측·트레이스·점수 원본")
-
-open(os.path.join(HERE, "REPORT.md"), "w").write("\n".join(L))
-print(f"\n[Phase 3] wrote REPORT.md  |  wiki F1={wf1:.3f} vs base F1={bf1:.3f}  |  {USAGE['calls']} LLM calls", flush=True)
+# ---------------------------------------------------------------- Phase 3
+os.system(f'python3 "{os.path.join(HERE, "analysis", "make_report.py")}" {NS}')
+print(f"[done] {USAGE['calls']} LLM calls | in {USAGE['input_tokens']:,} tok | out {USAGE['output_tokens']:,} tok",
+      flush=True)

@@ -1,0 +1,386 @@
+entries:
+- type: empty_emission
+  root_cause: COMPILEWIKIPAGES returned no page for a source passage (truncated JSON,
+    parse failure, or an empty list), so the passage's entities never entered the
+    Wiki.
+  constraint: Emit at least one page for every passage. If the passage is long, prefer
+    fewer pages with complete fields over many partial pages, and never truncate the
+    JSON.
+  layer: structural
+  status: open
+  count: 29
+  first_batch: 1
+  last_batch: 38
+- type: malformed_ref
+  root_cause: Cited a source id that is not in the provided source set.
+  constraint: Only cite source ids that appear in the passage's own source id. Do
+    not invent source ids.
+  layer: structural
+  status: closed
+  count: 1
+  first_batch: 4
+  last_batch: 4
+- type: unsupported_fact
+  root_cause: Stated a fact not grounded in the cited source digest.
+  constraint: Do NOT add entity attributes unless supported by the cited source digest.
+  layer: content
+  status: closed
+  count: 11
+  first_batch: 6
+  last_batch: 37
+- type: dangling_link
+  root_cause: Emitted a wikilink to a page that is not present in the index.
+  constraint: NEVER create a [[link]] to a page that is not present in the wiki index.
+    Only link to entities you also emit as pages or that already exist.
+  layer: structural
+  status: closed
+  count: 19
+  first_batch: 18
+  last_batch: 39
+- type: cross_page_contradiction
+  root_cause: Two compiled pages assert incompatible values for the same entity attribute.
+  constraint: When updating an existing entity page, reconcile dates and relationships
+    with its cited sources; do not preserve two incompatible values without qualification.
+  layer: content
+  status: closed
+  count: 1
+  first_batch: 19
+  last_batch: 19
+occurrences:
+- batch: 1
+  type: empty_emission
+  slug: p007
+  detail: compiler returned an empty page list
+- batch: 2
+  type: empty_emission
+  slug: p012
+  detail: compiler returned an empty page list
+- batch: 4
+  type: empty_emission
+  slug: p018
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Xawery-Żuławski\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [\"Xawery Żuławski\"],\n    \"\
+    tags\": [\"Polish film director\", \"Poland\"],\n    \"summary\": \"Polish film\
+    \ director born in 1971, known"
+- batch: 4
+  type: malformed_ref
+  slug: Snow-White-and-the-Huntsman
+  detail: p09
+- batch: 5
+  type: empty_emission
+  slug: p023
+  detail: "ValueError: could not parse JSON: [\n {\n  \"title\": \"The Mask of Fu\
+    \ Manchu\",\n  \"type\": \"media\",\n  \"aliases\": [],\n  \"tags\": [\"1932 film\"\
+    , \"pre-Code film\", \"adventure film\", \"Fu Manchu film series\"],\n  \"summary\"\
+    : \"1932"
+- batch: 6
+  type: empty_emission
+  slug: p025
+  detail: "ValueError: could not parse JSON: [\n {\n  \"title\": \"The Brides of Fu\
+    \ Manchu\",\n  \"type\": \"media\",\n  \"aliases\": [],\n  \"tags\": [\"Fu Manchu\
+    \ film series\", \"1966 film\", \"British film\", \"West German film\", \"Adventure\
+    \ film\", \"Crime film\"],\n  \""
+- batch: 6
+  type: empty_emission
+  slug: p027
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"The Face of\
+    \ Fu Manchu\",\n    \"type\": \"media\",\n    \"aliases\": [],\n    \"tags\":\
+    \ [\"1965 film\", \"Fu Manchu film series\", \"Thriller\", \"British-West German\
+    \ co-production\"],\n    \"summary\": "
+- batch: 6
+  type: unsupported_fact
+  slug: The-Mask-of-Fu-Manchu
+  detail: Source p026 does not mention 'Dr. Fu Manchu' as a title character featured
+    in the film; this link claim is unsupported.
+- batch: 7
+  type: empty_emission
+  slug: p029
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"The Blood of\
+    \ Fu Manchu\",\n    \"type\": \"media\",\n    \"aliases\": [\"Fu Manchu and the\
+    \ Kiss of Death\", \"Kiss of Death\", \"Kiss and Kill\", \"Against All Odds\"\
+    ],\n    \"tags\": [\"Fu Manchu film"
+- batch: 7
+  type: unsupported_fact
+  slug: Anhalt-Zerbst
+  detail: The claim that Bernhard VII ruled Anhalt-Zerbst 'from 1540 to 1570' is not
+    supported by source p032, which only gives his birth (1540) and death (1570) dates,
+    not his reign dates.
+- batch: 8
+  type: empty_emission
+  slug: p033
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Albert-III-Prince-of-Anhalt-Zerbst\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [\"Albert III of Anhalt-Zerbst\"\
+    , \"Albrecht III von Anhalt-Zerbst\"],\n    \"tags\": [\"German nobility\", \"\
+    House "
+- batch: 8
+  type: empty_emission
+  slug: p036
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"John-II-Prince-of-Anhalt-Zerbst\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [\"John II of Anhalt-Zerbst\",\
+    \ \"Johann II von Anhalt-Zerbst\"],\n    \"tags\": [\"German nobility\", \"House\
+    \ of Ascani"
+- batch: 8
+  type: unsupported_fact
+  slug: Anhalt-Zerbst
+  detail: Claims Bernhard VII 'ruled from 1540 to 1570', but the cited source (p032)
+    gives 1540 and 1570 as his birth and death dates, not his reign dates.
+- batch: 9
+  type: empty_emission
+  slug: p037
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"John V, Prince\
+    \ of Anhalt-Zerbst\",\n    \"type\": \"people\",\n    \"aliases\": [\"John V of\
+    \ Anhalt-Zerbst\", \"Johann V von Anhalt-Zerbst\"],\n    \"tags\": [\"German nobility\"\
+    , \"House of Ascania\""
+- batch: 9
+  type: empty_emission
+  slug: p038
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Ernest I, Prince\
+    \ of Anhalt-Dessau\",\n    \"type\": \"people\",\n    \"aliases\": [\"Ernest I\
+    \ of Anhalt-Dessau\", \"Ernst I von Anhalt-Dessau\"],\n    \"tags\": [\"German\
+    \ nobility\", \"House of Ascan"
+- batch: 9
+  type: empty_emission
+  slug: p039
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Waldemar III,\
+    \ Prince of Anhalt-Zerbst\",\n    \"type\": \"people\",\n    \"aliases\": [\"\
+    Waldemar III of Anhalt-Zerbst\", \"Waldemar III von Anhalt-Zerbst\"],\n    \"\
+    tags\": [\"German nobility\", \"H"
+- batch: 9
+  type: empty_emission
+  slug: p040
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Karl I, Prince\
+    \ of Anhalt-Zerbst\",\n    \"type\": \"people\",\n    \"aliases\": [\"Karl I of\
+    \ Anhalt-Zerbst\"],\n    \"tags\": [\"German nobility\", \"House of Ascania\"\
+    , \"Prince\"],\n    \"summary\": \"G"
+- batch: 10
+  type: empty_emission
+  slug: p043
+  detail: compiler returned an empty page list
+- batch: 13
+  type: empty_emission
+  slug: p056
+  detail: 'ValueError: no JSON found in: '
+- batch: 14
+  type: empty_emission
+  slug: p058
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Charles Armand\
+    \ René de La Trémoille\",\n    \"type\": \"people\",\n    \"aliases\": [\"6th\
+    \ duc de Thouars\"],\n    \"tags\": [\"French nobility\", \"House of La Trémoille\"\
+    , \"Académie française\", \"D"
+- batch: 14
+  type: empty_emission
+  slug: p060
+  detail: "ValueError: could not parse JSON: [\n {\n  \"title\": \"Henri-Charles-de-La-Tr-moille\"\
+    ,\n  \"type\": \"people\",\n  \"aliases\": [\"Henri Charles de La Trémoille\"\
+    ],\n  \"tags\": [\"French nobility\", \"House of La Trémoille\", \"military commander\"\
+    , \"3rd D"
+- batch: 14
+  type: unsupported_fact
+  slug: Charles-Bretagne-Marie-de-La-Tr-moille
+  detail: The claim that he 'married three times' is not supported by any cited source;
+    sources only mention his third wife, not the total number of marriages.
+- batch: 15
+  type: empty_emission
+  slug: p061
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Claude de La\
+    \ Trémoille\",\n    \"type\": \"people\",\n    \"aliases\": [\"Claude de La Trémoille,\
+    \ 2nd Duke of Thouars\"],\n    \"tags\": [\"French nobility\", \"House of La Trémoille\"\
+    , \"Protestant\""
+- batch: 16
+  type: empty_emission
+  slug: p065
+  detail: compiler returned an empty page list
+- batch: 16
+  type: empty_emission
+  slug: p066
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Henri III de\
+    \ La Trémoille\",\n    \"type\": \"people\",\n    \"aliases\": [\"Henri de La\
+    \ Trémoille\"],\n    \"tags\": [\"French nobility\", \"House of La Trémoille\"\
+    , \"Duke of Thouars\"],\n    \"summar"
+- batch: 17
+  type: empty_emission
+  slug: p072
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Wheeling-High-School\"\
+    ,\n    \"type\": \"organizations\",\n    \"aliases\": [\"WHS\"],\n    \"tags\"\
+    : [\"high school\", \"Illinois\", \"Township High School District 214\"],\n  \
+    \  \"summary\": \"A public f"
+- batch: 18
+  type: dangling_link
+  slug: Ottawa-High-School-and-Junior-High-School
+  detail: Washburn-Stookey
+- batch: 18
+  type: dangling_link
+  slug: Seoul-High-School
+  detail: Seoul
+- batch: 19
+  type: cross_page_contradiction
+  slug: North-Marion-High-School
+  detail: 'Page combines two distinct schools into one entity: summary states it is
+    in Aurora, Oregon while facts also assert it is a West Virginia high school (enrollment
+    851, near Farmington/Mannington/Rachel, WV), giving incompatible location values
+    for the same named entity ''North Marion High School''.'
+- batch: 20
+  type: dangling_link
+  slug: Rafaela-Aparicio
+  detail: Ana-and-the-Wolves
+- batch: 20
+  type: unsupported_fact
+  slug: Rafaela-Aparicio
+  detail: The source does not state that 'Mama Turns 100' is a sequel to 'Ana and
+    the Wolves'; this relationship is unsupported by the cited passage.
+- batch: 21
+  type: empty_emission
+  slug: p085
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Fernando-Fern-n-G-mez\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [\"Fernando Fernán Gómez\", \"\
+    Fernando Fernández Gómez\", \"Fernando Fernán-Gómez\"],\n    \"tags\": [\"Spanish\
+    \ actor\", \"Spanish "
+- batch: 22
+  type: empty_emission
+  slug: p091
+  detail: 'ValueError: no JSON found in: '
+- batch: 23
+  type: dangling_link
+  slug: Abd-al-Muttalib
+  detail: Muhammad
+- batch: 25
+  type: unsupported_fact
+  slug: Crimen-a-las-tres
+  detail: Source (p105) states SIFAL disbanded 'the following year' after the film's
+    completion, not that the completion 'coincided with' the disbanding.
+- batch: 25
+  type: unsupported_fact
+  slug: Luis-Saslavsky
+  detail: Source (p105) states SIFAL disbanded the year after Crimen a las tres was
+    completed, not 'around the time' of disbanding, implying simultaneity not supported
+    by the source.
+- batch: 26
+  type: empty_emission
+  slug: p106
+  detail: 'ValueError: no JSON found in: '
+- batch: 29
+  type: dangling_link
+  slug: Claude-Weisz
+  detail: Paris
+- batch: 29
+  type: empty_emission
+  slug: p119
+  detail: 'ValueError: could not parse JSON: [
+
+    {
+
+    "title": "Fleetwood Sheppard",
+
+    "type": "people",
+
+    "aliases": ["Shepphard", "Sheppheard", "Sheppeard", "Sir Fleetwood Sheppard"],
+
+    "tags": ["British courtier", "literary wit", "17th century"],
+
+    "summa'
+- batch: 32
+  type: empty_emission
+  slug: p131
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"The Ballad of\
+    \ Josie\",\n    \"type\": \"media\",\n    \"aliases\": [],\n    \"tags\": [\"\
+    film\", \"1967\", \"comedy western\", \"Technicolor\", \"American cinema\"],\n\
+    \    \"summary\": \"1967 Technicolor Ame"
+- batch: 33
+  type: empty_emission
+  slug: p134
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"The Ballad of\
+    \ Little Joe\",\n    \"type\": \"media\",\n    \"aliases\": [],\n    \"tags\"\
+    : [\"VeggieTales\", \"computer-animated film\", \"western film\", \"2003 film\"\
+    ],\n    \"summary\": \"2003 American"
+- batch: 34
+  type: dangling_link
+  slug: Elisabeth-of-Hesse-Countess-Palatine-of-Zweibr-cken
+  detail: Zweibr-cken
+- batch: 34
+  type: dangling_link
+  slug: Elisabeth-of-Hesse-Countess-Palatine-of-Zweibr-cken
+  detail: Hesse
+- batch: 34
+  type: unsupported_fact
+  slug: County-of-Zweibr-cken-Birkenfeld-Bischweiler
+  detail: Summary claims it was 'ruled by the House of Wittelsbach' but source p139
+    does not mention House of Wittelsbach or describe it as a branch territory of
+    the Palatinate.
+- batch: 34
+  type: unsupported_fact
+  slug: County-of-Nassau-Ottweiler
+  detail: Summary claims it was 'held by the House of Nassau' but source p139 does
+    not mention the House of Nassau.
+- batch: 37
+  type: unsupported_fact
+  slug: Jean-H-Bell
+  detail: Source p149 states Mona Hopton Bell was 'grandmother of the painter Jean
+    H. Bell' but does not specify Jean H. Bell's gender as grandson; this appears
+    to be an unsupported inference.
+- batch: 37
+  type: unsupported_fact
+  slug: Mona-Hopton-Bell
+  detail: Link relation labels Jean H. Bell as 'grandson' of Mona Hopton Bell, but
+    source p149 only states she was his/her grandmother without specifying gender.
+- batch: 38
+  type: empty_emission
+  slug: p153
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Marie-Zéphyrine-of-France\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [\"Madame Royale\", \"la Petite\
+    \ Madame\"],\n    \"tags\": [\"French royalty\", \"House of Bourbon\", \"Princess\"\
+    ],\n    \"summary"
+- batch: 38
+  type: empty_emission
+  slug: p154
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Louis-Dauphin-of-France-son-of-Louis-XV\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [\"Louis, Dauphin of France\",\
+    \ \"Louis de France\"],\n    \"tags\": [\"French royalty\", \"House of Bourbon\"\
+    , \""
+- batch: 39
+  type: dangling_link
+  slug: Township-High-School-District-214
+  detail: Buffalo-Grove-High-School
+- batch: 39
+  type: dangling_link
+  slug: Township-High-School-District-214
+  detail: Elk-Grove-High-School
+- batch: 39
+  type: dangling_link
+  slug: Township-High-School-District-214
+  detail: John-Hersey-High-School
+- batch: 39
+  type: dangling_link
+  slug: Township-High-School-District-214
+  detail: Prospect-High-School
+- batch: 39
+  type: dangling_link
+  slug: Township-High-School-District-214
+  detail: Rolling-Meadows-High-School
+- batch: 39
+  type: dangling_link
+  slug: Ottawa-High-School-and-Junior-High-School
+  detail: Washburn-Stookey
+- batch: 39
+  type: dangling_link
+  slug: Seoul-High-School
+  detail: Seoul
+- batch: 39
+  type: dangling_link
+  slug: Rafaela-Aparicio
+  detail: Ana-and-the-Wolves
+- batch: 39
+  type: dangling_link
+  slug: Abd-al-Muttalib
+  detail: Muhammad
+- batch: 39
+  type: dangling_link
+  slug: Claude-Weisz
+  detail: Paris
+- batch: 39
+  type: dangling_link
+  slug: Elisabeth-of-Hesse-Countess-Palatine-of-Zweibr-cken
+  detail: Zweibr-cken
+- batch: 39
+  type: dangling_link
+  slug: Elisabeth-of-Hesse-Countess-Palatine-of-Zweibr-cken
+  detail: Hesse

@@ -1,32 +1,69 @@
-# CLAUDE.md — llm_wiki
+# llm_wiki 작업 기준
 
-논문 *"Retrieval as Reasoning: Self-Evolving Agent-Native Retrieval via LLM-Wiki"* (arXiv 2605.25480) **재구현 MVP**. 목표는 절대 F1 복제가 아니라 (a) end-to-end 동작 (b) 논문 Appendix H 트레이스 재현 (c) 패턴 재현: **위키 > flat-RAG, hop 깊을수록 격차↑**. 서사·결정·고도화 방향은 메모리 `project_llm_wiki.md`와 이 폴더의 `발표정리.md`(⑥ 확장방향) 참조.
+> 최신 상태 기준: **2026-08-15**. `AGENTS.md`는 이 파일을 가리킨다. 과거 8문항/80문단 실행 지침보다 아래를 우선한다.
 
-## 실행
-- `python3 run_all.py` — Phase1 컴파일 → Phase2 질의(LLM-Wiki+BM25) → Phase3 평가. `wiki/`, `error_book.yaml`, `runs/results.json` 생성.
-- `python3 make_report.py` — **오프라인**(API 無)으로 `runs/results.json`에서 `REPORT.md` 재생성. cover 지표 포함.
-- **`python3`를 써라 (venv 깨짐):** `.venv/bin/python`은 bad interpreter. 패키지(`anthropic` `rank_bm25` `pyyaml`)는 `pip install --user`로 시스템 파이썬에 설치돼 있음.
-- API 키: 레포 루트 `../../.env`의 `ANTHROPIC_API_KEY` (llm.py가 로드).
+## 목적과 해석 범위
 
-## 하드 제약 (매번 헷갈리는 것)
-- ⚠️ **`runs/results.json`은 terse 교정 재실행본. 덮어쓰기 전 백업** — 논문 Appendix H 트레이스 재현본이자 REPORT.md의 근거 원본. 재실행은 LLM 비결정성으로 위키·수치가 바뀜.
-- 오프라인 재생성: `make_report.py`는 API 없이 `results.json`에서 `REPORT.md`만 다시 그림.
-- **모델은 전 비교군 `claude-opus-4-8` 동일** (논문 §4.4 통제). 바꾸지 말 것.
-- **임베딩 없음 — BM25** (`rank_bm25`). §3.2 "검색 품질은 병목 아님" 근거. baseline·search-fallback 모두 BM25.
-- **Error Book MVP 스코프 = 구조 오류 코드-자동수정만** (Layer 1). content 검증(Layer 2)은 log-only.
-- 하이퍼파라미터(`config.yaml`): Tmax=15, patience=3, SELECTPAGES k=5.
+- 이 프로젝트는 LLM-Wiki 논문의 **간이 재구현**이다. 공식 코드나 논문 수치의 재현물이라고 쓰지 않는다.
+- 현재 목표는 방법 순위가 아니라 **build → retrieval/traversal → answer** 중 실패 위치를 trace로 해부하는 것이다.
+- 7개 baseline/8문항·80문단은 초기 탐색 snapshot이고, 현재는 `llm_wiki`, `bm25`, `dense`, `graphrag` 네 arm의 실제 trace를 깊게 읽는 후속 단계다. 나머지 arm 구현은 남아 있지만, 현재 slice의 같은 수준 비교 결과가 아니다.
 
-## 구조
-- `llm.py` (opus-4-8 래퍼, .env 로드, USAGE 집계) · `wiki.py` (Wiki 저장/렌더 + search/read 구현)
-- `indexing/` = `select_pages.py`(SELECTPAGES) + `compile.py`(COMPILEWIKIPAGES + 루프) + `validators.py`(구조검증+코드수정) + `error_book.py`
-- `retrieval/` = `agent.py`(ReAct 루프) + `tools.py`(wiki_search/wiki_read 툴 래퍼) · `baseline/bm25_rag.py` · `harness/evaluate.py` (F1/EM/cover)
-- `data/` = `corpus.jsonl`(16 passage, 2Wiki 스타일 큐레이션, **Appendix H 정답 케이스 2건 포함**) + `questions.json`(8문항, hop/type 라벨)
-- `wiki/` = 컴파일 산출물(md 트리 + `_manifest.json` 내부 인덱스) · `runs/` 로그 · `REPORT.md`
-- 스케일업(실제 2Wiki dev 앞 50개): `data/` 교체만으로 가능(로더 동일).
+## 데이터와 현재 실행 상태
 
-## 현재 결과 (terse 교정 재실행)
-cover **8/8** vs baseline 7/8 (baseline은 q1 4-hop 오답 = 논문 Case 1 재현). terse-span 교정 적용 후 F1·EM도 위키 우위(1.000 vs 0.875). 컴파일 구조오류 0건.
+| dataset | 위치 | corpus | 실행/해석 상태 |
+|---|---|---:|---|
+| 2Wiki | `data/2wiki/` | 16문항, 156 passage | q1/q2/q3/q7/q12를 네 arm으로 실행. 다섯 문항 모두 trace 분석 가능. |
+| MuSiQue | `data/musique/` | 3문항, 60 paragraph | m1만 clean 사례다. **m2·m3은 공식 gold chain이 원문에 grounded되지 않아 성능 순위에서 제외한다**. |
 
-## 작업 관례
-- 발표 자료: `발표정리.md`(원본) → `발표정리.html`(그 md를 그대로 렌더하는 스크롤 문서). **md만 고치고 html은 재생성**(내용 항상 일치).
-- 파일 새로 만들 때 한글 파일명은 사라진 전례 있음 — 생성 후 `python3 -c "import os;print(os.listdir('.'))"`로 존재 확인.
+- 실행 원본은 `runs/results_2wiki.json`, `runs/results_musique.json`이고, LLM-Wiki 컴파일 감사 정보는 대응하는 `compile_info_*.json`이다.
+- 자동 집계 리포트는 `runs/REPORT_2wiki.md`, `runs/REPORT_musique.md`다. 둘 다 실행 당시의 raw 결과 snapshot이므로, 새 실행 결과를 의도적으로 남길 때 외에는 재생성하거나 편집하지 않는다.
+- 구현이 지금 형태에 이른 경위와 과거에 틀렸던 판단은 `devlog.md`에 기록한다. 구조나 기본 설정을 바꾸면 여기에 한 항목 남긴다.
+- 이 저장소는 자체 완결이다. 레포 밖 문서를 근거나 필수 참조로 걸지 않는다.
+
+## 파일·실행 규칙
+
+- `config.yaml`은 현재 모델, embedding, top-k의 **단일 기준**이다. 문서나 코드에 다른 모델을 기준으로 쓰지 않는다.
+- 데이터·모델·하이퍼파라미터가 바뀌면 인덱스를 다시 빌드한다. `--reuse`는 artifact의 data/config fingerprint가 모두 일치할 때만 안전하다.
+- `--questions`는 **질의 문항만** 줄인다. build corpus는 `--data` 아래의 전체 `corpus.jsonl`을 유지한다.
+- 사용자 요청 없이 `data/2wiki/`나 `data/musique/`를 다시 생성하거나 덮어쓰지 않는다.
+- build 비용과 query 비용을 분리해 기록한다. `results_*.json`의 arm metadata는 build, 각 row의 arm trace는 query다.
+- LLM-Wiki artifact는 `indexes_<dataset>/llm_wiki/wiki/`, Dense는 `indexes_<dataset>/dense/`, GraphRAG는 `indexes_<dataset>/graphrag/` 아래에 둔다. dataset namespace를 섞지 않는다.
+- 커밋 기준: **LLM이 만든 산출물(wiki page, graph, community report, ErrorBook, REPORT)은 커밋한다.** 재생성이 공짜인 것(`*.npz` 임베딩 벡터, `runs/cache/`, `runs/history/`)은 커밋하지 않는다.
+- 경로는 프로젝트 루트를 기준으로 계산한다. `os.path.dirname(__file__)` 옆에 산출물을 두면 파일을 옮길 때 산출물도 조용히 따라가고, 없으면 새로 만들어져 에러 없이 어긋난다(`core/runs/cache` 사례).
+
+```bash
+# API 0회 검증
+python3 run_all.py --dry-run --data data/2wiki \
+  --only llm_wiki,bm25,dense,graphrag \
+  --questions q1,q2,q3,q7,q12
+
+# 현재 2Wiki 진단 run
+python3 run_all.py --data data/2wiki \
+  --only llm_wiki,bm25,dense,graphrag \
+  --questions q1,q2,q3,q7,q12
+
+```
+
+## 방법별 trace를 읽는 위치
+
+| arm | build artifact | query trace |
+|---|---|---|
+| LLM-Wiki | wiki page, `_manifest.json`, `compile_info_*.json`, ErrorBook | `trace`, `read_pages`, `retrieved_pids` |
+| BM25 | 영속 artifact 없음 | `retrieved`, `retrieved_pids` |
+| Dense | `meta.json`, `INDEX.md`, `vectors.npz`(비커밋, 재빌드 시 생성) | `retrieved`, `retrieved_pids` |
+| GraphRAG | `graph.json`, `COMMUNITIES.md`, `_build_meta.json` | `map_trace`, `partials`, `retrieved_pids` |
+
+실패 판정 순서는 고정한다.
+
+1. gold/decomposition이 원문에 grounded되는가? 아니라면 data-grounding 문제이고, 그 문항은 성능 비교에서 제외한다. 확인된 사례는 MuSiQue m2·m3이며 README 해석 경계에 대조를 남겼다.
+2. valid gold가 인덱스에 존재하는가? 아니라면 원문/분할 또는 인덱싱 실패다.
+3. 존재하지만 질의에서 읽지 않았는가? 검색·ranking·link/community 탐색 실패다.
+4. 모두 읽고도 틀렸는가? 추론·비교·최종 답변 실패다.
+5. gold를 읽지 않고 맞혔는가? grounded 성공이 아니라 shortcut/parametric-knowledge 가능성으로 표시한다.
+
+## 구현 경계
+
+- LLM-Wiki는 passage를 entity-centric wiki page + wikilink + source PID로 컴파일하고 agent가 search/read를 반복한다.
+- GraphRAG는 현재 Leiden이 아니라 `greedy_modularity` community detection을 쓴다.
+- embedding은 논문의 Qwen3-Embedding-8B가 아니라 `Qwen/Qwen3-Embedding-0.6B`이다.
+- ErrorBook은 compile 중 발견된 오류를 기록·수정/재검증하는 빌드 단계 기능이다. `--reuse` 질의에서는 새 repair를 수행하지 않는다.

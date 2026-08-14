@@ -1,0 +1,401 @@
+entries:
+- type: cross_page_contradiction
+  root_cause: Two compiled pages assert incompatible values for the same entity attribute.
+  constraint: When updating an existing entity page, reconcile dates and relationships
+    with its cited sources; do not preserve two incompatible values without qualification.
+  layer: content
+  status: closed
+  count: 1
+  first_batch: 0
+  last_batch: 0
+- type: empty_emission
+  root_cause: COMPILEWIKIPAGES returned no page for a source passage (truncated JSON,
+    parse failure, or an empty list), so the passage's entities never entered the
+    Wiki.
+  constraint: Emit at least one page for every passage. If the passage is long, prefer
+    fewer pages with complete fields over many partial pages, and never truncate the
+    JSON.
+  layer: structural
+  status: open
+  count: 20
+  first_batch: 1
+  last_batch: 14
+- type: unsupported_fact
+  root_cause: Stated a fact not grounded in the cited source digest.
+  constraint: Do NOT add entity attributes unless supported by the cited source digest.
+  layer: content
+  status: closed
+  count: 5
+  first_batch: 7
+  last_batch: 8
+- type: dangling_link
+  root_cause: Emitted a wikilink to a page that is not present in the index.
+  constraint: NEVER create a [[link]] to a page that is not present in the wiki index.
+    Only link to entities you also emit as pages or that already exist.
+  layer: structural
+  status: closed
+  count: 44
+  first_batch: 13
+  last_batch: 15
+occurrences:
+- batch: 0
+  type: cross_page_contradiction
+  slug: Jawbox
+  detail: Claims Jawbox members founded DeSoto Records, but source and other pages
+    (DeSoto Records, Edsel) state DeSoto Records was originally founded by members
+    of the band Edsel, not Jawbox; Jawbox members only later ran the label.
+- batch: 1
+  type: empty_emission
+  slug: m007
+  detail: compiler returned an empty page list
+- batch: 5
+  type: empty_emission
+  slug: m022
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Stan (Dog with\
+    \ a Blog)\",\n    \"type\": \"people\",\n    \"aliases\": [\"Stan\"],\n    \"\
+    tags\": [\"fictional character\", \"talking dog\", \"Dog with a Blog\"],\n   \
+    \ \"summary\": \"A talking dog who is "
+- batch: 5
+  type: empty_emission
+  slug: m024
+  detail: compiler returned an empty page list
+- batch: 6
+  type: empty_emission
+  slug: m028
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Trey Parker\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [\"Randolph Severn Parker III\"\
+    ],\n    \"tags\": [\"voice actor\", \"South Park creator\", \"American actor\"\
+    ],\n    \"summary\": \"American act"
+- batch: 7
+  type: empty_emission
+  slug: m029
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Gemini Division\"\
+    ,\n    \"type\": \"media\",\n    \"aliases\": [],\n    \"tags\": [\"web series\"\
+    , \"science fiction\", \"online content\"],\n    \"summary\": \"American science\
+    \ fiction web series of fi"
+- batch: 7
+  type: empty_emission
+  slug: m030
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Dian Bachar\"\
+    ,\n    \"type\": \"people\",\n    \"aliases\": [],\n    \"tags\": [\"American\
+    \ actor\", \"Trey Parker collaborator\", \"Matt Stone collaborator\"],\n    \"\
+    summary\": \"American actor known f"
+- batch: 7
+  type: unsupported_fact
+  slug: Stan-Smith
+  detail: Source only states Stan and Francine are Steve's parents; it does not state
+    that Stan is Francine's husband.
+- batch: 7
+  type: unsupported_fact
+  slug: Francine-Smith
+  detail: Source only states Stan and Francine are Steve's parents; it does not state
+    that Francine is Stan's wife.
+- batch: 7
+  type: unsupported_fact
+  slug: American-Dad
+  detail: Source only mentions Steve Smith and his family relationships and that he
+    is one of six main characters; it does not explicitly confirm Stan, Francine,
+    and Hayley are among the six main characters.
+- batch: 8
+  type: empty_emission
+  slug: m033
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Richard Armitage\
+    \ (actor)\",\n    \"type\": \"people\",\n    \"aliases\": [\"Richard Crispin Armitage\"\
+    ],\n    \"tags\": [\"English actor\", \"film\", \"television\", \"theatre\", \"\
+    voice acting\"],\n    \"s"
+- batch: 8
+  type: empty_emission
+  slug: m034
+  detail: 'ValueError: could not parse JSON: [
+
+    {
+
+    "title": "Not What He Seems",
+
+    "type": "media",
+
+    "aliases": [],
+
+    "tags": ["Gravity Falls episode", "animated television episode"],
+
+    "summary": "The eleventh episode of the second season of Gravity Fal'
+- batch: 8
+  type: empty_emission
+  slug: m036
+  detail: 'ValueError: could not parse JSON: [
+
+    {
+
+    "title": "Seed of Chucky",
+
+    "type": "media",
+
+    "aliases": [],
+
+    "tags": ["film", "horror", "Chucky franchise"],
+
+    "summary": "A horror film featuring an ensemble cast portraying humans and the
+    voices of '
+- batch: 8
+  type: unsupported_fact
+  slug: Beck-film-series
+  detail: Source m035 only refers to the 'Beck series of movies' and does not specify
+    that they are 'crime films'.
+- batch: 8
+  type: unsupported_fact
+  slug: Jan-Guillou
+  detail: Summary states Jan Guillou is a 'Swedish author', but the cited source m035
+    does not mention his nationality.
+- batch: 9
+  type: empty_emission
+  slug: m037
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Rapture's Delight\"\
+    ,\n    \"type\": \"media\",\n    \"aliases\": [],\n    \"tags\": [\"American Dad!\
+    \ episode\", \"Season 6\", \"Television episode\"],\n    \"summary\": \"Ninth\
+    \ episode of season six of "
+- batch: 9
+  type: empty_emission
+  slug: m039
+  detail: "ValueError: could not parse JSON: [\n {\n  \"title\": \"Aidan Turner\"\
+    ,\n  \"type\": \"people\",\n  \"aliases\": [],\n  \"tags\": [\"Irish actor\",\
+    \ \"Film actor\", \"Television actor\"],\n  \"summary\": \"Irish actor born 19\
+    \ June 1983, known for roles in The Ho"
+- batch: 11
+  type: empty_emission
+  slug: m047
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"San Diego\"\
+    ,\n    \"type\": \"geography\",\n    \"aliases\": [],\n    \"tags\": [\"California\"\
+    , \"United States\", \"Mexican–American War\"],\n    \"summary\": \"California\
+    \ city and bay whose control w"
+- batch: 12
+  type: empty_emission
+  slug: m049
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Linden-Hills-Library\"\
+    ,\n    \"type\": \"organizations\",\n    \"aliases\": [],\n    \"tags\": [\"Public\
+    \ Library\", \"Minneapolis Public Library\", \"Tudor Revival architecture\", \"\
+    National Register"
+- batch: 12
+  type: empty_emission
+  slug: m051
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"French and Indian\
+    \ War\",\n    \"type\": \"events\",\n    \"aliases\": [],\n    \"tags\": [\"Anglo-French\
+    \ conflict\", \"colonial war\", \"18th century\"],\n    \"summary\": \"A century-long\
+    \ Anglo-French "
+- batch: 12
+  type: empty_emission
+  slug: m052
+  detail: "ValueError: could not parse JSON: [\n {\n  \"title\": \"Minneapolis\",\n\
+    \  \"type\": \"geography\",\n  \"aliases\": [],\n  \"tags\": [\"Minnesota\", \"\
+    Twin Cities\", \"global city\", \"former milling hub\"],\n  \"summary\": \"Minnesota\
+    \ city on the Mississippi Rive"
+- batch: 13
+  type: empty_emission
+  slug: m053
+  detail: "ValueError: could not parse JSON: [\n {\n  \"title\": \"Northwest-Territories\"\
+    ,\n  \"type\": \"geography\",\n  \"aliases\": [\"NWT\"],\n  \"tags\": [\"Canada\"\
+    , \"Territory\", \"Northern Canada\"],\n  \"summary\": \"A territory in northern\
+    \ Canada bordered by Yuk"
+- batch: 13
+  type: empty_emission
+  slug: m054
+  detail: "ValueError: could not parse JSON: [\n{\n \"title\": \"Pimpirev Glacier\"\
+    ,\n \"type\": \"geography\",\n \"aliases\": [\"Pimpirev Lednik\"],\n \"tags\"\
+    : [\"glacier\", \"Livingston Island\", \"South Shetland Islands\", \"Antarctica\"\
+    ],\n \"summary\": \"A glacier on Li"
+- batch: 13
+  type: dangling_link
+  slug: Clerke-Rocks
+  detail: South-Georgia-and-the-South-Sandwich-Islands
+- batch: 13
+  type: dangling_link
+  slug: Clerke-Rocks
+  detail: Argentina
+- batch: 14
+  type: empty_emission
+  slug: m057
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Louisiana Purchase\"\
+    ,\n    \"type\": \"events\",\n    \"aliases\": [],\n    \"tags\": [\"1803\", \"\
+    territorial cession\", \"United States history\"],\n    \"summary\": \"The 1803\
+    \ transfer of the Louisia"
+- batch: 14
+  type: empty_emission
+  slug: m058
+  detail: "ValueError: could not parse JSON: [\n {\n  \"title\": \"Treaty of Paris\
+    \ (1783)\",\n  \"type\": \"events\",\n  \"aliases\": [\"Treaty of Paris\"],\n\
+    \  \"tags\": [\"American Revolution\", \"diplomacy\", \"18th century\"],\n  \"\
+    summary\": \"Post-Revolutionary War tre"
+- batch: 14
+  type: empty_emission
+  slug: m060
+  detail: "ValueError: could not parse JSON: [\n  {\n    \"title\": \"Geography-of-the-United-States\"\
+    ,\n    \"type\": \"geography\",\n    \"aliases\": [\"Geography of the United States\"\
+    ],\n    \"tags\": [\"geography\", \"United States\", \"borders\"],\n    \"summary\"\
+    : \""
+- batch: 15
+  type: dangling_link
+  slug: Trey-Parker
+  detail: Stan-Marsh
+- batch: 15
+  type: dangling_link
+  slug: Trey-Parker
+  detail: Eric-Cartman
+- batch: 15
+  type: dangling_link
+  slug: Trey-Parker
+  detail: Randy-Marsh
+- batch: 15
+  type: dangling_link
+  slug: Trey-Parker
+  detail: Mr-Garrison
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Brad-Dourif
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Jennifer-Tilly
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Billy-Boyd
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: John-Waters
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Jason-Flemyng
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Redman
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Tony-Gardner
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Hannah-Spearritt
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Kristina-Hewitt
+- batch: 15
+  type: dangling_link
+  slug: Seed-of-Chucky
+  detail: Beans-El-Balawi
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Livingston-Island
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: South-Shetland-Islands
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Drake-Passage
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Bransfield-Strait
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Tundzha-Glacier
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Saedinenie-Snowfield
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Perunika-Glacier
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Kamchiya-Glacier
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Pimpirev-Beach
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: South-Bay
+- batch: 15
+  type: dangling_link
+  slug: Pimpirev-Glacier
+  detail: Ereby-Point
+- batch: 15
+  type: dangling_link
+  slug: Clerke-Rocks
+  detail: South-Georgia-and-the-South-Sandwich-Islands
+- batch: 15
+  type: dangling_link
+  slug: Clerke-Rocks
+  detail: Argentina
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Canada
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Mexico
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Russia
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Cuba
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Bahamas
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Pacific-Ocean
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Atlantic-Ocean
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Gulf-of-Mexico
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Bering-Strait
+- batch: 15
+  type: dangling_link
+  slug: Geography-of-the-United-States
+  detail: Arctic-Ocean
+- batch: 15
+  type: dangling_link
+  slug: Alaska
+  detail: Pacific-Ocean
+- batch: 15
+  type: dangling_link
+  slug: Alaska
+  detail: Bering-Strait
+- batch: 15
+  type: dangling_link
+  slug: Alaska
+  detail: Arctic-Ocean
+- batch: 15
+  type: dangling_link
+  slug: Hawaii
+  detail: Pacific-Ocean
+- batch: 15
+  type: dangling_link
+  slug: Stan-Dog-with-a-Blog
+  detail: Grandma-James

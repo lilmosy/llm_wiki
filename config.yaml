@@ -1,9 +1,30 @@
 # LLM-Wiki MVP configuration (paper hyperparameters where applicable)
-model: claude-opus-4-8        # unified answer + compile LLM (paper uses one model for all methods)
+model: claude-sonnet-5       # unified answer + compile LLM (paper uses one model for all methods).
+                             # Paper runs GLM-5.1, a mid-tier model, so a mid-tier
+                             # model here is closer to its setup than Opus was. What
+                             # the comparison needs is that all 8 arms share one
+                             # model, not that the model be the strongest available.
 max_tokens: 2000
 agent_tmax: 15               # paper: max tool-call budget T_max = 15
 agent_patience: 3            # paper: P = 3 consecutive empty searches
 select_k: 5                  # paper: SELECTPAGES selects at most k = 5 pages
 batch_size: 4               # passages per compile batch (paper leaves exact size unspecified)
 baseline_topk: 5            # Vanilla RAG (BM25): top-5 passages
-error_book_repair: code_only # MVP scope: structural code-autofix only (Layer 1); content Layer 2 = log-only
+error_book_revalidate_batches: 10  # paper setting: periodic Layer-2 LLM repair every 10 batches
+
+# ---- baseline arms (paper §4.2) -------------------------------------------
+embed_model: Qwen/Qwen3-Embedding-0.6B   # paper uses Qwen3-Embedding-8B -- same family, smaller.
+                                # Applies identically to every embedding arm (B2/B3/B5/B6).
+                                # Measured vs all-MiniLM-L6-v2 on Dense gold recall over the 8
+                                # questions: .719 -> .812. Not uniform: q3 and q8 improve, q1
+                                # regresses 3/4 -> 2/4. Swapping this invalidates every
+                                # indexes/ artifact that stores vectors -- rebuild B2/B3/B5/B6.
+# Query-side instruction comes from the model's own declared template
+# (Qwen3-Embedding ships one); nothing to configure here.
+embed_batch_size: 2          # peak-memory knob, not a quality knob. 8 GB unified
+                             # memory on this M2 is the hard constraint; begin at 2
+                             # for official-style graph indexing, then raise only
+                             # after a complete build succeeds without MPS OOM.
+
+raptor_levels: 2                # RAPTOR: how many summary levels above the leaves
+raptor_cluster_size: 5          # RAPTOR: target members per cluster -> k = ceil(n/size)

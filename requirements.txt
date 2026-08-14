@@ -1,0 +1,16 @@
+# pip install -r requirements.txt
+# 버전은 개발 시점(2026-08) 기준 하한만 둔다.
+
+anthropic>=0.69            # 유일한 LLM 제공자. core/llm.py
+sentence-transformers>=3.0 # 로컬 임베딩(Qwen3-Embedding-0.6B). core/embed.py
+                           #  ⚠️ 함수 안에서 import되므로, 없어도 --dry-run은 통과하고
+                           #     실제 인코딩 시점에 처음 실패한다. 반드시 설치할 것.
+numpy>=1.26                # 벡터 연산·npz 저장. core/embed.py
+networkx>=3.0              # 그래프 + greedy_modularity 커뮤니티 탐지. b4_graphrag, b5_lightrag, b6_hipporag
+scikit-learn>=1.4          # KMeans 클러스터링. b3_raptor/build.py
+rank-bm25>=0.2.2           # BM25Okapi. b1_bm25, llm_wiki/wiki.py의 search 도구
+PyYAML>=6.0                # config.yaml, ErrorBook
+
+# torch는 sentence-transformers가 함께 설치한다.
+# Apple Silicon에서는 MPS를 쓰며, 배치가 크면 OOM이 난다.
+# 그 경우 config.yaml의 embed_batch_size를 낮춘다.
