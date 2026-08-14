@@ -95,12 +95,8 @@ llm_wiki/
 ├── indexes_2wiki/                  빌드 산출물 — LLM 이 만든 것
 │   ├── llm_wiki/{wiki/, error_book.yaml, _build_meta.json}
 │   ├── graphrag/{graph.json, COMMUNITIES.md, _build_meta.json}
-│   ├── dense/{meta.json, INDEX.md, _build_meta.json}
-│   │   └── vectors.npz          ✕  질의 시 자동 생성
-│   ├── raptor/  ← 미실행         ✕  vectors.npz
-│   ├── lightrag/ ← 미실행        ✕  ent_vectors.npz, rel_vectors.npz
-│   └── hipporag/ ← 미실행        ✕  vectors.npz
-├── indexes_musique/                동일 구조
+│   └── dense/{meta.json, INDEX.md, _build_meta.json, vectors.npz ✕}
+├── indexes_musique/                동일 (실행한 arm 의 폴더만 생긴다)
 │
 └── runs/                           실행 기록
     ├── results_<dataset>.json      문항×arm 예측·retrieved PID·trace
@@ -110,13 +106,9 @@ llm_wiki/
     └── history/ ✕                  과거 실행 snapshot
 ```
 
-`✕` 는 저장소에 없는 것이다. 기준은 **LLM 이 만든 산출물은 커밋하고, 재생성이 공짜인 것은 커밋하지 않는다**.
+`✕` 는 저장소에 없는 것이다. 기준은 **LLM 이 만든 산출물은 커밋하고, 재생성이 공짜인 것(임베딩 벡터 `*.npz`, `runs/cache/`, `runs/history/`)은 커밋하지 않는다**.
 
-`*.npz` 는 임베딩 벡터다. **clone 직후에는 없고, 따로 받아올 필요도 없다** — 해당 arm 을 처음 실행할 때 로컬 임베딩 모델이 API 비용 없이 만들어 위 위치에 캐시한다(`core/embed.py` 의 `encode_cached`). 바이너리라 diff 가 남지 않고 재빌드마다 통째로 히스토리에 쌓이기 때문에 제외했다.
-
-다른 머신에서 만든 `.npz` 를 **위 경로에 직접 복사해 넣어도 된다.** 인코딩은 156 passage 기준 수 분에서 십수 분이 걸리므로 같은 corpus 를 여러 곳에서 돌릴 때 쓸 만하다. 캐시 키가 `sha256(임베딩 모델명 + 문서 텍스트 전체)` 라서, 복사한 파일이 현재 corpus·모델과 맞으면 그대로 쓰고 어긋나면 조용히 무시하고 다시 만든다. 잘못된 벡터가 살아남는 경우는 없다.
-
-`runs/cache/` 는 LLM 응답 캐시로, 재실행 비용을 줄일 뿐 결과의 근거가 아니다. `runs/history/` 는 과거 실행 snapshot이고 그 역할은 git 이 대신한다.
+`*.npz` 는 해당 arm 을 실행할 때 로컬 임베딩 모델이 만들어 위 위치에 캐시한다. 받아올 필요는 없지만, 인코딩에 시간이 걸리므로 다른 머신에서 만든 파일을 같은 경로에 복사해 넣어도 된다 — 캐시 키가 `sha256(모델명 + 문서 텍스트)` 라서 현재 corpus·모델과 어긋나면 무시하고 다시 만든다.
 
 `b3_raptor`·`b5_lightrag`·`b6_hipporag` 는 구현은 있으나 현재 slice 에서는 실행하지 않았다. `b0`~`b2` 에 `build.py` 가 없는 것은 오프라인 인덱스가 필요 없는 방법이기 때문이다.
 
